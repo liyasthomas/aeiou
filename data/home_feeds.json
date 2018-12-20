@@ -1,35 +1,107 @@
 {
 	"recent": [
 		{
-			"title": "recent",
+			"title": "Recommended for you",
 			"icon": "star",
 			"color": "orange",
 			"link": "blog",
 			"sub": [
 				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
-					"info": "Read more",
+					"color": "purple",
+					"title": "Students",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "red",
+					"title": "Artist",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "pink",
+					"title": "Teachers",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "orange",
+					"title": "Doctors",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "cyan",
+					"title": "E-commerce",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "green",
+					"title": "Devs",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "yellow",
+					"title": "Creative",
+					"description": "Description",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
 				},
 				{
 					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Read more",
+					"title": "Navigate",
+					"description": "Description",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
-					"link": "feedie"
+					"link": "aeiou"
+				},
+				{
+					"color": "teal",
+					"title": "Identify",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "indigo",
+					"title": "Measure",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
 				}
 			]
 		}
 	],
 	"popular": [
 		{
-			"title": "popular",
+			"title": "Discover",
 			"icon": "whatshot",
 			"color": "red",
 			"link": "blog",
@@ -38,10 +110,55 @@
 					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Developers community",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "group",
 					"link": "fuseorg"
+				},
+				{
+					"color": "cyan",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "green",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "yellow",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "blue",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
+				},
+				{
+					"color": "teal",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "arrow-forward",
+					"link": "aeiou"
 				},
 				{
 					"color": "orange",
@@ -65,7 +182,7 @@
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
@@ -74,7 +191,7 @@
 					"color": "black",
 					"title": "Shooter",
 					"description": "Shoot em down!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "shooter"
@@ -82,18 +199,18 @@
 			]
 		}
 	],
-	"projects": [
+	"activity": [
 		{
-			"title": "projects",
+			"title": "Activity",
 			"icon": "work",
 			"color": "blue",
-			"link": "projects",
+			"link": "activity",
 			"sub": [
 				{
 					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "language",
 					"link": "konnect"
@@ -102,7 +219,7 @@
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
@@ -111,7 +228,7 @@
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
@@ -120,7 +237,7 @@
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
@@ -129,7 +246,7 @@
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"

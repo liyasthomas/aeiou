@@ -5,7 +5,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyAbout extends PolymerElement {
+class MyActivity extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -74,11 +74,11 @@ class MyAbout extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/about/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/activity/banner.svg"  alt="Banner"></iron-image>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
-					<iron-icon class="deep-orange-fg big" icon="my-icons:face"></iron-icon>about me
+					<iron-icon class="deep-orange-fg big" icon="my-icons:face"></iron-icon>activity me
 				</div>
 				<div class="description">
 					hi, my name is Liyas Thomas, i'm a designer, developer, and an entrepreneur.
@@ -119,7 +119,7 @@ class MyAbout extends PolymerElement {
 					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>
 			</div>
-			<iron-ajax auto url="../data/about_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/activity_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -234,4 +234,4 @@ class MyAbout extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-about', MyAbout);
+window.customElements.define('my-activity', MyActivity);

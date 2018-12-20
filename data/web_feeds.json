@@ -10,7 +10,7 @@
 					"color": "teal",
 					"title": "Konnect",
 					"description": "Intranet for NCERC",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "language",
 					"link": "konnect"
@@ -19,7 +19,7 @@
 					"color": "indigo",
 					"title": "AEIOU",
 					"description": "Augmented Reality platform to make education fun and interactive",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "aeiou"
@@ -28,7 +28,7 @@
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"
@@ -37,7 +37,7 @@
 					"color": "blue-grey",
 					"title": "Material Things",
 					"description": "Reusable Material Design components",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "materialthings"
@@ -46,7 +46,7 @@
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
@@ -55,7 +55,7 @@
 					"color": "grey",
 					"title": "Snake",
 					"description": "Snakes! Snakes everywhere!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "snake"
@@ -64,7 +64,7 @@
 					"color": "pink",
 					"title": "ily",
 					"description": "Sharing is better than getting Likes",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "ily"
@@ -73,7 +73,7 @@
 					"color": "black",
 					"title": "Shooter",
 					"description": "Shoot em down!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "shooter"
@@ -82,7 +82,7 @@
 					"color": "yellow",
 					"title": "Pineapple Notes",
 					"description": "A simple, clean note app",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "pineapplenotes"
@@ -91,7 +91,7 @@
 					"color": "green",
 					"title": "Recycle Mix",
 					"description": "Mix of eco-conscious recycling methodologies",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "recyclemix"
@@ -100,7 +100,7 @@
 					"color": "red",
 					"title": "Saapshot",
 					"description": "Camera app",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "saapshot"
@@ -119,7 +119,7 @@
 					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Developers community",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "group",
 					"link": "fuseorg"

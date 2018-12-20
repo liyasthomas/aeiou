@@ -19,7 +19,7 @@
 					"color": "deep-purple",
 					"title": "Fuse Org",
 					"description": "Developers community",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "group",
 					"link": "fuseorg"
@@ -38,7 +38,7 @@
 					"color": "blue",
 					"title": "Feedie",
 					"description": "Faculty feedback system",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "feedie"
@@ -47,7 +47,7 @@
 					"color": "light-blue",
 					"title": "Lvr",
 					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Read more",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "arrow-forward",
 					"link": "lvr"

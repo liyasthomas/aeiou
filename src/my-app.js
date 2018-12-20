@@ -22,7 +22,6 @@ import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
-import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
@@ -60,10 +59,10 @@ class MyApp extends PolymerElement {
 					--paper-tabs-selection-bar-color: #fff;
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
-					--paper-progress-active-color: var(--accent-color);
+					--paper-progress-active-color: #fff;
 					--paper-spinner-color: var(--accent-color);
 //					--paper-progress-secondary-color: var(--dark-accent-color);
-					--paper-progress-container-color: var(--light-text-color);
+					--paper-progress-container-color: var(--light-accent-color);
 					color: var(--primary-text-color);
 					--iron-icon-height: 26px;
 					--iron-icon-width: 26px;
@@ -98,7 +97,7 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				#home.iron-selected, #collections.iron-selected, #about.iron-selected {
+				#home.iron-selected, #collections.iron-selected, #activity.iron-selected {
 					color: #fff;
 				}
 				app-header {
@@ -110,9 +109,6 @@ class MyApp extends PolymerElement {
 				}
 				app-toolbar paper-icon-button {
 					margin: 0 4px;
-				}
-				app-toolbar paper-menu-button {
-					padding: 0;
 				}
 				[main-title] {
 					font-size: 32px;
@@ -231,7 +227,7 @@ class MyApp extends PolymerElement {
 						<a href="tel:+919539653962">
 							<paper-icon-button class="toast-button" icon="my-icons:phone"  aria-label="Icon"></paper-icon-button>
 						</a>
-						<a href="about">
+						<a href="activity">
 							<paper-icon-button class="toast-button" icon="my-icons:more-horiz"  aria-label="Icon"></paper-icon-button>
 						</a>
 					</div>
@@ -318,10 +314,10 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a id="about" href="about" tabindex="-1">
+						<a id="activity" href="activity" tabindex="-1">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
-								<span>About</span>
+								<span>activity</span>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
@@ -334,30 +330,7 @@ class MyApp extends PolymerElement {
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
               <div main-title><span class="logo">AEIOU</span></div>
-							<paper-menu-button vertical-align="top" horizontal-align="right">
-								<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
-								<paper-listbox class="listbox" slot="dropdown-content">
-									<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-										<paper-icon-item>
-											<iron-icon icon="my-icons:alternate-email" slot="item-icon"></iron-icon>
-											<span>Hire&nbsp;me</span>
-											<paper-ripple></paper-ripple>
-										</paper-icon-item>
-									</a>
-									<a href="https://paypal.me/liyascthomas" target="_blank" rel="noopener">
-										<paper-icon-item>
-											<iron-icon src="../images/assets/social/paypal.svg" slot="item-icon"></iron-icon>
-											<span>Donate</span>
-											<paper-ripple></paper-ripple>
-										</paper-icon-item>
-									</a>
-									<paper-icon-item on-click="openShare">
-										<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
-										<span>Share</span>
-										<paper-ripple></paper-ripple>
-									</paper-icon-item>
-								</paper-listbox>
-							</paper-menu-button>
+							<a href="new"><paper-icon-button icon="my-icons:create" aria-label="Create new"></paper-icon-button></a>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 							</template>
@@ -376,10 +349,10 @@ class MyApp extends PolymerElement {
 										<span>Collections</span>
 									</a>
 								</paper-tab>
-								<paper-tab id="about">
-									<a href="about" tabindex="-1">
+								<paper-tab id="activity">
+									<a href="activity" tabindex="-1">
 										<iron-icon icon="my-icons:face"></iron-icon>
-										<span>About</span>
+										<span>activity</span>
 									</a>
 								</paper-tab>
 							</paper-tabs>
@@ -388,7 +361,7 @@ class MyApp extends PolymerElement {
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
 						<my-collections name="collections"></my-collections>
-						<my-about name="about"></my-about>
+						<my-activity name="activity"></my-activity>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
 						<my-wallpapers name="wallpapers"></my-wallpapers>
@@ -396,7 +369,7 @@ class MyApp extends PolymerElement {
 						<my-view4 name="view4"></my-view4>
 						<my-404 name="404"></my-404>
 					</iron-pages>
-					<paper-fab id="fab" icon="my-icons:arrow-upward" aria-label="Scroll top" on-click="scrollTop"></paper-fab>
+					<a href="new"><paper-fab id="fab" icon="my-icons:create" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
 					<footer>
 						<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
 					</footer>
@@ -528,7 +501,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'collections', 'about', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'collections', 'activity', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -570,8 +543,8 @@ class MyApp extends PolymerElement {
 			case 'collections':
 				import('./my-collections.js');
 				break;
-			case 'about':
-				import('./my-about.js');
+			case 'activity':
+				import('./my-activity.js');
 				break;
 			case 'web':
 				import('./my-web.js');

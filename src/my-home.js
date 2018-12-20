@@ -55,7 +55,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 25vw;
+						--app-grid-item-height: 20vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -99,7 +99,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid">
 					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
@@ -110,7 +110,6 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -128,7 +127,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{recent.link}}">
-						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all {{recent.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -173,14 +172,14 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{popular.link}}">
-						<paper-button class$="[[_computeBgClass(popular.color)]]" aria-label="View all">View all {{popular.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(popular.color)]]" aria-label="View all">Discover more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.collections]]" as="collections">
+			<template is="dom-repeat" items="[[ajaxResponse0.activity]]" as="activity">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						<iron-icon class$="[[_computeFgClass(collections.color)]] big" icon="my-icons:{{collections.icon}}"></iron-icon>{{collections.title}}
+						<iron-icon class$="[[_computeFgClass(activity.color)]] big" icon="my-icons:{{activity.icon}}"></iron-icon>{{activity.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -190,7 +189,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[collections.sub]]" as="sub">
+					<template is="dom-repeat" items="[[activity.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -217,8 +216,8 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{collections.link}}">
-						<paper-button class$="[[_computeBgClass(collections.color)]]" aria-label="View all">View all {{collections.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<a href="{{activity.link}}">
+						<paper-button class$="[[_computeBgClass(activity.color)]]" aria-label="View all">View all {{activity.title}}<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>

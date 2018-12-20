@@ -126,6 +126,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.actions .title,
 			.content .title {
 				font-size: 32px;
+				font-weight: 700;
 				color: var(--primary-text-color);
         font-family: "Prompt", "Roboto", "Noto", sans-serif;
 			}
@@ -145,7 +146,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--secondary-text-color);
 			}
 			.grid {
-				width: 90%;
+				width: 80%;
 			}
 			.grid, .list {
 				margin: 0 auto;
@@ -184,15 +185,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       	@apply --layout-horizontal;
 			}
 			.top {
-				padding: 16px 16px 4px 16px;
+				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
 			}
 			.mid {
-				padding: 4px 16px 16px 16px;
+				padding: 4px 32px 32px 32px;
 			}
 			.bottom {
-				padding: 8px;
+				padding: 8px 16px 8px 8px;
 				border-radius: 0 0 8px 8px;
+				background-color: rgba(0,0,0,.2);
 			}
 			.title {
 				display: -webkit-box;
@@ -217,7 +219,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
+				-webkit-line-clamp: 4;
 				font-size: 24px;
 				font-weight: 600;
 				line-height: 1.2;
