@@ -1,0 +1,195 @@
+{
+	"section1": [
+		{
+			"title": "screenshots",
+			"icon": "wallpaper",
+			"color": "blue",
+			"link": "https://github.com/liyasthomas/feedie",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"section2": [
+		{
+			"title": "prototyping",
+			"icon": "language",
+			"color": "red",
+			"link": "https://github.com/liyasthomas/feedie",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"section3": [
+		{
+			"title": "architecture",
+			"icon": "code",
+			"color": "black",
+			"link": "https://github.com/liyasthomas/feedie",
+			"sub": [
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				},
+				{
+					"color": "white",
+					"title": "Wall",
+					"description": "blah",
+					"info": "View album",
+					"img": "../images/assets/feeds/puff.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				}
+			]
+		}
+	],
+	"similar": [
+		{
+			"title": "similar",
+			"icon": "group",
+			"color": "blue-grey",
+			"link": "projects",
+			"sub": [
+				{
+					"color": "deep-purple",
+					"title": "Fuse Org",
+					"description": "Developers community",
+					"info": "Read more",
+					"img": "../images/assets/projects/fuseorg.svg",
+					"icon": "group",
+					"link": "fuseorg"
+				},
+				{
+					"color": "orange",
+					"title": "Wallpapers",
+					"description": "Curated list of wallpapers",
+					"info": "View all",
+					"img": "../images/assets/projects/wallpapers.svg",
+					"icon": "wallpaper",
+					"link": "wallpapers"
+				}
+			]
+		}
+	]
+}
