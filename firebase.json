@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "build/es6-bundled",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
