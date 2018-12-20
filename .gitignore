@@ -1,3 +1,6 @@
+# Firebase
+.firebase
+
 # Logs
 logs
 *.log
@@ -29,14 +32,15 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -57,5 +61,3 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next

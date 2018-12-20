@@ -73,7 +73,7 @@ class MyApp extends PolymerElement {
 				}
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
-					font-weight: 700;
+					font-weight: 900;
 					color: var(--secondary-text-color);
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
@@ -85,7 +85,7 @@ class MyApp extends PolymerElement {
 					-webkit-overflow-scrolling: touch;
 				}
 				paper-icon-item {
-					font-weight: 700;
+					font-weight: 900;
 					font-size: 16px;
 				}
 				span.expand {
@@ -116,18 +116,18 @@ class MyApp extends PolymerElement {
 				}
 				[main-title] {
 					font-size: 44px;
-					font-weight: 700;
+					font-weight: 900;
 					margin-left: 12px;
 				}
 				[condensed-title] {
 					font-size: 24px;
 					overflow: hidden;
 					text-overflow: ellipsis;
-					font-weight: 700;
+					font-weight: 900;
 					margin-left: 16px;
 				}
 				.logo {
-        	font-family: "Lobster", "Roboto", "Noto", sans-serif;
+        	font-family: "Nunito Sans", "Roboto", "Noto", sans-serif;
 					color: #000;
 				}
 				paper-tabs {
@@ -142,7 +142,7 @@ class MyApp extends PolymerElement {
 					text-transform: capitalize;
 					padding: 0;
 					font-size: 16px;
-					font-weight: 700;
+					font-weight: 900;
 					padding: 0 16px;
 				}
 				paper-tab a {
@@ -234,7 +234,7 @@ class MyApp extends PolymerElement {
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="{{!wideLayout}}">
 					<div class="drawer-contents">
-          <app-toolbar><span class="logo">Liyas Thomas</span></app-toolbar>
+          <app-toolbar><span class="logo">AEIOU</span></app-toolbar>
 					<paper-listbox selected="[[page]]" attr-for-selected="id" class="listbox" role="listbox">
 						<a id="home" href="[[rootPath]]" tabindex="-1">
 							<paper-icon-item>
@@ -333,13 +333,13 @@ class MyApp extends PolymerElement {
           <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title">
             <app-toolbar sticky>
               <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
-              <div condensed-title><span class="logo">Liyas Thomas</span></div>
+              <div condensed-title><span class="logo">AEIOU</span></div>
 							<template is="dom-if" if="{{loading}}">
 								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 							</template>
             </app-toolbar>
             <app-toolbar>
-              <div main-title><span class="logo">Liyas Thomas</span></div>
+              <div main-title><span class="logo">AEIOU</span></div>
 							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}">
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
@@ -542,7 +542,7 @@ class MyApp extends PolymerElement {
 		}
 
 		// Change page title
-		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · Liyas Thomas';
+		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · AEIOU';
 
 		// Close a non-persistent drawer when the page & route are changed.
 		if (!this.$.drawer.persistent) {

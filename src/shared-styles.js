@@ -39,7 +39,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h2,
 			h3,
 			h4 {
-				font-weight: normal;
+				font-weight: 900;
 				margin: 0;
 			}
 			.listbox {
@@ -64,7 +64,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button {
 				margin: 4px;
 				padding: .6em 1.2em;
-				font-weight: 700;
+				font-weight: 900;
 				text-transform: none;
 				transition: all .1s ease;
 				border-radius: 32px;
@@ -122,9 +122,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.actions .title,
 			.content .title {
-				font-size: 28px;
+				font-size: 44px;
 				color: var(--primary-text-color);
-        font-family: "Lobster", "Roboto", "Noto", sans-serif;
+        font-family: "Nunito Sans", "Roboto", "Noto", sans-serif;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -198,9 +198,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 24px;
+				font-size: 32px;
 				line-height: 1.25;
-				font-weight: 700;
+				font-weight: 900;
 			}
 			.title span {
 				color: var(--secondary-text-color);
@@ -216,14 +216,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
-				font-size: 20px;
+				font-size: 24px;
 				line-height: 1.2;
 			}
 			.info {
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
-				font-weight: 700;
+				font-weight: 900;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
