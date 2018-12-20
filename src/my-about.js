@@ -92,7 +92,7 @@ class MyAbout extends PolymerElement {
 				<p>In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world of doodles and drawings. I've had a pencil in my hand since I was in diapers. Things never change... I'm no longer in diapers though.</p>
 				<p>
 					<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,"><paper-button class="primary" aria-label="Hire me">Hire me<iron-icon icon="my-icons:alternate-email"></iron-icon></paper-button></a>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="collections"><paper-button class="primary" aria-label="My collections">My collections<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 				</p>
 			</div>
 			<div class$="[[getUIType(UI)]] content">
@@ -108,13 +108,13 @@ class MyAbout extends PolymerElement {
 			</div>
 			<div class$="[[getUIType(UI)]] content">
 				<div class="title">
-					<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>open source projects
+					<iron-icon class="red-fg big" icon="my-icons:favorite"></iron-icon>open source collections
 				</div>
 				<div class="description">
-					open sourcing our projects, or part of it, can help inspire other coders.
+					open sourcing our collections, or part of it, can help inspire other coders.
 				</div>
 				<p>
-					<a href="projects"><paper-button class="primary" aria-label="My projects">My projects<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
+					<a href="collections"><paper-button class="primary" aria-label="My collections">My collections<iron-icon icon="my-icons:lightbulb-outline"></iron-icon></paper-button></a>
 					<a href="https://dribbble.com/liyasthomas"><paper-button class="primary" aria-label="Dribbble">Dribbble<iron-icon src="../images/assets/social/dribbble.svg"></iron-icon></paper-button></a>
 					<a href="https://github.com/liyasthomas"><paper-button class="primary" aria-label="GitHub">GitHub<iron-icon src="../images/assets/social/github.svg"></iron-icon></paper-button></a>
 				</p>

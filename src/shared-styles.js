@@ -39,7 +39,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h2,
 			h3,
 			h4 {
-				font-weight: 900;
+				font-weight: normal;
 				margin: 0;
 			}
 			.listbox {
@@ -122,7 +122,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.actions .title,
 			.content .title {
-				font-size: 44px;
+				font-size: 28px;
 				color: var(--primary-text-color);
         font-family: "Nunito Sans", "Roboto", "Noto", sans-serif;
 			}
@@ -198,7 +198,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 32px;
+				font-size: 24px;
 				line-height: 1.25;
 				font-weight: 900;
 			}
@@ -216,7 +216,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
-				font-size: 24px;
+				font-size: 20px;
 				line-height: 1.2;
 			}
 			.info {

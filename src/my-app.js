@@ -50,18 +50,18 @@ class MyApp extends PolymerElement {
 					--primary-color: #fff;
 					--light-primary-color: rgba(0, 0, 0, .05);
 					--dark-primary-color: rgba(0, 0, 0, .54);
-					--accent-color: var(--paper-blue-a400);
-					--light-accent-color: var(--paper-blue-a200);
-					--dark-accent-color: var(--paper-blue-a700);
+					--accent-color: var(--paper-light-blue-a400);
+					--light-accent-color: var(--paper-light-blue-a200);
+					--dark-accent-color: var(--paper-light-blue-a700);
 					--primary-text-color: rgba(0, 0, 0, .87);
 					--secondary-text-color: rgba(0, 0, 0, .54);
 					--divider-text-color: rgba(0, 0, 0, .38);
 					--light-text-color: rgba(0, 0, 0, .12);
-					--paper-tabs-selection-bar-color: var(--accent-color);
+					--paper-tabs-selection-bar-color: #fff;
 					--paper-tab-ink: var(--light-text-color);
 					--paper-fab-keyboard-focus-background: var(--accent-color);
 					--paper-progress-active-color: var(--accent-color);
-					--paper-spinner-color: #000;
+					--paper-spinner-color: var(--accent-color);
 //					--paper-progress-secondary-color: var(--dark-accent-color);
 					--paper-progress-container-color: var(--light-text-color);
 					color: var(--primary-text-color);
@@ -98,12 +98,12 @@ class MyApp extends PolymerElement {
 					border-bottom: 1px solid var(--paper-grey-100);
 					background-color: var(--paper-grey-50);
 				}
-				#home.iron-selected, #projects.iron-selected, #blog.iron-selected, #about.iron-selected {
-					color: var(--accent-color);
+				#home.iron-selected, #collections.iron-selected, #about.iron-selected {
+					color: #fff;
 				}
 				app-header {
-					background-color: var(--primary-color);
-					color: var(--secondary-text-color);
+					background-color: var(--accent-color);
+					color: #fff;
 					--app-header-shadow: {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
@@ -115,11 +115,6 @@ class MyApp extends PolymerElement {
 					padding: 0;
 				}
 				[main-title] {
-					font-size: 44px;
-					font-weight: 900;
-					margin-left: 12px;
-				}
-				[condensed-title] {
 					font-size: 24px;
 					overflow: hidden;
 					text-overflow: ellipsis;
@@ -128,7 +123,6 @@ class MyApp extends PolymerElement {
 				}
 				.logo {
         	font-family: "Nunito Sans", "Roboto", "Noto", sans-serif;
-					color: #000;
 				}
 				paper-tabs {
 					height: 100%;
@@ -243,24 +237,24 @@ class MyApp extends PolymerElement {
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
-						<a id="projects" tabindex="-1">
+						<a id="collections" tabindex="-1">
 							<paper-icon-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">
 								<iron-icon icon="my-icons:work" slot="item-icon"></iron-icon>
-								<span class="expand">Projects</span>
+								<span class="expand">Collections</span>
 								<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon>
 								<paper-ripple></paper-ripple>
 							</paper-icon-item>
 						</a>
 						<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
-							<a href="projects" tabindex="-1">
+							<a href="collections" tabindex="-1">
 								<paper-icon-item class="category">
 									<iron-icon icon="my-icons:lightbulb-outline" slot="item-icon"></iron-icon>
-										<span class="expand">View all projects</span>
+										<span class="expand">View all collections</span>
 										<iron-icon icon="my-icons:input"></iron-icon>
 									<paper-ripple></paper-ripple>
 								</paper-icon-item>
 							</a>
-							<iron-ajax auto id="ajax" url="../data/projects.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
+							<iron-ajax auto id="ajax" url="../data/collections.json" loading="{{loading}}" handle-as="json" progress="{{progress}}" last-response="{{ajaxResponse}}" last-error="{{error}}" debounce-duration="500"></iron-ajax>
 							<template is="dom-if" if="{{loading}}">
 								<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading]]">
 									<paper-spinner-lite active$="[[loading]]"></paper-spinner-lite>
@@ -311,13 +305,6 @@ class MyApp extends PolymerElement {
 								</template>
 							</template>
 						</iron-collapse>
-						<a id="blog" href="blog" tabindex="-1">
-							<paper-icon-item>
-								<iron-icon icon="my-icons:favorite" slot="item-icon"></iron-icon>
-								<span>Blog</span>
-								<paper-ripple></paper-ripple>
-							</paper-icon-item>
-						</a>
 						<a id="about" href="about" tabindex="-1">
 							<paper-icon-item>
 								<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
@@ -330,46 +317,10 @@ class MyApp extends PolymerElement {
         </app-drawer>
         <!-- Main content -->
         <app-header-layout>
-          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses effects="waterfall resize-title">
-            <app-toolbar sticky>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
-              <div condensed-title><span class="logo">AEIOU</span></div>
-							<template is="dom-if" if="{{loading}}">
-								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
-							</template>
-            </app-toolbar>
+          <app-header id="toolbar" class="toolbar" slot="header" fixed condenses reveals effects="waterfall">
             <app-toolbar>
+              <paper-icon-button icon="my-icons:menu" drawer-toggle hidden$="{{wideLayout}}" aria-label="Toggle menu"></paper-icon-button>
               <div main-title><span class="logo">AEIOU</span></div>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect no-bar hidden$="{{!wideLayout}}">
-								<paper-tab id="home">
-									<a href="[[rootPath]]" tabindex="-1">
-										<iron-icon icon="my-icons:home"></iron-icon>
-										<span>Home</span>
-									</a>
-								</paper-tab>
-								<paper-tab id="projects">
-									<a href="projects" tabindex="-1">
-										<iron-icon icon="my-icons:work"></iron-icon>
-										<span>Projects</span>
-									</a>
-								</paper-tab>
-								<paper-tab id="blog">
-									<a href="blog" tabindex="-1">
-										<iron-icon icon="my-icons:favorite"></iron-icon>
-										<span>Blog</span>
-									</a>
-								</paper-tab>
-								<paper-tab id="about">
-									<a href="about" tabindex="-1">
-										<iron-icon icon="my-icons:face"></iron-icon>
-										<span>About</span>
-									</a>
-								</paper-tab>
-							</paper-tabs>
-							<a href="mailto:liyascthomas@gmail.com?&subject=Hello Liyas!&body=Hi,">
-								<paper-icon-button icon="my-icons:mail-outline" aria-label="E-mail"></paper-icon-button>
-							</a>
-							<paper-icon-button icon="my-icons:share" on-tap="openShare" aria-label="Share"></paper-icon-button>
 							<paper-menu-button vertical-align="top" horizontal-align="right">
 								<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
 								<paper-listbox class="listbox" slot="dropdown-content">
@@ -387,14 +338,43 @@ class MyApp extends PolymerElement {
 											<paper-ripple></paper-ripple>
 										</paper-icon-item>
 									</a>
+									<paper-icon-item on-click="openShare">
+										<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
+										<span>Share</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
 								</paper-listbox>
 							</paper-menu-button>
+							<template is="dom-if" if="{{loading}}">
+								<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
+							</template>
+            </app-toolbar>
+            <app-toolbar sticky>
+							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect sticky$="{{!wideLayout}}">
+								<paper-tab id="home">
+									<a href="[[rootPath]]" tabindex="-1">
+										<iron-icon icon="my-icons:home"></iron-icon>
+										<span>Home</span>
+									</a>
+								</paper-tab>
+								<paper-tab id="collections">
+									<a href="collections" tabindex="-1">
+										<iron-icon icon="my-icons:work"></iron-icon>
+										<span>Collections</span>
+									</a>
+								</paper-tab>
+								<paper-tab id="about">
+									<a href="about" tabindex="-1">
+										<iron-icon icon="my-icons:face"></iron-icon>
+										<span>About</span>
+									</a>
+								</paper-tab>
+							</paper-tabs>
             </app-toolbar>
           </app-header>
 					<iron-pages id="pages" selected="[[page]]" attr-for-selected="name" role="main">
 						<my-home name="home"></my-home>
-						<my-projects name="projects"></my-projects>
-						<my-blog name="blog"></my-blog>
+						<my-collections name="collections"></my-collections>
 						<my-about name="about"></my-about>
 						<my-web name="web"></my-web>
 						<my-others name="others"></my-others>
@@ -535,7 +515,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'projects', 'blog', 'about', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'collections', 'about', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -550,7 +530,7 @@ class MyApp extends PolymerElement {
 		}
 
 		// Animations
-		this.animate({
+		this.$.pages.animate({
 			opacity: [0, 1],
 			transform: ['translateY(-32px)', 'translateY(0)']
 		}, {
@@ -560,7 +540,7 @@ class MyApp extends PolymerElement {
 		this.$.fab.animate({
 			transform: ['scale(0)', 'scale(1)']
 		}, {
-			duration: 1000,
+			duration: 600,
 			easing: 'ease-in-out'
 		});
 	}
@@ -574,11 +554,8 @@ class MyApp extends PolymerElement {
 			case 'home':
 				import('./my-home.js');
 				break;
-			case 'projects':
-				import('./my-projects.js');
-				break;
-			case 'blog':
-				import('./my-blog.js');
+			case 'collections':
+				import('./my-collections.js');
 				break;
 			case 'about':
 				import('./my-about.js');

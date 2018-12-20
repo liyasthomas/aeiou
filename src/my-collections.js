@@ -5,7 +5,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyProjects extends PolymerElement {
+class MyCollections extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -74,9 +74,9 @@ class MyProjects extends PolymerElement {
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<div class="banner flexchild flex-vertical">
-				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/projects/banner.svg"  alt="Banner"></iron-image>
+				<iron-image class="bg" preload fade sizing="contain" src="../images/assets/collections/banner.svg"  alt="Banner"></iron-image>
 			</div>
-			<iron-ajax auto url="../data/projects_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/collections_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -131,7 +131,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -176,7 +176,7 @@ class MyProjects extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{others.link}}">
-						<paper-button class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} projects<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -215,4 +215,4 @@ class MyProjects extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-projects', MyProjects);
+window.customElements.define('my-collections', MyCollections);
