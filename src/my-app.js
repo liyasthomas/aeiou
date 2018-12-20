@@ -73,7 +73,7 @@ class MyApp extends PolymerElement {
 				}
 				app-drawer {
 					--app-drawer-scrim-background: rgba(0,0,0,.4);
-					font-weight: 900;
+					font-weight: 600;
 					color: var(--secondary-text-color);
 					--app-drawer-content-container: {
 						@apply --shadow-elevation-12dp;
@@ -85,7 +85,7 @@ class MyApp extends PolymerElement {
 					-webkit-overflow-scrolling: touch;
 				}
 				paper-icon-item {
-					font-weight: 900;
+					font-weight: 600;
 					font-size: 16px;
 				}
 				span.expand {
@@ -115,14 +115,14 @@ class MyApp extends PolymerElement {
 					padding: 0;
 				}
 				[main-title] {
-					font-size: 24px;
+					font-size: 32px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 900;
 					margin-left: 16px;
 				}
 				.logo {
-        	font-family: "Nunito Sans", "Roboto", "Noto", sans-serif;
+        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
 				}
 				paper-tabs {
 					height: 100%;
@@ -133,10 +133,11 @@ class MyApp extends PolymerElement {
 					}
 				}
 				paper-tab {
+        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
-					font-size: 16px;
-					font-weight: 900;
+					font-size: 18px;
+					font-weight: 600;
 					padding: 0 16px;
 				}
 				paper-tab a {
@@ -189,6 +190,18 @@ class MyApp extends PolymerElement {
 					}
 					#sharehome {
 						max-width: none;
+					}
+					paper-tabs {
+						width: 100%;
+					}
+					paper-tab span {
+						display: none;
+					}
+					[main-title] {
+						text-align: center;
+					}
+					[sticky] {
+						padding: 0;
 					}
 				}
       </style>
@@ -350,7 +363,7 @@ class MyApp extends PolymerElement {
 							</template>
             </app-toolbar>
             <app-toolbar sticky>
-							<paper-tabs selected="[[page]]" attr-for-selected="id" autoselect sticky$="{{!wideLayout}}">
+							<paper-tabs selected="[[page]]" attr-for-selected="id" no-bar autoselect>
 								<paper-tab id="home">
 									<a href="[[rootPath]]" tabindex="-1">
 										<iron-icon icon="my-icons:home"></iron-icon>
