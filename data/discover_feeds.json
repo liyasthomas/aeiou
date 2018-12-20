@@ -1,7 +1,7 @@
 {
 	"web": [
 		{
-			"title": "Collections",
+			"title": "Discover",
 			"icon": "language",
 			"color": "light-blue",
 			"link": "web",
@@ -74,7 +74,7 @@
 	],
 	"others": [
 		{
-			"title": "Discover",
+			"title": "Collections",
 			"icon": "group",
 			"color": "indigo",
 			"link": "others",

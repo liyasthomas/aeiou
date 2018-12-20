@@ -336,7 +336,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--paper-pink-a400);
 			}
 			.yellow-fg {
-				color: var(--paper-yellow-a700);
+				color: var(--paper-yellow-a400);
 			}
 			.cyan-fg {
 				color: var(--paper-cyan-a400);

@@ -5,7 +5,7 @@ import {
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 
-class MyHome extends PolymerElement {
+class MyDiscover extends PolymerElement {
 	static get template() {
 		return html `
       <style include="app-grid-style">
@@ -55,7 +55,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 20vw;
+						--app-grid-item-height: 25vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -73,7 +73,7 @@ class MyHome extends PolymerElement {
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			<iron-ajax auto url="../data/discover_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
 			<template is="dom-if" if="{{loading0}}">
 				<div class$="[[getUIType(UI)]] actions flex-center-center" hidden$="[[!loading0]]">
@@ -87,54 +87,10 @@ class MyHome extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
+			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{recent.title}}
-					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-				<div class$="[[getUIType(UI)]] app-grid">
-					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon">{{sub.info}}</paper-icon-button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{recent.link}}">
-						<paper-button class$="[[_computeBgClass(recent.color)]]" aria-label="View all">View all collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
-					<div class="title">
-						{{popular.title}}
+						<iron-icon class$="[[_computeFgClass(web.color)]] big" icon="my-icons:{{web.icon}}"></iron-icon>{{web.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -144,7 +100,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
+					<template is="dom-repeat" items="[[web.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -171,15 +127,15 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{popular.link}}">
-						<paper-button class$="[[_computeBgClass(popular.color)]]" aria-label="View all">Discover more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<a href="{{web.link}}">
+						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">View all {{web.title}} discover<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.activity]]" as="activity">
+			<template is="dom-repeat" items="[[ajaxResponse0.others]]" as="others">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{activity.title}}
+						<iron-icon class$="[[_computeFgClass(others.color)]] big" icon="my-icons:{{others.icon}}"></iron-icon>{{others.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -189,7 +145,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[activity.sub]]" as="sub">
+					<template is="dom-repeat" items="[[others.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -216,8 +172,8 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{activity.link}}">
-						<paper-button class$="[[_computeBgClass(activity.color)]]" aria-label="View all">View all activity<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+					<a href="{{others.link}}">
+						<paper-button class$="[[_computeBgClass(others.color)]]" aria-label="View all">View all {{others.title}} discover<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
@@ -256,4 +212,4 @@ class MyHome extends PolymerElement {
 	}
 }
 
-window.customElements.define('my-home', MyHome);
+window.customElements.define('my-discover', MyDiscover);
