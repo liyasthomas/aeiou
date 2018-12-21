@@ -19,7 +19,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: auto;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -30,7 +30,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: auto;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -41,7 +41,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: auto;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -55,7 +55,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 20vw;
+						--app-grid-item-height: auto;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -143,7 +143,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid">
 					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
@@ -188,7 +188,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
+				<div class$="[[getUIType(UI)]] app-grid">
 					<template is="dom-repeat" items="[[activity.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">

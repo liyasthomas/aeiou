@@ -39,7 +39,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			h2,
 			h3,
 			h4 {
-				font-weight: 600;
+				font-weight: 700;
 				margin: 0;
 			}
 			.listbox {
@@ -72,15 +72,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 				border-radius: 32px;
 			}
-			paper-button.secondary {
-				background-color: #fff;
-				color: var(--secondary-text-color);
+			paper-button.primary {
+				background-color: var(--accent-color);
+				color: #fff;
 				--paper-button-raised-keyboard-focus: {
-					color: var(--accent-color);
+					background-color: var(--dark-accent-color);
 				};
 			}
-			paper-button.secondary:hover {
-				color: var(--accent-color);
+			paper-button.primary:hover {
+				background-color: var(--dark-accent-color);
 			}
 			paper-button iron-icon {
 				margin-left: 8px;
