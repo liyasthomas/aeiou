@@ -66,7 +66,7 @@ class MyNew extends PolymerElement {
 					};
 				}
       </style>
-			<paper-tabs selected="{{selected}}" attr-for-selected="name" no-bar fit-container>
+			<paper-tabs selected="{{selected}}" attr-for-selected="name" no-bar>
 				<paper-tab name="markerbased">Marker based</paper-tab>
 				<paper-tab name="markerless">Marker less</paper-tab>
 			</paper-tabs>
@@ -100,12 +100,9 @@ class MyNew extends PolymerElement {
 						</h1>
 					</div>
 					<div class="actions flex-center-center">
-						<a href="/">
+						<a href="{{selectedThis}}/{{selectedThat}}">
 							<paper-button class="primary" aria-label="Next">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 						</a>
-					</div>
-					<div class="actions flex-center-center">
-						{{selectedThis}} {{selectedThat}}
 					</div>
 				</div>
 				<div name="markerless">

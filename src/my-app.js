@@ -73,6 +73,9 @@ class MyApp extends PolymerElement {
 				:host(:not([page=home])) .leftItem {
 					display: block;
 				}
+				:host([page=new]) #fab {
+					display: none;
+				}
 				span.expand {
 					width: calc(100% - 80px);
 				}

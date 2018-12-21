@@ -82,6 +82,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-button.primary:hover {
 				background-color: var(--dark-accent-color);
 			}
+			a[disabled] {
+				pointer-events: none;
+			}
+			paper-button[disabled] {
+				pointer-events: none;
+				color: white;
+				background-color: #b2b2b2;
+			}
 			paper-button iron-icon {
 				margin-left: 8px;
 			}
