@@ -233,10 +233,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			@media (max-width: 640px) {
 				.title {
-					font-size: 24px;
+					font-size: 28px;
 				}
 				.description {
-					font-size: 20px;
+					font-size: 22px;
 				}
 				.grid {
 					width: 100%;

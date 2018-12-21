@@ -68,6 +68,13 @@ class MyApp extends PolymerElement {
 				[hidden] {
 					display: none !important;
 				}
+				.leftItem {
+					display: none;
+					text-transform: capitalize;
+				}
+				:host(:not([page=home])) .leftItem {
+					display: block;
+				}
 				span.expand {
 					width: calc(100% - 80px);
 				}
@@ -96,6 +103,13 @@ class MyApp extends PolymerElement {
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 900;
+					margin-left: 16px;
+				}
+				[condensed-title] {
+					font-size: 24px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					font-weight: 700;
 					margin-left: 16px;
 				}
 				.logo {
@@ -152,11 +166,6 @@ class MyApp extends PolymerElement {
 					background-color: #fff !important;
 					color: var(--secondary-text-color);
 				}
-				footer {
-					padding: 32px;
-					text-align: center;
-					color: var(--secondary-text-color);
-				}
 				@media (max-width: 640px) {
 					paper-toast {
 						max-width: none;
@@ -174,6 +183,12 @@ class MyApp extends PolymerElement {
 					[sticky] {
 						padding: 0;
 					}
+					.rightItem {
+						display: none;
+					}
+					:host([page=home]) .rightItem {
+						display: block;
+					}
 				}
       </style>
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -181,9 +196,7 @@ class MyApp extends PolymerElement {
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<paper-toast id="updateToast" duration="0" text="New update is here!">
-				<paper-button class="primary" onclick="window.location.reload(true)" aria-label="Update">Update</paper-button>
-			</paper-toast>
+			<paper-toast id="updateToast" duration="3000" text="App cahed. Browse offline!"></paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
@@ -212,7 +225,9 @@ class MyApp extends PolymerElement {
 			<app-header-layout>
 				<app-header id="toolbar" class="toolbar" slot="header" fixed condenses reveals effects="waterfall">
 					<app-toolbar>
-						<div main-title><span class="logo">A E I O U</span></div>
+						<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
+						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
+						<div main-title class="rightItem"><span class="logo">AEIOU</span></div>
 						<a href="404"><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
 						<a href="404"><paper-icon-button icon="my-icons:face" aria-label="Create new"></paper-icon-button></a>
 						<a href="404"><paper-icon-button icon="my-icons:settings" aria-label="Create new"></paper-icon-button></a>
@@ -262,9 +277,6 @@ class MyApp extends PolymerElement {
 					<my-404 name="404"></my-404>
 				</iron-pages>
 				<a href="new"><paper-fab id="fab" icon="my-icons:create" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
-				<footer>
-					<iron-icon class="red-fg" icon="my-icons:favorite"></iron-icon>
-				</footer>
 			</app-header-layout>
     `;
 	}
@@ -391,7 +403,7 @@ class MyApp extends PolymerElement {
 		}
 
 		// Change page title
-		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · A E I O U';
+		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · AEIOU';
 
 		// Animations
 		this.$.pages.animate({
