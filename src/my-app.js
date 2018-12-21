@@ -20,8 +20,6 @@ import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
-import '@polymer/paper-listbox/paper-listbox.js';
-import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
@@ -269,7 +267,7 @@ class MyApp extends PolymerElement {
 					<my-collections name="collections"></my-collections>
 					<my-discover name="discover"></my-discover>
 					<my-activity name="activity"></my-activity>
-					<my-web name="web"></my-web>
+					<my-new name="new"></my-new>
 					<my-others name="others"></my-others>
 					<my-wallpapers name="wallpapers"></my-wallpapers>
 					<my-feedie name="feedie"></my-feedie>
@@ -396,7 +394,7 @@ class MyApp extends PolymerElement {
 		// Show 'home' in that case. And if the page doesn't exist, show '404'.
 		if (!page) {
 			this.page = 'home';
-		} else if (['home', 'collections', 'discover', 'activity', 'web', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
+		} else if (['home', 'collections', 'discover', 'activity', 'new', 'others', 'wallpapers', 'feedie', 'view4'].indexOf(page) !== -1) {
 			this.page = page;
 		} else {
 			this.page = '404';
@@ -439,8 +437,8 @@ class MyApp extends PolymerElement {
 			case 'activity':
 				import('./my-activity.js');
 				break;
-			case 'web':
-				import('./my-web.js');
+			case 'new':
+				import('./my-new.js');
 				break;
 			case 'others':
 				import('./my-others.js');
