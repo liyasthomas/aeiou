@@ -49,18 +49,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-icon-item {
         font-family: "Prompt", "Roboto", "Noto", sans-serif;
 				font-weight: 600;
+				cursor: pointer;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
-			}
-			paper-icon-button.link {
-				margin: 4px;
-			}
-			paper-icon-button.link {
-				color: var(--secondary-text-color);
-			}
-			paper-icon-button.link:hover {
-				color: var(--secondary-text-color);
 			}
 			paper-button {
         font-family: "Prompt", "Roboto", "Noto", sans-serif;
@@ -127,9 +119,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.actions {
 				@apply --layout-horizontal;
 				padding: 32px;
-			}
-			.actions:nth-child(even) {
-				margin-bottom: 16px;
 			}
 			.actions .title,
 			.content .title {

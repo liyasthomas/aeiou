@@ -21,6 +21,7 @@ class MyNew extends PolymerElement {
 					}
 					--demo-snippet-code: {
 //						background-color: #232323;
+						padding: 16px;
 					}
 					--demo-snippet: {
 						box-shadow: none;
@@ -55,7 +56,6 @@ class MyNew extends PolymerElement {
 				}
 				h1 {
 					font-size: 48px;
-					color: var(--secondary-text-color);
 					text-align: center;
 				}
 				paper-dropdown-menu {
@@ -121,7 +121,7 @@ class MyNew extends PolymerElement {
 						<div class="grid actions flex-center-center">
 							<demo-snippet>
 									<template preserve-content>
-<h2>Demo using A-Frame and AR.js</h2>
+<h3>Demo using A-Frame and AR.js</h3>
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 <a-scene embedded arjs>

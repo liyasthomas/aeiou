@@ -78,12 +78,6 @@ class MyApp extends PolymerElement {
 				:host([page=new]) #fab {
 					display: none;
 				}
-				span.expand {
-					width: calc(100% - 80px);
-				}
-				.category {
-					border-top: 1px solid var(--paper-grey-100);
-				}
 				#home.iron-selected, #collections.iron-selected, #discover.iron-selected, #activity.iron-selected {
 					color: #fff;
 				}
@@ -94,10 +88,16 @@ class MyApp extends PolymerElement {
 						box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
 					};
 				}
+				app-toolbar {
+					padding: 0 8px;
+				}
 				app-toolbar paper-icon-button {
 					margin: 0 4px;
 				}
 				app-toolbar paper-menu-button {
+					padding: 0;
+				}
+				[sticky] {
 					padding: 0;
 				}
 				[main-title] {
@@ -112,10 +112,7 @@ class MyApp extends PolymerElement {
 					overflow: hidden;
 					text-overflow: ellipsis;
 					font-weight: 700;
-					margin-left: 16px;
-				}
-				.logo {
-        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
+					margin-left: 8px;
 				}
 				paper-tabs {
 					height: 100%;
@@ -182,9 +179,6 @@ class MyApp extends PolymerElement {
 					paper-tab span {
 						display: none;
 					}
-					[sticky] {
-						padding: 0;
-					}
 					.rightItem {
 						display: none;
 					}
@@ -229,9 +223,9 @@ class MyApp extends PolymerElement {
 					<app-toolbar>
 						<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
 						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
-						<div main-title class="rightItem"><span class="logo">AEIOU</span></div>
-						<a href="404"><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
-						<paper-menu-button vertical-align="top" horizontal-align="right">
+						<div main-title class="rightItem">AEIOU</div>
+						<a href=""><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
+						<paper-menu-button vertical-align="top" horizontal-align="right" horizontal-offset="0">
 							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox class="listbox" slot="dropdown-content">
 								<a href="">
@@ -248,17 +242,17 @@ class MyApp extends PolymerElement {
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<a href="">
-									<paper-icon-item>
-										<iron-icon icon="my-icons:help-outline" slot="item-icon"></iron-icon>
-										<span>Help</span>
-										<paper-ripple></paper-ripple>
-									</paper-icon-item>
-								</a>
 								<a href="#" onclick="return false;">
 									<paper-icon-item on-tap="openShare">
 										<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
 										<span>Share</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+								<a href="">
+									<paper-icon-item>
+										<iron-icon icon="my-icons:help-outline" slot="item-icon"></iron-icon>
+										<span>Help</span>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
@@ -269,7 +263,7 @@ class MyApp extends PolymerElement {
 						</template>
 					</app-toolbar>
 					<app-toolbar sticky>
-						<paper-tabs selected="[[page]]" attr-for-selected="id" no-bar autoselect>
+						<paper-tabs selected="[[page]]" attr-for-selected="id" no-bar autoselect on-click="scrollTop">
 							<paper-tab id="home">
 								<a href="[[rootPath]]" tabindex="-1">
 									<iron-icon icon="my-icons:filter-vintage"></iron-icon>
@@ -309,7 +303,7 @@ class MyApp extends PolymerElement {
 					<my-view4 name="view4"></my-view4>
 					<my-404 name="404"></my-404>
 				</iron-pages>
-				<a href="new"><paper-fab id="fab" icon="my-icons:create" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
+				<a href="new"><paper-fab id="fab" icon="my-icons:add" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
 			</app-header-layout>
     `;
 	}
