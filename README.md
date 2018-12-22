@@ -2,7 +2,7 @@
 When I wrote this, only God and I understood what I was doing. Now, only God knows.
 ```
 <div align="center">
-  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
+  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
   <br>
   <h1>Liyas Thomas</h1>
   <sub>Built with ❤︎ by
@@ -15,7 +15,7 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 [![Build Status](https://travis-ci.org/liyasthomas/aeiou.svg?branch=master)](https://travis-ci.org/liyasthomas/aeiou) [![GitHub release](https://img.shields.io/github/release/liyasthomas/aeiou/all.svg)](https://github.com/liyasthomas/aeiou/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/aeiou/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/assets/images/manifest/icon-48x48.png" alt="AEIOU" width="32"> AEIOU
+# <img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/images/manifest/icon-48x48.png" alt="AEIOU" width="32"> AEIOU
 
 ### Web platform to make augmented reality fun & interactive! by [Liyas Thomas](https://github.com/liyasthomas)
 

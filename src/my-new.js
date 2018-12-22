@@ -117,7 +117,7 @@ class MyNew extends PolymerElement {
 					</div>
 					<div class="actions flex-center-center">
 						<a href="{{selectedThis}}/{{selectedThat}}"><paper-button class="primary" aria-label="Next">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
-						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">View code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
+						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 						<div class="grid actions flex-center-center">
@@ -156,6 +156,10 @@ class MyNew extends PolymerElement {
 				reflectToAttribute: true
 			}
 		};
+	}
+
+	_getText(opened) {
+		return opened ? 'Hide' : 'View';
 	}
 
 	_getIcon(opened) {
