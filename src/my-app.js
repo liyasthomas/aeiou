@@ -16,7 +16,6 @@ import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-ajax/iron-ajax.js';
-import '@polymer/iron-collapse/iron-collapse.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
@@ -81,10 +80,6 @@ class MyApp extends PolymerElement {
 				}
 				.category {
 					border-top: 1px solid var(--paper-grey-100);
-				}
-				iron-collapse {
-					border-bottom: 1px solid var(--paper-grey-100);
-					background-color: var(--paper-grey-50);
 				}
 				#home.iron-selected, #collections.iron-selected, #discover.iron-selected, #activity.iron-selected {
 					color: #fff;
@@ -357,10 +352,6 @@ class MyApp extends PolymerElement {
 
 	update(worker) {
 		this.$.updateToast.show();
-	}
-
-	toggle() {
-		this.$.collapse.toggle();
 	}
 
 	openShare() {

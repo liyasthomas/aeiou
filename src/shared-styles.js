@@ -110,7 +110,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 			}
 			.flex-center-center {
-				@apply --layout-horizontal;
+				@apply --layout-vertical;
 				@apply --layout-center-center;
 			}
 			.flex-end-align {
@@ -251,6 +251,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 				.list .item {
 					--app-grid-item-height: 100vw;
+				}
+				.actions, .content {
+					padding: 16px;
 				}
 			}
 			.white-bg {
