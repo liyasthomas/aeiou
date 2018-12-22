@@ -15,7 +15,7 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 [![Build Status](https://travis-ci.org/liyasthomas/aeiou.svg?branch=master)](https://travis-ci.org/liyasthomas/aeiou) [![GitHub release](https://img.shields.io/github/release/liyasthomas/aeiou/all.svg)](https://github.com/liyasthomas/aeiou/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/aeiou/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/assets/images/favicon.png" alt="AEIOU" width="32"> AEIOU
+# <img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/assets/images/manifest/icon-48x48.png" alt="AEIOU" width="32"> AEIOU
 
 ### Web platform to make augmented reality fun & interactive! by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -57,13 +57,6 @@ What things you need to install the software and how to install them.
 * Internet connection
 * A web browser
 * [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
-
-<div align="center">
-  <br>
-  <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="AEIOU" width="100%">
-  <br>
-  <br>
-</div>
 
 ### Demo: Try it on mobile :iphone:
 
