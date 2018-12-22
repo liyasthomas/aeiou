@@ -20,6 +20,7 @@ import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-menu-button/paper-menu-button.js';
+import '@polymer/paper-listbox/paper-listbox.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
@@ -248,18 +249,22 @@ class MyApp extends PolymerElement {
 								</a>
 								<a href="">
 									<paper-icon-item>
-										<iron-icon icon="my-icons:help" slot="item-icon"></iron-icon>
+										<iron-icon icon="my-icons:help-outline" slot="item-icon"></iron-icon>
 										<span>Help</span>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<paper-icon-item on-tap="openShare" >
-									<iron-icon icon="my-icons:help" slot="item-icon"></iron-icon>
-									<span>Help</span>
-									<paper-ripple></paper-ripple>
-								</paper-icon-item>
+								<a href="#" onclick="return false;">
+									<paper-icon-item on-tap="openShare">
+										<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
+										<span>Share</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
 							</paper-listbox>
 						</paper-menu-button>
+
+
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>

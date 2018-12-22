@@ -44,11 +44,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.listbox {
 				background: none;
-				color: inherit;
 			}
 			paper-item,
 			paper-icon-item {
         font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-weight: 600;
 				--paper-item-focused-before: {
 					opacity: 0;
 				};

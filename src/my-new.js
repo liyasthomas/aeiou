@@ -94,7 +94,7 @@ class MyNew extends PolymerElement {
 							<div>
 								<paper-dropdown-menu label="this" no-label-float>
 									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThis}}">
-										<paper-icon-item id="browsethis"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Custom marker<paper-ripple></paper-ripple></paper-icon-item>
+										<paper-icon-item id="browsethis"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Custom&nbsp;marker<paper-ripple></paper-ripple></paper-icon-item>
 										<paper-icon-item id="marker1"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #1<paper-ripple></paper-ripple></paper-icon-item>
 										<paper-icon-item id="marker2"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #2<paper-ripple></paper-ripple></paper-icon-item>
 										<paper-icon-item id="marker3"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #3<paper-ripple></paper-ripple></paper-icon-item>
