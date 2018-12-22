@@ -19,6 +19,7 @@ import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
@@ -93,6 +94,9 @@ class MyApp extends PolymerElement {
 				}
 				app-toolbar paper-icon-button {
 					margin: 0 4px;
+				}
+				app-toolbar paper-menu-button {
+					padding: 0;
 				}
 				[main-title] {
 					font-size: 32px;
@@ -225,8 +229,37 @@ class MyApp extends PolymerElement {
 						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
 						<div main-title class="rightItem"><span class="logo">AEIOU</span></div>
 						<a href="404"><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
-						<a href="404"><paper-icon-button icon="my-icons:face" aria-label="Create new"></paper-icon-button></a>
-						<a href="404"><paper-icon-button icon="my-icons:settings" aria-label="Create new"></paper-icon-button></a>
+						<paper-menu-button vertical-align="top" horizontal-align="right">
+							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox class="listbox" slot="dropdown-content">
+								<a href="">
+									<paper-icon-item>
+										<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
+										<span>Profile</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+								<a href="">
+									<paper-icon-item>
+										<iron-icon icon="my-icons:settings" slot="item-icon"></iron-icon>
+										<span>Settings</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+								<a href="">
+									<paper-icon-item>
+										<iron-icon icon="my-icons:help" slot="item-icon"></iron-icon>
+										<span>Help</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+								<paper-icon-item on-tap="openShare" >
+									<iron-icon icon="my-icons:help" slot="item-icon"></iron-icon>
+									<span>Help</span>
+									<paper-ripple></paper-ripple>
+								</paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>
