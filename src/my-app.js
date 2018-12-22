@@ -21,6 +21,7 @@ import '@polymer/paper-toast/paper-toast.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/paper-listbox/paper-listbox.js';
+import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-tabs/paper-tabs.js';
@@ -263,8 +264,6 @@ class MyApp extends PolymerElement {
 								</a>
 							</paper-listbox>
 						</paper-menu-button>
-
-
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>

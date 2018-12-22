@@ -4,8 +4,6 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
-import '@polymer/paper-listbox/paper-listbox.js';
-import '@polymer/paper-item/paper-icon-item.js';
 import '@polymer/iron-demo-helpers/demo-snippet.js';
 import '@polymer/iron-collapse/iron-collapse.js';
 
