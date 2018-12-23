@@ -8,84 +8,84 @@
 			"sub": [
 				{
 					"color": "purple",
-					"title": "Students",
+					"title": "Alphabets",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
 				{
 					"color": "red",
-					"title": "Artist",
+					"title": "Animals",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				},
 				{
 					"color": "pink",
-					"title": "Teachers",
+					"title": "Automobile",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
 				{
 					"color": "orange",
-					"title": "Doctors",
+					"title": "Biology",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
 					"color": "cyan",
-					"title": "E-commerce",
+					"title": "Chemistry",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
 				},
 				{
 					"color": "green",
-					"title": "Devs",
+					"title": "Electronics",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
 				{
 					"color": "yellow",
-					"title": "Creative",
+					"title": "Entertainment",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
 				},
 				{
 					"color": "blue",
-					"title": "Navigate",
+					"title": "Movie",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
 					"color": "teal",
-					"title": "Identify",
+					"title": "Geography",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
 				{
 					"color": "indigo",
@@ -94,7 +94,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/measure.html"
 				}
 			]
 		}
@@ -122,7 +122,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				},
 				{
 					"color": "green",
@@ -131,7 +131,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				},
 				{
 					"color": "yellow",
@@ -140,7 +140,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				},
 				{
 					"color": "blue",
@@ -149,7 +149,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				},
 				{
 					"color": "teal",
@@ -158,7 +158,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				},
 				{
 					"color": "orange",
@@ -249,7 +249,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				}
 			]
 		}

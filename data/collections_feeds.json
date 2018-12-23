@@ -7,67 +7,94 @@
 			"link": "web",
 			"sub": [
 				{
-					"color": "teal",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
+					"color": "purple",
+					"title": "Alphabets",
+					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "konnect"
+					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
 				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
+					"color": "red",
+					"title": "Animals",
+					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "aeiou"
-				},
-				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "lvr"
-				},
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "materialthings"
-				},
-				{
-					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "feedie"
-				},
-				{
-					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "snake"
+					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				},
 				{
 					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
+					"title": "Automobile",
+					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
-					"link": "ily"
+					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
+				},
+				{
+					"color": "orange",
+					"title": "Biology",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "cyan",
+					"title": "Chemistry",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
+				},
+				{
+					"color": "green",
+					"title": "Electronics",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
+				},
+				{
+					"color": "yellow",
+					"title": "Entertainment",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
+				},
+				{
+					"color": "blue",
+					"title": "Movie",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
+				},
+				{
+					"color": "teal",
+					"title": "Geography",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
+				},
+				{
+					"color": "indigo",
+					"title": "Measure",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/measure.html"
 				}
 			]
 		}

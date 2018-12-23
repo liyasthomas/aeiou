@@ -6,14 +6,54 @@
 			"link": "this",
 			"sub": [
 				{
-					"title": "Lvr",
-					"icon": "visibility",
-					"link": "lvr"
+					"title": "Barcode #1",
+					"icon": "center-focus-strong",
+					"link": "barcode1"
 				},
 				{
-					"title": "Feedie",
-					"icon": "star",
-					"link": "feedie"
+					"title": "Barcode #2",
+					"icon": "center-focus-strong",
+					"link": "barcode2"
+				},
+				{
+					"title": "Barcode #3",
+					"icon": "center-focus-strong",
+					"link": "barcode3"
+				},
+				{
+					"title": "Barcode #4",
+					"icon": "center-focus-strong",
+					"link": "barcode4"
+				},
+				{
+					"title": "Barcode #5",
+					"icon": "center-focus-strong",
+					"link": "barcode5"
+				},
+				{
+					"title": "Barcode #6",
+					"icon": "center-focus-strong",
+					"link": "barcode6"
+				},
+				{
+					"title": "Barcode #7",
+					"icon": "center-focus-strong",
+					"link": "barcode7"
+				},
+				{
+					"title": "Barcode #8",
+					"icon": "center-focus-strong",
+					"link": "barcode8"
+				},
+				{
+					"title": "Barcode #9",
+					"icon": "center-focus-strong",
+					"link": "barcode9"
+				},
+				{
+					"title": "Barcode #10",
+					"icon": "center-focus-strong",
+					"link": "barcode10"
 				}
 			]
 		}
@@ -25,12 +65,42 @@
 			"link": "that",
 			"sub": [
 				{
-					"title": "Wallpapers",
+					"title": "Alphabet A",
 					"icon": "wallpaper",
 					"link": "wallpapers"
 				},
 				{
-					"title": "Fuse Org",
+					"title": "Cat",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "Car",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "Skeleton",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "H2O",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "Motherboard",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "Spiderman",
+					"icon": "open-in-new",
+					"link": "fuseorg"
+				},
+				{
+					"title": "Earth",
 					"icon": "open-in-new",
 					"link": "fuseorg"
 				}
