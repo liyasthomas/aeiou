@@ -1,9 +1,9 @@
 {
-	"web": [
+	"this": [
 		{
-			"title": "Web",
-			"icon": "language",
-			"link": "web",
+			"title": "this",
+			"icon": "open-in-new",
+			"link": "this",
 			"sub": [
 				{
 					"title": "Lvr",
@@ -18,11 +18,11 @@
 			]
 		}
 	],
-	"others": [
+	"that": [
 		{
-			"title": "Others",
-			"icon": "group",
-			"link": "others",
+			"title": "that",
+			"icon": "open-in-new",
+			"link": "that",
 			"sub": [
 				{
 					"title": "Wallpapers",
@@ -31,7 +31,7 @@
 				},
 				{
 					"title": "Fuse Org",
-					"icon": "group",
+					"icon": "open-in-new",
 					"link": "fuseorg"
 				}
 			]

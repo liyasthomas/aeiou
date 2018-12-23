@@ -57,7 +57,7 @@
 	"section2": [
 		{
 			"title": "prototyping",
-			"icon": "language",
+			"icon": "open-in-new",
 			"color": "red",
 			"link": "https://github.com/liyasthomas/feedie",
 			"sub": [
@@ -167,7 +167,7 @@
 	"similar": [
 		{
 			"title": "similar",
-			"icon": "group",
+			"icon": "open-in-new",
 			"color": "blue-grey",
 			"link": "projects",
 			"sub": [
@@ -177,7 +177,7 @@
 					"description": "Developers community",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "group",
+					"icon": "open-in-new",
 					"link": "fuseorg"
 				},
 				{

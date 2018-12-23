@@ -2,7 +2,7 @@
 	"web": [
 		{
 			"title": "Discover",
-			"icon": "language",
+			"icon": "open-in-new",
 			"color": "light-blue",
 			"link": "web",
 			"sub": [
@@ -12,7 +12,7 @@
 					"description": "Intranet for NCERC",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "language",
+					"icon": "open-in-new",
 					"link": "konnect"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "lvr"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Reusable Material Design components",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "materialthings"
 				},
 				{
@@ -48,7 +48,7 @@
 					"description": "Faculty feedback system",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "feedie"
 				},
 				{
@@ -57,7 +57,7 @@
 					"description": "Snakes! Snakes everywhere!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "snake"
 				},
 				{
@@ -66,7 +66,7 @@
 					"description": "Sharing is better than getting Likes",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "ily"
 				}
 			]
@@ -75,7 +75,7 @@
 	"others": [
 		{
 			"title": "Collections",
-			"icon": "group",
+			"icon": "open-in-new",
 			"color": "indigo",
 			"link": "others",
 			"sub": [
@@ -94,7 +94,7 @@
 					"description": "Developers community",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "group",
+					"icon": "open-in-new",
 					"link": "fuseorg"
 				}
 			]

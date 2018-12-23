@@ -2,7 +2,7 @@
 	"others": [
 		{
 			"title": "others",
-			"icon": "group",
+			"icon": "open-in-new",
 			"color": "indigo",
 			"link": "projects",
 			"sub": [
@@ -21,7 +21,7 @@
 					"description": "Developers community",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "group",
+					"icon": "open-in-new",
 					"link": "fuseorg"
 				}
 			]
@@ -40,7 +40,7 @@
 					"description": "Faculty feedback system",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "feedie"
 				},
 				{
@@ -49,7 +49,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "lvr"
 				}
 			]

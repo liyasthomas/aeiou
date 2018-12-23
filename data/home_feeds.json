@@ -12,7 +12,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -48,7 +48,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -57,7 +57,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -66,7 +66,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -75,7 +75,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -84,7 +84,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -93,7 +93,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				}
 			]
@@ -112,7 +112,7 @@
 					"description": "Developers community",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "group",
+					"icon": "open-in-new",
 					"link": "fuseorg"
 				},
 				{
@@ -121,7 +121,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -130,7 +130,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -139,7 +139,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -148,7 +148,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -157,7 +157,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				},
 				{
@@ -166,7 +166,7 @@
 					"description": "Curated list of wallpapers",
 					"info": "View all",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "wallpaper",
+					"icon": "open-in-new",
 					"link": "wallpapers"
 				},
 				{
@@ -175,7 +175,7 @@
 					"description": "Doodles and drawings",
 					"info": "View all",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "create",
+					"icon": "open-in-new",
 					"link": "art"
 				},
 				{
@@ -184,7 +184,7 @@
 					"description": "A simple, clean note app",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "pineapplenotes"
 				},
 				{
@@ -193,7 +193,7 @@
 					"description": "Shoot em down!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "shooter"
 				}
 			]
@@ -212,7 +212,7 @@
 					"description": "Intranet for NCERC",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "language",
+					"icon": "open-in-new",
 					"link": "konnect"
 				},
 				{
@@ -221,7 +221,7 @@
 					"description": "Faculty feedback system",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "feedie"
 				},
 				{
@@ -230,7 +230,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "lvr"
 				},
 				{
@@ -239,7 +239,7 @@
 					"description": "Sharing is better than getting Likes",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "ily"
 				},
 				{
@@ -248,7 +248,7 @@
 					"description": "Augmented Reality platform to make education fun and interactive",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "arrow-forward",
+					"icon": "open-in-new",
 					"link": "aeiou"
 				}
 			]
