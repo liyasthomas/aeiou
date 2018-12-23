@@ -225,7 +225,7 @@ class MyApp extends PolymerElement {
 						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
 						<div main-title class="rightItem">AEIOU</div>
 						<a href=""><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
-						<paper-menu-button vertical-align="top" horizontal-align="right" horizontal-offset="0">
+						<paper-menu-button horizontal-align="right">
 							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox class="listbox" slot="dropdown-content">
 								<a href="">

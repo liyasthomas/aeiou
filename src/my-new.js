@@ -60,7 +60,7 @@ class MyNew extends PolymerElement {
 				}
 				paper-dropdown-menu {
 					--paper-input-container-label: {
-        		font-family: "Prompt", "Roboto", "Noto", sans-serif;
+						font-family: "Prompt", "Roboto", "Noto", sans-serif;
 						color: var(--accent-color);
 						text-align: center;
 						font-weight: 700;
@@ -70,7 +70,7 @@ class MyNew extends PolymerElement {
 						@apply --layout-center-center;
 					};
 					--paper-input-container-input: {
-        		font-family: "Prompt", "Roboto", "Noto", sans-serif;
+						font-family: "Prompt", "Roboto", "Noto", sans-serif;
 						color: var(--accent-color);
 						text-align: center;
 						font-weight: 700;
@@ -107,9 +107,9 @@ class MyNew extends PolymerElement {
 								if
 								<div>
 									<paper-dropdown-menu label="{{this.title}}" no-label-float>
-										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThis}}">
+										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
 											<template is="dom-repeat" items="[[this.sub]]" as="sub">
-												<paper-icon-item id="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+												<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 											</template>
 										</paper-listbox>
 									</paper-dropdown-menu>
@@ -119,9 +119,9 @@ class MyNew extends PolymerElement {
 								then
 								<div>
 									<paper-dropdown-menu label="{{that.title}}" no-label-float>
-										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThat}}">
+										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
 											<template is="dom-repeat" items="[[that.sub]]" as="sub">
-												<paper-icon-item id="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+												<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 											</template>
 										</paper-listbox>
 									</paper-dropdown-menu>

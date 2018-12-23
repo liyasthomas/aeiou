@@ -47,7 +47,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-item,
 			paper-icon-item {
-        font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				white-space: nowrap;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-size: 18px;
 				font-weight: 600;
 				cursor: pointer;
 				--paper-item-focused-before: {
