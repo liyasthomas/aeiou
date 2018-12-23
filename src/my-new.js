@@ -81,36 +81,52 @@ class MyNew extends PolymerElement {
 					};
 				}
       </style>
+			<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+			</iron-ajax>
 			<paper-tabs selected="{{selected}}" attr-for-selected="name">
 				<paper-tab name="markerbased">Marker based</paper-tab>
 				<paper-tab name="markerless">Marker less</paper-tab>
 			</paper-tabs>
 			<iron-pages selected="{{selected}}" attr-for-selected="name">
 				<div name="markerbased">
+					<template is="dom-if" if="{{loading0}}">
+						<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
+							<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+						</div>
+					</template>
+					<template is="dom-if" if="{{error0}}">
+						<template is="dom-if" if="{{!loading0}}">
+							<div class="grid error">
+								<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+							</div>
+						</template>
+					</template>
 					<div class="actions flex-center-center">
-						<h1>if
-							<div>
-								<paper-dropdown-menu label="this" no-label-float>
-									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThis}}">
-										<paper-icon-item id="browsethis"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Custom&nbsp;marker<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="marker1"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #1<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="marker2"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #2<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="marker3"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #3<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="marker4"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Marker #4<paper-ripple></paper-ripple></paper-icon-item>
-									</paper-listbox>
-								</paper-dropdown-menu>
-							</div>
-							then
-							<div>
-								<paper-dropdown-menu id="that" label="that" no-label-float>
-									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThat}}">
-										<paper-icon-item id="browsethat"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Browse<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="plant"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Plant<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="pet"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Pet<paper-ripple></paper-ripple></paper-icon-item>
-										<paper-icon-item id="photo"><iron-icon icon="my-icons:star" slot="item-icon"></iron-icon>Photo<paper-ripple></paper-ripple></paper-icon-item>
-									</paper-listbox>
-								</paper-dropdown-menu>
-							</div>
+						<h1>
+							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
+								if
+								<div>
+									<paper-dropdown-menu label="{{this.title}}" no-label-float>
+										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThis}}">
+											<template is="dom-repeat" items="[[this.sub]]" as="sub">
+												<paper-icon-item id="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+											</template>
+										</paper-listbox>
+									</paper-dropdown-menu>
+								</div>
+							</template>
+							<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
+								then
+								<div>
+									<paper-dropdown-menu label="{{that.title}}" no-label-float>
+										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="id" selected="{{selectedThat}}">
+											<template is="dom-repeat" items="[[that.sub]]" as="sub">
+												<paper-icon-item id="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+											</template>
+										</paper-listbox>
+									</paper-dropdown-menu>
+								</div>
+							</template>
 						</h1>
 					</div>
 					<div class="actions flex-center-center">
@@ -120,7 +136,7 @@ class MyNew extends PolymerElement {
 					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 						<div class="grid actions flex-center-center">
 							<demo-snippet>
-									<template preserve-content>
+								<template preserve-content>
 <h3>Demo using A-Frame and AR.js</h3>
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
@@ -130,7 +146,7 @@ class MyNew extends PolymerElement {
 	</a-marker>
 <a-entity camera></a-entity>
 </a-scene>
-									</template>
+								</template>
 							</demo-snippet>
 						</div>
 					</iron-collapse>
@@ -154,6 +170,10 @@ class MyNew extends PolymerElement {
 				reflectToAttribute: true
 			}
 		};
+	}
+
+	tryAgain() {
+		this.$.ajax0.generateRequest();
 	}
 
 	_getText(opened) {
