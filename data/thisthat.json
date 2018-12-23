@@ -66,43 +66,43 @@
 			"sub": [
 				{
 					"title": "Alphabet A",
-					"icon": "wallpaper",
-					"link": "wallpapers"
+					"icon": "open-in-new",
+					"link": "none"
 				},
 				{
 					"title": "Cat",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "Car",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "Skeleton",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "H2O",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "Motherboard",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "Spiderman",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				},
 				{
 					"title": "Earth",
 					"icon": "open-in-new",
-					"link": "fuseorg"
+					"link": "none"
 				}
 			]
 		}
