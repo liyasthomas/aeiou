@@ -128,7 +128,7 @@ class MyDiscover extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{web.link}}">
-						<paper-button class$="[[_computeBgClass(web.color)]]" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="primary" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
