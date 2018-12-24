@@ -5,28 +5,35 @@ import {
 import './shared-styles.js';
 import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
 import '@polymer/iron-demo-helpers/demo-snippet.js';
+import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
 import '@polymer/iron-collapse/iron-collapse.js';
 
 class MyNew extends PolymerElement {
 	static get template() {
 		return html `
+      <style include="demo-pages-shared-styles"></style>
       <style include="shared-styles">
 				:host {
-          display: block;
+					display: block;
 					--paper-tabs-selection-bar-color: var(--accent-color);
 				}
 				demo-snippet {
 					--demo-snippet-demo: {
 //						display: none;
+						border-bottom: 2px dashed #b2b2b2;
 					}
 					--demo-snippet-code: {
-//						background-color: #232323;
+						-webkit-touch-callout: auto;
+						-webkit-user-select: all;
+						user-select: all;
+						max-height: 360px;
+//						background-color: #fff;
 						padding: 16px;
 					}
 					--demo-snippet: {
 						box-shadow: none;
 						overflow: auto;
-						border: 1px solid #e0e0e0;
+						border: 2px dashed #b2b2b2;
 						border-radius: 8px;
 					}
 				}
@@ -89,63 +96,81 @@ class MyNew extends PolymerElement {
 			</paper-tabs>
 			<iron-pages selected="{{selected}}" attr-for-selected="name">
 				<div name="markerbased">
-					<template is="dom-if" if="{{loading0}}">
-						<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
-							<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
-						</div>
-					</template>
-					<template is="dom-if" if="{{error0}}">
-						<template is="dom-if" if="{{!loading0}}">
-							<div class="grid error">
-								<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
-							</div>
-						</template>
-					</template>
-					<div class="actions flex-center-center">
+					<div class="content flex-center-center">
 						<h1>
-							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
-								if
-								<div>
-									<paper-dropdown-menu label="{{this.title}}" no-label-float>
-										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
-											<template is="dom-repeat" items="[[this.sub]]" as="sub">
-												<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
-											</template>
-										</paper-listbox>
-									</paper-dropdown-menu>
+							if
+						</h1>
+						<div>
+							<template is="dom-if" if="{{loading0}}">
+								<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
+									<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
 								</div>
+							</template>
+							<template is="dom-if" if="{{error0}}">
+								<template is="dom-if" if="{{!loading0}}">
+									<div class="grid error">
+										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+									</div>
+								</template>
+							</template>
+							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
+								<paper-dropdown-menu label="{{this.title}}" no-label-float>
+									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
+										<template is="dom-repeat" items="[[this.sub]]" as="sub">
+											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+										</template>
+									</paper-listbox>
+								</paper-dropdown-menu>
+								<paper-icon-button on-click="resetThis" icon="my-icons:refresh" aria-label="Reset"></paper-icon-button>
+							</template>
+						</div>
+						<h1>
+							then
+						</h1>
+						<div>
+							<template is="dom-if" if="{{loading0}}">
+								<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
+									<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+								</div>
+							</template>
+							<template is="dom-if" if="{{error0}}">
+								<template is="dom-if" if="{{!loading0}}">
+									<div class="grid error">
+										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+									</div>
+								</template>
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
-								then
-								<div>
-									<paper-dropdown-menu label="{{that.title}}" no-label-float>
-										<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
-											<template is="dom-repeat" items="[[that.sub]]" as="sub">
-												<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
-											</template>
-										</paper-listbox>
-									</paper-dropdown-menu>
-								</div>
+								<paper-dropdown-menu label="{{that.title}}" no-label-float>
+									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
+										<template is="dom-repeat" items="[[that.sub]]" as="sub">
+											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
+										</template>
+									</paper-listbox>
+								</paper-dropdown-menu>
+								<paper-icon-button on-click="resetThat" icon="my-icons:refresh" aria-label="Reset"></paper-icon-button>
 							</template>
-						</h1>
+						</div>
 					</div>
 					<div class="actions flex-center-center">
 						<a href="{{selectedThis}}/{{selectedThat}}"><paper-button class="primary" aria-label="Next">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
+					</div>
+					<div class="actions flex-center-center">
 						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 						<div class="grid actions flex-center-center">
 							<demo-snippet>
 								<template preserve-content>
-<h3>Demo using A-Frame and AR.js</h3>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
-<a-scene embedded arjs>
-	<a-marker preset="{{selectedThis}}/{{selectedThat}}">
-		<a-box position='0 0.5 0' material='color: black;'></a-box>
-	</a-marker>
-<a-entity camera></a-entity>
-</a-scene>
+									<h2>Demo using A-Frame and AR.js</h2>
+									<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+									<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+									<a-scene embedded arjs>
+										<a-marker preset="{{selectedThis}}/{{selectedThat}}">
+											<a-box position='0 0.5 0' material='color: black;'></a-box>
+										</a-marker>
+									<a-entity camera></a-entity>
+									</a-scene>
 								</template>
 							</demo-snippet>
 						</div>
@@ -170,6 +195,14 @@ class MyNew extends PolymerElement {
 				reflectToAttribute: true
 			}
 		};
+	}
+
+	resetThis() {
+		this.selectedThis = 0;
+	}
+
+	resetThat() {
+		this.selectedThat = 0;
 	}
 
 	tryAgain() {
