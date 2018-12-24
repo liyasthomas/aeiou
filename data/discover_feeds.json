@@ -1,10 +1,10 @@
 {
-	"web": [
+	"discover": [
 		{
 			"title": "Discover",
 			"icon": "open-in-new",
 			"color": "light-blue",
-			"link": "web",
+			"link": "discover",
 			"sub": [
 				{
 					"color": "teal",

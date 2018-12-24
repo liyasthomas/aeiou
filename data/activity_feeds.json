@@ -1,10 +1,10 @@
 {
-	"web": [
+	"activity": [
 		{
-			"title": "Collections",
+			"title": "Activity",
 			"icon": "open-in-new",
 			"color": "light-blue",
-			"link": "web",
+			"link": "activity",
 			"sub": [
 				{
 					"color": "teal",

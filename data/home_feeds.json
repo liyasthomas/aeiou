@@ -1,10 +1,10 @@
 {
-	"recent": [
+	"collections": [
 		{
 			"title": "Recommended for you",
 			"icon": "star",
 			"color": "orange",
-			"link": "blog",
+			"link": "collections",
 			"sub": [
 				{
 					"color": "purple",
@@ -50,61 +50,16 @@
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
-				},
-				{
-					"color": "green",
-					"title": "Electronics",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
-				},
-				{
-					"color": "yellow",
-					"title": "Entertainment",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
-				},
-				{
-					"color": "blue",
-					"title": "Movie",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
-				},
-				{
-					"color": "teal",
-					"title": "Geography",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
-				},
-				{
-					"color": "indigo",
-					"title": "Measure",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/measure.html"
 				}
 			]
 		}
 	],
-	"popular": [
+	"discover": [
 		{
 			"title": "Discover",
 			"icon": "whatshot",
 			"color": "red",
-			"link": "blog",
+			"link": "discover",
 			"sub": [
 				{
 					"color": "deep-purple",
@@ -168,33 +123,6 @@
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
 					"link": "wallpapers"
-				},
-				{
-					"color": "grey",
-					"title": "Art",
-					"description": "Doodles and drawings",
-					"info": "View all",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "art"
-				},
-				{
-					"color": "yellow",
-					"title": "Pineapple Notes",
-					"description": "A simple, clean note app",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "pineapplenotes"
-				},
-				{
-					"color": "black",
-					"title": "Shooter",
-					"description": "Shoot em down!",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "shooter"
 				}
 			]
 		}

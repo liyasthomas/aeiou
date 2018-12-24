@@ -99,12 +99,12 @@
 			]
 		}
 	],
-	"others": [
+	"discover": [
 		{
 			"title": "Discover",
 			"icon": "open-in-new",
 			"color": "indigo",
-			"link": "others",
+			"link": "discover",
 			"sub": [
 				{
 					"color": "orange",
