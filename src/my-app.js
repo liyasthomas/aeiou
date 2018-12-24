@@ -123,6 +123,9 @@ class MyApp extends PolymerElement {
 					}
 				}
 				paper-tab {
+					--paper-tab-content-unselected: {
+						opacity: .5;
+					}
         	font-family: "Prompt", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
