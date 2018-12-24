@@ -426,7 +426,7 @@ class MyApp extends PolymerElement {
 		}
 
 		// Change page title
-		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' · AEIOU';
+		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' - AEIOU';
 
 		// Animations
 		this.$.pages.animate({

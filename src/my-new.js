@@ -18,6 +18,7 @@ class MyNew extends PolymerElement {
 					--paper-tabs-selection-bar-color: var(--accent-color);
 				}
 				demo-snippet {
+					margin: 16px 0;
 					--demo-snippet-demo: {
 //						display: none;
 						border-bottom: 2px dashed #b2b2b2;
@@ -28,7 +29,6 @@ class MyNew extends PolymerElement {
 						user-select: all;
 						max-height: 360px;
 //						background-color: #fff;
-						padding: 16px;
 					}
 					--demo-snippet: {
 						box-shadow: none;
@@ -39,7 +39,7 @@ class MyNew extends PolymerElement {
 				}
 				paper-tabs {
 					height: 100%;
-					background-color: var(--paper-grey-100);
+					background-color: var(--paper-grey-200);
 				}
 				paper-tab:hover {
 					--paper-tab-content-unselected: {
@@ -152,17 +152,18 @@ class MyNew extends PolymerElement {
 							</template>
 						</div>
 					</div>
-					<div class="actions flex-center-center">
+					<div class="content flex-center-center">
 						<a href="{{selectedThis}}/{{selectedThat}}"><paper-button class="primary" aria-label="Next">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
 					</div>
-					<div class="actions flex-center-center">
+					<div class="content flex-center-center">
 						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
-						<div class="grid actions flex-center-center">
+						<div class="grid content">
+							<div class="title">Standalone file</div>
 							<demo-snippet>
 								<template preserve-content>
-									<h2>Demo using A-Frame and AR.js</h2>
+									<h3>Demo using A-Frame and AR.js</h3>
 									<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 									<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
 									<a-scene embedded arjs>
