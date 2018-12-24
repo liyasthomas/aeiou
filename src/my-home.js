@@ -87,10 +87,10 @@ class MyHome extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.recent]]" as="recent">
+			<template is="dom-repeat" items="[[ajaxResponse0.collections]]" as="collections">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{recent.title}}
+						{{collections.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -100,7 +100,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid">
-					<template is="dom-repeat" items="[[recent.sub]]" as="sub">
+					<template is="dom-repeat" items="[[collections.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -126,15 +126,15 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{recent.link}}">
+					<a href="{{collections.link}}">
 						<paper-button class="primary" aria-label="View all">View all collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.popular]]" as="popular">
+			<template is="dom-repeat" items="[[ajaxResponse0.discover]]" as="discover">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{popular.title}}
+						{{discover.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -144,7 +144,7 @@ class MyHome extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid">
-					<template is="dom-repeat" items="[[popular.sub]]" as="sub">
+					<template is="dom-repeat" items="[[discover.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -171,7 +171,7 @@ class MyHome extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{popular.link}}">
+					<a href="{{discover.link}}">
 						<paper-button class="primary" aria-label="View all">Discover more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>

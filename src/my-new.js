@@ -39,7 +39,7 @@ class MyNew extends PolymerElement {
 				}
 				paper-tabs {
 					height: 100%;
-					background-color: var(--paper-grey-200);
+					background-color: var(--paper-grey-100);
 				}
 				paper-tab:hover {
 					--paper-tab-content-unselected: {

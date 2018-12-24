@@ -87,10 +87,10 @@ class MyDiscover extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+			<template is="dom-repeat" items="[[ajaxResponse0.discover]]" as="discover">
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{web.title}}
+						{{discover.title}}
 					</div>
 					<paper-icon-button
 							hidden$="{{!wideLayout}}"
@@ -100,7 +100,7 @@ class MyDiscover extends PolymerElement {
 					</paper-icon-button>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub">
+					<template is="dom-repeat" items="[[discover.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -127,7 +127,7 @@ class MyDiscover extends PolymerElement {
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{web.link}}">
+					<a href="{{discover.link}}">
 						<paper-button class="primary" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
 					</a>
 				</div>
