@@ -3,7 +3,9 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@polymer/paper-input/paper-input.js';
 
 class MyCollections extends PolymerElement {
 	static get template() {
@@ -71,6 +73,23 @@ class MyCollections extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
+				paper-input {
+					background-color: var(--paper-grey-200);
+					border-radius: 32px;
+					--paper-input-container: {
+						padding: 4px 8px;
+					};
+					--paper-input-container-underline: {
+						display: none;
+						height: 0;
+					};
+					--paper-input-container-underline-focus: {
+						display: none;
+					};
+					--paper-input-container-input: {
+						padding: 4px 8px;
+					};
+				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/collections_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -87,20 +106,37 @@ class MyCollections extends PolymerElement {
 					</div>
 				</template>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.web]]" as="web">
+			<template is="dom-repeat" items="[[ajaxResponse0.collections]]" as="collections">
+				<div class$="[[getUIType(UI)]] content flex-justified">
+					<paper-input id="searchInput" value="{{filterVal}}" no-label-float>
+						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
+						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear"></paper-icon-button>
+					</paper-input>
+				</div>
+				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
-						{{web.title}}
+						{{collections.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-menu-button horizontal-align="right">
+ 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="description"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="none"><iron-icon icon="my-icons:close" slot="item-icon"></iron-icon>None<paper-ripple></paper-ripple></paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[web.sub]]" as="sub">
+					<template is="dom-repeat" items="[[collections.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -184,6 +220,34 @@ class MyCollections extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	_filter(val) {
+		return function (sub) {
+			if (!val) return true;
+			if (!sub) return false;
+			return (sub.title && ~sub.title.toLowerCase().indexOf(val.toLowerCase())) ||
+				(sub.description && ~sub.description.toLowerCase().indexOf(val.toLowerCase()));
+		};
+	}
+
+	_sort(val) {
+		switch (val) {
+			case 'title':
+				return function (a, b) {
+					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
+					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+				};
+			case 'description':
+				return function (a, b) {
+					if (a.description.toLowerCase() === b.description.toLowerCase()) return 0;
+					return a.description.toLowerCase() < b.description.toLowerCase() ? -1 : 1;
+				};
+		}
+	}
+
+	clearInput() {
+		this.$.searchInput.value = '';
 	}
 
 	tryAgain() {
