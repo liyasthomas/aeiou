@@ -115,13 +115,13 @@ class MyNew extends PolymerElement {
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
 								<paper-dropdown-menu label="{{this.title}}" no-label-float>
-									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
+									<paper-listbox id="selectedThis" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
 										<template is="dom-repeat" items="[[this.sub]]" as="sub">
 											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 										</template>
 									</paper-listbox>
 								</paper-dropdown-menu>
-								<paper-icon-button on-click="resetThis" icon="my-icons:refresh" aria-label="Reset"></paper-icon-button>
+								<paper-icon-button on-click="resetThis" icon="my-icons:refresh" aria-label="Reset" hidden$="{{!selectedThis}}"></paper-icon-button>
 							</template>
 						</div>
 						<h1>
@@ -142,18 +142,18 @@ class MyNew extends PolymerElement {
 							</template>
 							<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
 								<paper-dropdown-menu label="{{that.title}}" no-label-float>
-									<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
+									<paper-listbox id="selectedThat" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
 										<template is="dom-repeat" items="[[that.sub]]" as="sub">
 											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 										</template>
 									</paper-listbox>
 								</paper-dropdown-menu>
-								<paper-icon-button on-click="resetThat" icon="my-icons:refresh" aria-label="Reset"></paper-icon-button>
+								<paper-icon-button on-click="resetThat" icon="my-icons:refresh" aria-label="Reset" hidden$="{{!selectedThat}}"></paper-icon-button>
 							</template>
 						</div>
 					</div>
 					<div class="content flex-center-center">
-						<a href="{{selectedThis}}/{{selectedThat}}"><paper-button class="primary" aria-label="Next">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
+						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
 					</div>
 					<div class="content flex-center-center">
 						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
@@ -191,6 +191,16 @@ class MyNew extends PolymerElement {
 				value: "markerbased",
 				reflectToAttribute: true
 			},
+			selectedThis: {
+				type: String,
+				value: 0,
+				reflectToAttribute: true
+			},
+			selectedThat: {
+				type: String,
+				value: 0,
+				reflectToAttribute: true
+			},
 			opened: {
 				type: Boolean,
 				reflectToAttribute: true
@@ -204,6 +214,11 @@ class MyNew extends PolymerElement {
 
 	resetThat() {
 		this.selectedThat = 0;
+	}
+
+	isInputEmpty(a, b) {
+		if (a === 0 || b === 0) return true;
+		return false;
 	}
 
 	tryAgain() {
