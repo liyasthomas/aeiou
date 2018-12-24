@@ -1,15 +1,15 @@
 {
-	"web": [
+	"collections": [
 		{
 			"title": "Collections",
 			"icon": "open-in-new",
 			"color": "light-blue",
-			"link": "web",
+			"link": "collections",
 			"sub": [
 				{
 					"color": "purple",
-					"title": "Alphabets",
-					"description": "Description",
+					"title": "ZAlphabets",
+					"description": "This is a  description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
@@ -27,7 +27,7 @@
 				{
 					"color": "pink",
 					"title": "Automobile",
-					"description": "Description",
+					"description": "Another description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
@@ -45,7 +45,7 @@
 				{
 					"color": "cyan",
 					"title": "Chemistry",
-					"description": "Description",
+					"description": "Bold description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
@@ -80,7 +80,7 @@
 				},
 				{
 					"color": "teal",
-					"title": "Geography",
+					"title": "Hot geography",
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
