@@ -73,23 +73,6 @@ class MyCollections extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
-				paper-input {
-					background-color: var(--paper-grey-200);
-					border-radius: 32px;
-					--paper-input-container: {
-						padding: 4px 8px;
-					};
-					--paper-input-container-underline: {
-						display: none;
-						height: 0;
-					};
-					--paper-input-container-underline-focus: {
-						display: none;
-					};
-					--paper-input-container-input: {
-						padding: 4px 8px;
-					};
-				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/collections_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -108,9 +91,9 @@ class MyCollections extends PolymerElement {
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.collections]]" as="collections">
 				<div class$="[[getUIType(UI)]] content flex-justified">
-					<paper-input id="searchInput" value="{{filterVal}}" no-label-float>
+					<paper-input class="searchInput" value="{{filterVal}}" no-label-float>
 						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
-						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear"></paper-icon-button>
+						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>
 				</div>
 				</div>
@@ -247,7 +230,7 @@ class MyCollections extends PolymerElement {
 	}
 
 	clearInput() {
-		this.$.searchInput.value = '';
+		this.filterVal = null;
 	}
 
 	tryAgain() {
