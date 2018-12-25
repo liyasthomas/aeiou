@@ -96,7 +96,6 @@ class MyActivity extends PolymerElement {
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>
 				</div>
-				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
 						{{activity.title}}
@@ -119,7 +118,7 @@ class MyActivity extends PolymerElement {
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[activity.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}">
+					<template is="dom-repeat" items="[[activity.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -143,6 +142,9 @@ class MyActivity extends PolymerElement {
 								</div>
 							</div>
 						</div>
+					</template>
+					<template is="dom-if" if="{{!renderedCount}}">
+						Nothing found for '{{filterVal}}'
 					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">

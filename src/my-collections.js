@@ -96,14 +96,13 @@ class MyCollections extends PolymerElement {
 						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
 					</paper-input>
 				</div>
-				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
 						{{collections.title}}
 					</div>
 					<div>
 						<paper-menu-button horizontal-align="right">
- 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="description"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
@@ -119,7 +118,7 @@ class MyCollections extends PolymerElement {
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[collections.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}">
+					<template is="dom-repeat" items="[[collections.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -143,6 +142,9 @@ class MyCollections extends PolymerElement {
 								</div>
 							</div>
 						</div>
+					</template>
+					<template is="dom-if" if="{{!renderedCount}}">
+						Nothing found for '{{filterVal}}'
 					</template>
 				</div>
 			</template>
