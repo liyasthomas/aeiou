@@ -156,7 +156,7 @@ class MyNew extends PolymerElement {
 						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button></a>
 					</div>
 					<div class="content flex-center-center">
-						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
+						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
 						<div class="grid content">
