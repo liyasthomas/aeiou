@@ -229,7 +229,7 @@ class MyApp extends PolymerElement {
 						<div main-title class="rightItem">AEIOU</div>
 						<a href=""><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
 						<paper-menu-button horizontal-align="right">
-							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger"></paper-icon-button>
+							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More options"></paper-icon-button>
 							<paper-listbox class="listbox" slot="dropdown-content">
 								<a href="">
 									<paper-icon-item>
@@ -268,25 +268,25 @@ class MyApp extends PolymerElement {
 					<app-toolbar sticky>
 						<paper-tabs selected="[[page]]" attr-for-selected="id" no-bar autoselect on-click="scrollTop">
 							<paper-tab id="home">
-								<a href="[[rootPath]]" tabindex="-1">
+								<a href="[[rootPath]]">
 									<iron-icon icon="my-icons:filter-vintage"></iron-icon>
 									<span>Home</span>
 								</a>
 							</paper-tab>
 							<paper-tab id="collections">
-								<a href="collections" tabindex="-1">
+								<a href="collections">
 									<iron-icon icon="my-icons:layers"></iron-icon>
 									<span>Collections</span>
 								</a>
 							</paper-tab>
 							<paper-tab id="discover">
-								<a href="discover" tabindex="-1">
+								<a href="discover">
 									<iron-icon icon="my-icons:explore"></iron-icon>
 									<span>Discover</span>
 								</a>
 							</paper-tab>
 							<paper-tab id="activity">
-								<a href="activity" tabindex="-1">
+								<a href="activity">
 									<iron-icon icon="my-icons:bubble-chart"></iron-icon>
 									<span>Activity</span>
 								</a>
