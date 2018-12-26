@@ -104,9 +104,8 @@ class MyCollections extends PolymerElement {
 						<paper-menu-button horizontal-align="right">
 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="none"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
-								<paper-icon-item name="description"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
-								<paper-icon-item name="none"><iron-icon icon="my-icons:close" slot="item-icon"></iron-icon>None<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
 						</paper-menu-button>
 						<paper-icon-button
@@ -196,6 +195,16 @@ class MyCollections extends PolymerElement {
     `;
 	}
 
+	static get properties() {
+		return {
+			sortVal: {
+				type: String,
+				value: "none",
+				reflectToAttribute: true
+			}
+		};
+	}
+
 	attached() {
 		this._updateGridStyles = this._updateGridStyles || function () {
 			this.updateStyles();
@@ -222,11 +231,6 @@ class MyCollections extends PolymerElement {
 				return function (a, b) {
 					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
 					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
-				};
-			case 'description':
-				return function (a, b) {
-					if (a.description.toLowerCase() === b.description.toLowerCase()) return 0;
-					return a.description.toLowerCase() < b.description.toLowerCase() ? -1 : 1;
 				};
 		}
 	}

@@ -1,4 +1,5 @@
 import '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/polymer-element.js';
 
 const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `<dom-module id="shared-styles">
@@ -52,6 +53,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-size: 18px;
 				font-weight: 600;
 				cursor: pointer;
+				--paper-item-focused: {
+					color: var(--accent-color);
+				};
 				--paper-item-focused-before: {
 					opacity: 0;
 				};
@@ -60,7 +64,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         font-family: "Prompt", "Roboto", "Noto", sans-serif;
 				margin: 4px;
 				padding: .6em 1.2em;
-				font-weight: 600;
 				font-size: 22px;
 				text-transform: none;
 				transition: all .1s ease;
@@ -105,8 +108,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 					display: none;
 				};
 				--paper-input-container-input: {
-					padding: 4px 8px;
+					padding: 4px 0;
+					font-family: "Prompt", "Roboto", "Noto", sans-serif;
+					font-size: 18px;
+					font-weight: 600;
 				};
+			}
+			paper-input.searchInput[focused] {
+				background-color: var(--paper-grey-300);
 			}
 			iron-collapse {
 				outline: none;
@@ -220,7 +229,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-line-clamp: 2;
 				font-size: 32px;
 				line-height: 1.25;
-				font-weight: 600;
 			}
 			.title span {
 				color: var(--secondary-text-color);
@@ -237,14 +245,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 4;
 				font-size: 24px;
-				font-weight: 600;
 				line-height: 1.2;
 			}
 			.info {
 				@apply --layout-flex;
 				@apply --layout-horizontal;
 				@apply --layout-center;
-				font-weight: 600;
 				text-overflow: ellipsis;
 			}
 			@media (max-width: 640px) {
