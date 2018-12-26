@@ -4,7 +4,6 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
-import '@google/model-viewer'
 
 class MyHome extends PolymerElement {
 	static get template() {
