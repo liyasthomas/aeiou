@@ -61,7 +61,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				};
 			}
 			paper-button {
-        font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
 				margin: 4px;
 				padding: .6em 1.2em;
 				font-size: 22px;
@@ -81,6 +81,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			a[disabled] {
 				pointer-events: none;
+			}
+			paper-icon-button {
+				margin: 0 4px;
 			}
 			paper-button[disabled] {
 				pointer-events: none;
@@ -116,6 +119,25 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			paper-input.searchInput[focused] {
 				background-color: var(--paper-grey-300);
+			}
+			paper-toggle-button.tbuttons {
+				--paper-toggle-button-checked-bar-color: var(--accent-color);
+				--paper-toggle-button-checked-button-color: var(--accent-color);
+				--paper-toggle-button-checked-ink-color: var(--accent-color);
+				--paper-toggle-button-label-color: var(--secondary-text-color);
+				display: inline-flex;
+				margin: 0 8px;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-size: 18px;
+				cursor: pointer;
+			}
+			paper-menu-button {
+				padding: 0;
+			}
+			model-viewer {
+				height: 100%;
+				width: 100%;
+				cursor: all-scroll;
 			}
 			iron-collapse {
 				outline: none;
@@ -153,7 +175,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-size: 32px;
 				font-weight: 700;
 				color: var(--primary-text-color);
-        font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -171,7 +193,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				color: var(--secondary-text-color);
 			}
 			.grid {
-				width: 80%;
+				width: 90%;
 			}
 			.grid, .list {
 				margin: 0 auto;
@@ -192,11 +214,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				border-radius: 8px;
 			}
 			.item:hover {
-//				@apply --shadow-elevation-2dp;
+/*				@apply --shadow-elevation-2dp;*/
 			}
 			.container {
-      	@apply --layout-flex;
-      	@apply --layout-vertical;
+				@apply --layout-flex;
+				@apply --layout-vertical;
 				height: 100%;
 			}
 			.bg {
@@ -207,19 +229,18 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				transition: all .1s ease;
 			}
 			.block {
-      	@apply --layout-horizontal;
+				@apply --layout-horizontal;
 			}
 			.top {
 				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
 			}
 			.mid {
-				padding: 4px 32px 32px 32px;
+				padding: 4px 32px 16px 32px;
 			}
 			.bottom {
 				padding: 8px 16px 8px 8px;
 				border-radius: 0 0 8px 8px;
-				background-color: rgba(0,0,0,.2);
 			}
 			.title {
 				display: -webkit-box;
@@ -227,7 +248,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
-				font-size: 32px;
+				font-size: 28px;
 				line-height: 1.25;
 			}
 			.title span {
@@ -244,7 +265,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 4;
-				font-size: 24px;
+				font-size: 22px;
 				line-height: 1.2;
 			}
 			.info {
@@ -255,10 +276,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			@media (max-width: 640px) {
 				.title {
-					font-size: 28px;
+					font-size: 24px;
 				}
 				.description {
-					font-size: 22px;
+					font-size: 20px;
 				}
 				.grid {
 					width: 100%;
@@ -268,6 +289,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 				.actions, .content {
 					padding: 16px;
+				}
+				.top {
+					padding: 16px 16px 4px 16px;
+				}
+				.mid {
+					padding: 4px 16px 16px 16px;
+				}
+				.bottom {
+					padding: 4px 8px 4px 4px;
 				}
 			}
 			.white-bg {
@@ -338,7 +368,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: var(--paper-blue-grey-700);
 				color: #fff;
 			}
-
 			.white-fg {
 				color: var(--paper-grey-800);
 			}

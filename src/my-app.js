@@ -91,12 +91,6 @@ class MyApp extends PolymerElement {
 				app-toolbar {
 					padding: 0 8px;
 				}
-				app-toolbar paper-icon-button {
-					margin: 0 4px;
-				}
-				app-toolbar paper-menu-button {
-					padding: 0;
-				}
 				[sticky] {
 					padding: 0;
 				}

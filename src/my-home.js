@@ -30,7 +30,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -71,11 +71,6 @@ class MyHome extends PolymerElement {
 						@apply --app-grid-expandible-item;
 					}
 				}
-				model-viewer {
-					height: 100%;
-					width: 100%;
-					cursor: all-scroll;
-				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -97,12 +92,14 @@ class MyHome extends PolymerElement {
 					<div class="title">
 						{{collections.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[collections.sub]]" as="sub">
@@ -115,15 +112,6 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<model-viewer src="gltf/ironman/scene.gltf"
-																alt="A 3D model"
-																controls
-																background-image="images/assets/home/small_hangar.jpg"
-																background-color="#455A64"
-																reveal-when-loaded
-																preload
-																poster="images/assets/home/puff.svg">
-									</model-viewer>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -236,6 +224,11 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
     `;
+	}
+
+	static get properties() {
+		return {
+		};
 	}
 
 	attached() {
