@@ -4,6 +4,7 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@google/model-viewer'
 
 class MyHome extends PolymerElement {
 	static get template() {
@@ -19,7 +20,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: auto;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -30,7 +31,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: auto;
+						--app-grid-item-height: 80vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -41,7 +42,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: auto;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -55,7 +56,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: auto;
+						--app-grid-item-height: 30vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -70,6 +71,11 @@ class MyHome extends PolymerElement {
 					.item:nth-child(5n+4) {
 						@apply --app-grid-expandible-item;
 					}
+				}
+				model-viewer {
+					height: 100%;
+					width: 100%;
+					cursor: all-scroll;
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
@@ -99,7 +105,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid">
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[collections.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
@@ -110,6 +116,15 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
+									<model-viewer src="gltf/ironman/scene.gltf"
+																alt="A 3D model"
+																controls
+																background-image="images/assets/home/small_hangar.jpg"
+																background-color="#455A64"
+																reveal-when-loaded
+																preload
+																poster="images/assets/home/puff.svg">
+									</model-viewer>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -143,7 +158,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid">
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[discover.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
@@ -188,7 +203,7 @@ class MyHome extends PolymerElement {
 							icon$="my-icons:[[getUIIcon(UI)]]">
 					</paper-icon-button>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid">
+				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[activity.sub]]" as="sub">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
