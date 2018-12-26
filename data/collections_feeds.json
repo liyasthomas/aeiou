@@ -7,94 +7,112 @@
 			"link": "collections",
 			"sub": [
 				{
-					"color": "purple",
-					"title": "ZAlphabets",
-					"description": "This is a  description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
-				},
-				{
-					"color": "red",
-					"title": "Animals",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
-				},
-				{
-					"color": "pink",
-					"title": "Automobile",
-					"description": "Another description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
-				},
-				{
-					"color": "orange",
-					"title": "Biology",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
-				},
-				{
-					"color": "cyan",
-					"title": "Chemistry",
-					"description": "Bold description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
-				},
-				{
-					"color": "green",
-					"title": "Electronics",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
-				},
-				{
-					"color": "yellow",
-					"title": "Entertainment",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
-				},
-				{
 					"color": "blue",
+					"ccode": "#2979ff",
 					"title": "Movie",
-					"description": "Description",
+					"description": "Spiderman, Ironman",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
 					"color": "teal",
-					"title": "Hot geography",
-					"description": "Description",
+					"ccode": "#1de9b6",
+					"title": "Geography",
+					"description": "Earth, Sun, Jupiter, Neptune, Moon, Gas planet",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
 				{
-					"color": "indigo",
-					"title": "Measure",
-					"description": "Description",
+					"color": "purple",
+					"ccode": "#d500f9",
+					"title": "Alphabets",
+					"description": "A to Z",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/measure.html"
+					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
+				},
+				{
+					"color": "green",
+					"ccode": "#00e676",
+					"title": "Electronics",
+					"description": "Motherboard, Fan",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
+				},
+				{
+					"color": "pink",
+					"ccode": "#f50057",
+					"title": "Automobile",
+					"description": "Cars and bikes",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
+				},
+				{
+					"color": "orange",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "cyan",
+					"ccode": "#00e5ff",
+					"title": "Chemistry",
+					"description": "Methane, Ethane, Cyclo-Hexane, Ethanol, Pyrrole, Nuclear fission",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
+				},
+				{
+					"color": "yellow",
+					"ccode": "#ffea00",
+					"title": "Entertainment",
+					"description": "Avatar, Talk back",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
+				},
+				{
+					"color": "red",
+					"ccode": "#ff1744",
+					"title": "Animals",
+					"description": "Cat, butterfly, fish, dog, panda",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				}
 			]
 		}
