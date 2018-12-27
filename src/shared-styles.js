@@ -139,6 +139,17 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 				cursor: all-scroll;
 			}
+			skeleton-carousel {
+				--skeleton-carousel-dot-selected: {
+					color: var(--accent-color);
+				}
+				--skeleton-carousel: {
+					padding: 0 32px;
+				};
+				--skeleton-carousel-item: {
+					border-radius: 8px;
+				};
+			}
 			iron-collapse {
 				outline: none;
 			}
@@ -164,7 +175,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: calc(100vh - 128px);
+				height: 60vh;
 			}
 			.actions {
 				@apply --layout-horizontal;
@@ -210,7 +221,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			.item {
 				transition: all .1s ease;
-				border-radius: 8px;
 				border-radius: 8px;
 			}
 			.item:hover {
@@ -298,6 +308,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				}
 				.bottom {
 					padding: 4px 8px 4px 4px;
+				}
+				skeleton-carousel {
+					--skeleton-carousel: {
+						padding: 0 16px;
+					};
 				}
 			}
 			.white-bg {

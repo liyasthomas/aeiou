@@ -7,6 +7,7 @@ import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-image/iron-image.js';
+import '@fabricelements/skeleton-carousel/skeleton-carousel.js';
 //import '@google/model-viewer';
 
 class MyHome extends PolymerElement {
@@ -87,40 +88,35 @@ class MyHome extends PolymerElement {
 					<div class="title">
 						{{collections.title}}
 					</div>
-					<div>
-						<paper-icon-button
-								hidden$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
-					</div>
 				</div>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[collections.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+				<div class$="[[getUIType(UI)]] banner flexchild flex-vertical">
+					<skeleton-carousel dots loop auto>
+						<template is="dom-repeat" items="[[collections.sub]]" as="sub">
+							<div class="item">
+								<div class$="[[_computeBgClass(sub.color)]] container">
+									<div class="block top">
+										<div class="title">{{sub.title}}</div>
+									</div>
+									<div class="block mid">
+										<div class="description">{{sub.description}}</div>
+									</div>
+									<div class="flexchild flex-vertical">
+										<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									</div>
+									<div class="block bottom">
+										<div class="info">
+											<div class="flexchild">
+												<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											</div>
+											<div>
+												<a href="{{sub.link}}"><a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a></a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</template>
+						</template>
+					</skeleton-carousel>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{collections.link}}">
