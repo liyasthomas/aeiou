@@ -7,77 +7,122 @@
 			"link": "activity",
 			"sub": [
 				{
-					"color": "teal",
-					"title": "Konnect",
-					"description": "Intranet for NCERC",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "konnect"
-				},
-				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "aeiou"
-				},
-				{
-					"color": "light-blue",
-					"title": "Lvr",
-					"description": "Virtual and Augmented Reality for everyone!",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "lvr"
-				},
-				{
-					"color": "blue-grey",
-					"title": "Material Things",
-					"description": "Reusable Material Design components",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "materialthings"
-				},
-				{
 					"color": "blue",
-					"title": "Feedie",
-					"description": "Faculty feedback system",
+					"ccode": "#2979ff",
+					"title": "Movie",
+					"description": "Spiderman, Ironman",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "feedie"
+					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
-					"color": "grey",
-					"title": "Snake",
-					"description": "Snakes! Snakes everywhere!",
+					"color": "teal",
+					"ccode": "#1de9b6",
+					"title": "Geography",
+					"description": "Earth, Sun, Jupiter, Neptune, Moon, Gas planet",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "snake"
+					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
+				},
+				{
+					"color": "purple",
+					"ccode": "#d500f9",
+					"title": "Alphabets",
+					"description": "A to Z",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
+				},
+				{
+					"color": "green",
+					"ccode": "#00e676",
+					"title": "Electronics",
+					"description": "Motherboard, Fan",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
 				{
 					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
+					"ccode": "#f50057",
+					"title": "Automobile",
+					"description": "Cars and bikes",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "ily"
+					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
+				},
+				{
+					"color": "orange",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "cyan",
+					"ccode": "#00e5ff",
+					"title": "Chemistry",
+					"description": "Methane, Ethane, Cyclo-Hexane, Ethanol, Pyrrole, Nuclear fission",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
+				},
+				{
+					"color": "yellow",
+					"ccode": "#ffea00",
+					"title": "Entertainment",
+					"description": "Avatar, Talk back",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/entertainment.html"
+				},
+				{
+					"color": "red",
+					"ccode": "#ff1744",
+					"title": "Animals",
+					"description": "Cat, butterfly, fish, dog, panda",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				}
 			]
 		}
 	],
 	"others": [
 		{
-			"title": "Discover",
+			"title": "Others",
 			"icon": "open-in-new",
 			"color": "indigo",
-			"link": "others",
+			"link": "discover",
 			"sub": [
 				{
 					"color": "orange",

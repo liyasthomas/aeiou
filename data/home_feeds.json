@@ -50,6 +50,15 @@
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
+				},
+				{
+					"color": "green",
+					"title": "Collection",
+					"description": "Description",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				}
 			]
 		}
@@ -62,67 +71,76 @@
 			"link": "discover",
 			"sub": [
 				{
-					"color": "deep-purple",
-					"title": "Fuse Org",
-					"description": "Developers community",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "fuseorg"
-				},
-				{
-					"color": "cyan",
-					"title": "Collection",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
-				},
-				{
-					"color": "green",
-					"title": "Collection",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
-				},
-				{
-					"color": "yellow",
-					"title": "Collection",
-					"description": "Description",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
-				},
-				{
 					"color": "blue",
-					"title": "Collection",
-					"description": "Description",
+					"ccode": "#2979ff",
+					"title": "Movie",
+					"description": "Spiderman, Ironman",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
+					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
 					"color": "teal",
-					"title": "Collection",
-					"description": "Description",
+					"ccode": "#1de9b6",
+					"title": "Geography",
+					"description": "Earth, Sun, Jupiter, Neptune, Moon, Gas planet",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
+					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
+				},
+				{
+					"color": "purple",
+					"ccode": "#d500f9",
+					"title": "Alphabets",
+					"description": "A to Z",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
+				},
+				{
+					"color": "green",
+					"ccode": "#00e676",
+					"title": "Electronics",
+					"description": "Motherboard, Fan",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
+				},
+				{
+					"color": "pink",
+					"ccode": "#f50057",
+					"title": "Automobile",
+					"description": "Cars and bikes",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
 				{
 					"color": "orange",
-					"title": "Wallpapers",
-					"description": "Curated list of wallpapers",
-					"info": "View all",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "gltf/test/scene.gltf",
 					"icon": "open-in-new",
-					"link": "wallpapers"
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				}
 			]
 		}
@@ -160,24 +178,6 @@
 					"img": "../images/assets/collections/puff.svg",
 					"icon": "open-in-new",
 					"link": "lvr"
-				},
-				{
-					"color": "pink",
-					"title": "ily",
-					"description": "Sharing is better than getting Likes",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "ily"
-				},
-				{
-					"color": "indigo",
-					"title": "AEIOU",
-					"description": "Augmented Reality platform to make education fun and interactive",
-					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
-					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				}
 			]
 		}
