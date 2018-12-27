@@ -97,10 +97,7 @@ class MyHome extends PolymerElement {
 									<div class="top">
 										<div class="title">{{sub.title}}</div>
 									</div>
-									<div class="mid">
-										<div class="description">{{sub.description}}</div>
-									</div>
-									<div class="flexchild flex-vertical" style="background-size: 80%; border-left: 1px solid var(--light-text-color); border-right: 1px solid var(--light-text-color);">
+									<div class="flexchild flex-vertical" style="padding: 32px; border-left: 1px solid var(--light-text-color); border-right: 1px solid var(--light-text-color);">
 										<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 									</div>
 									<div class="bottom">

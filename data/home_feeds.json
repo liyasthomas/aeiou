@@ -11,7 +11,7 @@
 					"title": "Alphabets",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/idea.svg",
+					"img": "../images/assets/collections/marketing.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
@@ -20,7 +20,7 @@
 					"title": "Animals",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/network.svg",
+					"img": "../images/assets/collections/diamond.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				},
@@ -29,7 +29,7 @@
 					"title": "Automobile",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/gear.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
@@ -38,7 +38,7 @@
 					"title": "Biology",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/ui.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
@@ -47,7 +47,7 @@
 					"title": "Chemistry",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/network.svg",
+					"img": "../images/assets/collections/share.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
 				},
@@ -56,7 +56,7 @@
 					"title": "Collection",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/spark.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				}
