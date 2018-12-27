@@ -129,7 +129,7 @@ class MyCollections extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[collections.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -139,12 +139,11 @@ class MyCollections extends PolymerElement {
 								</div>
 								<div class="flexchild flex-vertical">
 									<model-viewer src="{{sub.model}}"
-																class$="[[_computeBgClass(sub.color)]]"
 																alt="{{sub.title}}"
 																controls$="{{controls}}"
-																auto-rotate$="{{autoRotate}}"
+																auto-rotate$="{{rotate}}"
 																background-image="{{sub.bg}}"
-																background-color="{{sub.ccode}}"
+																background-color="#eee"
 																reveal-when-loaded
 																preload
 																poster="{{sub.img}}">

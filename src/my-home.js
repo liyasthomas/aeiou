@@ -93,11 +93,14 @@ class MyHome extends PolymerElement {
 					<skeleton-carousel dots loop auto duration="5000">
 						<template is="dom-repeat" items="[[collections.sub]]" as="sub">
 							<div class="item">
-								<div class$="[[_computeBgClass(sub.color)]] container" style="text-align: center;">
+								<div class="container" style="text-align: center;">
 									<div class="top">
 										<div class="title">{{sub.title}}</div>
 									</div>
-									<div class="flexchild flex-vertical">
+									<div class="mid">
+										<div class="description">{{sub.description}}</div>
+									</div>
+									<div class="flexchild flex-vertical" style="background-size: 80%; border-left: 1px solid var(--light-text-color); border-right: 1px solid var(--light-text-color);">
 										<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 									</div>
 									<div class="bottom">
@@ -158,7 +161,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[discover.sub]]" as="sub" sort="{{_sort(sortVal)}}">
-						<div class$="[[_computeBgClass(sub.color)]] item">
+						<div class="item">
 							<div class="container">
 								<div class="block top">
 									<div class="title">{{sub.title}}</div>
@@ -168,12 +171,11 @@ class MyHome extends PolymerElement {
 								</div>
 								<div class="flexchild flex-vertical">
 									<model-viewer src="{{sub.model}}"
-																class$="[[_computeBgClass(sub.color)]]"
 																alt="{{sub.title}}"
 																controls$="{{controls}}"
-																auto-rotate$="{{autoRotate}}"
+																auto-rotate$="{{rotate}}"
 																background-image="{{sub.bg}}"
-																background-color="{{sub.ccode}}"
+																background-color="#eee"
 																reveal-when-loaded
 																preload
 																poster="{{sub.img}}">

@@ -64,6 +64,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				margin: 4px;
 				padding: .6em 1.2em;
 				font-size: 22px;
+				color: var(--accent-color);
 				text-transform: none;
 				transition: all .1s ease;
 				border-radius: 32px;
@@ -97,7 +98,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 			}
 			paper-input.searchInput {
-				background-color: var(--paper-grey-200);
+				background-color: var(--paper-grey-100);
 				border-radius: 32px;
 				--paper-input-container: {
 					padding: 4px 8px;
@@ -117,7 +118,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				};
 			}
 			paper-input.searchInput[focused] {
-				background-color: var(--paper-grey-300);
+				background-color: var(--paper-grey-200);
 			}
 			paper-toggle-button.tbuttons {
 				--paper-toggle-button-checked-bar-color: var(--accent-color);
@@ -137,6 +138,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				height: 100%;
 				width: 100%;
 				cursor: all-scroll;
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 			}
 			skeleton-carousel {
 				--skeleton-carousel-dot-selected: {
@@ -243,13 +246,23 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.top {
 				padding: 32px 32px 4px 32px;
 				border-radius: 8px 8px 0 0;
+				border-top: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
 			}
 			.mid {
 				padding: 4px 32px 16px 32px;
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
+				border-bottom: 1px solid var(--light-text-color);
 			}
 			.bottom {
 				padding: 8px 16px 8px 8px;
 				border-radius: 0 0 8px 8px;
+				border-top: 1px solid var(--light-text-color);
+				border-left: 1px solid var(--light-text-color);
+				border-right: 1px solid var(--light-text-color);
+				border-bottom: 1px solid var(--light-text-color);
 			}
 			.title {
 				display: -webkit-box;
@@ -275,6 +288,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 3;
 				font-size: 22px;
+				color: var(--secondary-text-color);
 				line-height: 1.2;
 			}
 			.info {
