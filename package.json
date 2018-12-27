@@ -13,6 +13,7 @@
 		"test:integration": "polymer build # test that psk builds without error with the CLI"
 	},
 	"dependencies": {
+		"@fabricelements/skeleton-carousel": "^3.0.2",
 		"@google/model-viewer": "0.0.6",
 		"@polymer/app-layout": "^3.0.2",
 		"@polymer/app-route": "^3.0.2",
@@ -54,7 +55,7 @@
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
-		"polymer-cli": "^1.9.3",
+		"polymer-cli": "^1.9.4",
 		"wct-browser-legacy": "^1.0.2"
 	},
 	"engines": {
