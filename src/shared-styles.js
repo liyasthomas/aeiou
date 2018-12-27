@@ -174,7 +174,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-justified;
 			}
 			.banner {
-				height: 60vh;
+				height: calc(70vh - 128px);
 			}
 			.actions {
 				@apply --layout-horizontal;

@@ -94,7 +94,7 @@ class MyHome extends PolymerElement {
 						<template is="dom-repeat" items="[[collections.sub]]" as="sub">
 							<div class="item">
 								<div class$="[[_computeBgClass(sub.color)]] container">
-									<div class="block top">
+									<div class="block top" style="text-align: center;">
 										<div class="title">{{sub.title}}</div>
 									</div>
 									<div class="block mid">
@@ -131,28 +131,35 @@ class MyHome extends PolymerElement {
 					</div>
 					<div>
 						<paper-icon-button
+								id="controls"
 								toggles
 								active="{{controls}}"
 								icon="my-icons:pan-tool">
 						</paper-icon-button>
+						<paper-tooltip for="controls" position="top" animation-delay="0">Toggle controls</paper-tooltip>
 						<paper-icon-button
+								id="rotate"
 								toggles
-								active="{{autoRotate}}"
-								icon="my-icons:3d-rotation">
+								active="{{rotate}}"
+								icon="my-icons:360">
 						</paper-icon-button>
+						<paper-tooltip for="rotate" position="top" animation-delay="0">Toggle rotation</paper-tooltip>
 						<paper-icon-button
+								id="ui"
 								hidden$="{{!wideLayout}}"
 								toggles
 								active="{{UI}}"
 								icon$="my-icons:[[getUIIcon(UI)]]">
 						</paper-icon-button>
-						<paper-menu-button horizontal-align="right">
+						<paper-tooltip for="ui" position="top" animation-delay="0">Toggle grid / list</paper-tooltip>
+						<paper-menu-button id="sort" horizontal-align="right">
 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
 								<paper-icon-item name="none"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
 						</paper-menu-button>
+						<paper-tooltip for="sort" position="top" animation-delay="0">Sort</paper-tooltip>
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>

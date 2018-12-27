@@ -17,6 +17,7 @@ import '@polymer/iron-selector/iron-selector.js';
 import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/paper-toast/paper-toast.js';
+import '@polymer/paper-tooltip/paper-tooltip.js';
 import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/paper-listbox/paper-listbox.js';
@@ -218,8 +219,9 @@ class MyApp extends PolymerElement {
 						<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
 						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
 						<div main-title class="rightItem">AEIOU</div>
-						<a href=""><paper-icon-button icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
-						<paper-menu-button horizontal-align="right">
+						<a href=""><paper-icon-button id="notifications" icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
+						<paper-tooltip for="notifications" animation-delay="0">Notifications</paper-tooltip>
+						<paper-menu-button id="more" horizontal-align="right">
 							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More options"></paper-icon-button>
 							<paper-listbox class="listbox" slot="dropdown-content">
 								<a href="">
@@ -252,6 +254,7 @@ class MyApp extends PolymerElement {
 								</a>
 							</paper-listbox>
 						</paper-menu-button>
+						<paper-tooltip for="more" animation-delay="0">More</paper-tooltip>
 						<template is="dom-if" if="{{loading}}">
 							<paper-progress value="{{progress}}" indeterminate active$="[[loading]]" top-item></paper-progress>
 						</template>
@@ -298,6 +301,7 @@ class MyApp extends PolymerElement {
 					<my-404 name="404"></my-404>
 				</iron-pages>
 				<a href="new"><paper-fab id="fab" icon="my-icons:add" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
+				<paper-tooltip for="fab" position="top" animation-delay="0">Create new</paper-tooltip>
 			</app-header-layout>
     `;
 	}
