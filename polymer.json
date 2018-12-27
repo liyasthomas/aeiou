@@ -11,7 +11,8 @@
 		"node_modules/@webcomponents/webcomponentsjs/*.js",
 		"!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
 		"node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
-		"node_modules/web-animations-js/web-animations-next-lite.min.js"
+		"node_modules/web-animations-js/web-animations-next-lite.min.js",
+		"node_modules/@fabricelements/skeleton-carousel/skeleton-carousel.js"
 	],
 	"builds": [
 		{
