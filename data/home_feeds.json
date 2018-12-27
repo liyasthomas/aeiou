@@ -7,11 +7,11 @@
 			"link": "collections",
 			"sub": [
 				{
-					"color": "purple",
+					"color": "green",
 					"title": "Alphabets",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/idea.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
@@ -20,7 +20,7 @@
 					"title": "Animals",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/network.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				},
@@ -47,7 +47,7 @@
 					"title": "Chemistry",
 					"description": "Description",
 					"info": "Remix",
-					"img": "../images/assets/collections/puff.svg",
+					"img": "../images/assets/collections/network.svg",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
 				},
@@ -78,7 +78,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/apple/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
@@ -90,7 +90,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/pyrrole/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
@@ -102,7 +102,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/catt/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
@@ -114,7 +114,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/couchh/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
@@ -126,7 +126,7 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/orange/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
@@ -138,7 +138,43 @@
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
-					"model": "gltf/test/scene.gltf",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/dog/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "orange",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ethane/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "orange",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ironman/scene.gltf",
+					"icon": "open-in-new",
+					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
+				},
+				{
+					"color": "orange",
+					"ccode": "#ff9100",
+					"title": "Biology",
+					"description": "Skeleton, DNA, Cell, Thymine",
+					"info": "Remix",
+					"img": "../images/assets/collections/puff.svg",
+					"bg": "",
+					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/umbrella/scene.gltf",
 					"icon": "open-in-new",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				}
