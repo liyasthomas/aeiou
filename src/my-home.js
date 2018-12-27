@@ -4,6 +4,10 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/paper-spinner/paper-spinner-lite.js';
+import '@polymer/iron-image/iron-image.js';
+//import '@google/model-viewer';
 
 class MyHome extends PolymerElement {
 	static get template() {
@@ -30,7 +34,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
+						--app-grid-item-height: 80vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -47,29 +51,20 @@ class MyHome extends PolymerElement {
 					.list {
 						width: 80vw;
 					}
-					.item:nth-child(5n+3) {
-						@apply --app-grid-expandible-item;
-					}
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 4;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
 						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
-						width: 60vw;
+						width: 50vw;
 					}
-					.item:nth-child(5n+1) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+2) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+4) {
-						@apply --app-grid-expandible-item;
-					}
+				}
+				paper-icon-button[active] {
+					color: var(--accent-color);
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
@@ -138,15 +133,34 @@ class MyHome extends PolymerElement {
 					<div class="title">
 						{{discover.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-icon-button
+								toggles
+								active="{{controls}}"
+								icon="my-icons:pan-tool">
+						</paper-icon-button>
+						<paper-icon-button
+								toggles
+								active="{{autoRotate}}"
+								icon="my-icons:3d-rotation">
+						</paper-icon-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+						<paper-menu-button horizontal-align="right">
+							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="none"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[discover.sub]]" as="sub">
+					<template is="dom-repeat" items="[[discover.sub]]" as="sub" sort="{{_sort(sortVal)}}">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -156,7 +170,17 @@ class MyHome extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<model-viewer src="{{sub.model}}"
+																class$="[[_computeBgClass(sub.color)]]"
+																alt="{{sub.title}}"
+																controls$="{{controls}}"
+																auto-rotate$="{{autoRotate}}"
+																background-image="{{sub.bg}}"
+																background-color="{{sub.ccode}}"
+																reveal-when-loaded
+																preload
+																poster="{{sub.img}}">
+									</model-viewer>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -178,56 +202,21 @@ class MyHome extends PolymerElement {
 					</a>
 				</div>
 			</template>
-			<template is="dom-repeat" items="[[ajaxResponse0.activity]]" as="activity">
-				<div class$="[[getUIType(UI)]] actions flex-justified">
-					<div class="title">
-						{{activity.title}}
-					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
-				</div>
-				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[activity.sub]]" as="sub">
-						<div class$="[[_computeBgClass(sub.color)]] item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<a href="{{sub.link}}"><a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</template>
-				</div>
-				<div class$="[[getUIType(UI)]] actions flex-center-center">
-					<a href="{{activity.link}}">
-						<paper-button class="primary" aria-label="View all">View all activity<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
-					</a>
-				</div>
-			</template>
     `;
 	}
 
 	static get properties() {
 		return {
+			sortVal: {
+				type: String,
+				value: "none",
+				reflectToAttribute: true
+			},
+			controls: {
+				type: Boolean,
+				value: true,
+				reflectToAttribute: true
+			}
 		};
 	}
 
@@ -240,6 +229,16 @@ class MyHome extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	_sort(val) {
+		switch (val) {
+			case 'title':
+				return function (a, b) {
+					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
+					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+				};
+		}
 	}
 
 	tryAgain() {

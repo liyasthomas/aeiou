@@ -4,6 +4,10 @@ import {
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/paper-spinner/paper-spinner-lite.js';
+//import '@google/model-viewer';
 
 class MyDiscover extends PolymerElement {
 	static get template() {
@@ -19,7 +23,7 @@ class MyDiscover extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -41,7 +45,7 @@ class MyDiscover extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -55,21 +59,24 @@ class MyDiscover extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 25vw;
+						--app-grid-item-height: 30vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
-						width: 60vw;
+						width: 50vw;
 					}
-					.item:nth-child(5n+1) {
+					.item:nth-child(9n+2) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(5n+2) {
+					.item:nth-child(9n+4) {
 						@apply --app-grid-expandible-item;
 					}
-					.item:nth-child(5n+4) {
+					.item:nth-child(9n+9) {
 						@apply --app-grid-expandible-item;
 					}
+				}
+				paper-icon-button[active] {
+					color: var(--accent-color);
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
@@ -88,19 +95,44 @@ class MyDiscover extends PolymerElement {
 				</template>
 			</template>
 			<template is="dom-repeat" items="[[ajaxResponse0.discover]]" as="discover">
+				<div class$="[[getUIType(UI)]] content flex-justified">
+					<paper-input class="searchInput" value="{{filterVal}}" no-label-float>
+						<paper-icon-button icon="my-icons:search" slot="prefix"></paper-icon-button>
+						<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!filterVal}}"></paper-icon-button>
+					</paper-input>
+				</div>
 				<div class$="[[getUIType(UI)]] actions flex-justified">
 					<div class="title">
 						{{discover.title}}
 					</div>
-					<paper-icon-button
-							hidden$="{{!wideLayout}}"
-							toggles
-							active="{{UI}}"
-							icon$="my-icons:[[getUIIcon(UI)]]">
-					</paper-icon-button>
+					<div>
+						<paper-icon-button
+								toggles
+								active="{{controls}}"
+								icon="my-icons:pan-tool">
+						</paper-icon-button>
+						<paper-icon-button
+								toggles
+								active="{{autoRotate}}"
+								icon="my-icons:3d-rotation">
+						</paper-icon-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
+						<paper-menu-button horizontal-align="right">
+							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
+							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
+								<paper-icon-item name="none"><iron-icon icon="my-icons:date-range" slot="item-icon"></iron-icon>Date<paper-ripple></paper-ripple></paper-icon-item>
+								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
+							</paper-listbox>
+						</paper-menu-button>
+					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
-					<template is="dom-repeat" items="[[discover.sub]]" as="sub">
+					<template is="dom-repeat" items="[[discover.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
 						<div class$="[[_computeBgClass(sub.color)]] item">
 							<div class="container">
 								<div class="block top">
@@ -110,7 +142,17 @@ class MyDiscover extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<model-viewer src="{{sub.model}}"
+																class$="[[_computeBgClass(sub.color)]]"
+																alt="{{sub.title}}"
+																controls$="{{controls}}"
+																auto-rotate$="{{autoRotate}}"
+																background-image="{{sub.bg}}"
+																background-color="{{sub.ccode}}"
+																reveal-when-loaded
+																preload
+																poster="{{sub.img}}">
+									</model-viewer>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -125,6 +167,9 @@ class MyDiscover extends PolymerElement {
 							</div>
 						</div>
 					</template>
+					<template is="dom-if" if="{{!renderedCount}}">
+						Nothing found for '{{filterVal}}'
+					</template>
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{discover.link}}">
@@ -133,6 +178,21 @@ class MyDiscover extends PolymerElement {
 				</div>
 			</template>
     `;
+	}
+
+	static get properties() {
+		return {
+			sortVal: {
+				type: String,
+				value: "none",
+				reflectToAttribute: true
+			},
+			controls: {
+				type: Boolean,
+				value: true,
+				reflectToAttribute: true
+			}
+		};
 	}
 
 	attached() {
@@ -144,6 +204,29 @@ class MyDiscover extends PolymerElement {
 
 	detached() {
 		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	_filter(val) {
+		return function (sub) {
+			if (!val) return true;
+			if (!sub) return false;
+			return (sub.title && ~sub.title.toLowerCase().indexOf(val.toLowerCase())) ||
+				(sub.description && ~sub.description.toLowerCase().indexOf(val.toLowerCase()));
+		};
+	}
+
+	_sort(val) {
+		switch (val) {
+			case 'title':
+				return function (a, b) {
+					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
+					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+				};
+		}
+	}
+
+	clearInput() {
+		this.filterVal = null;
 	}
 
 	tryAgain() {

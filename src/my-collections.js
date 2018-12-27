@@ -3,10 +3,12 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
-import '@google/model-viewer';
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/paper-spinner/paper-spinner-lite.js';
+import '@polymer/iron-image/iron-image.js';
+//import '@google/model-viewer';
 
 class MyCollections extends PolymerElement {
 	static get template() {
@@ -49,9 +51,6 @@ class MyCollections extends PolymerElement {
 					}
 					.list {
 						width: 80vw;
-					}
-					.item:nth-child(5n+3) {
-						@apply --app-grid-expandible-item;
 					}
 				}
 				@media all and (min-width: 961px) {

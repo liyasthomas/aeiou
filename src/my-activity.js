@@ -3,9 +3,11 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import '@polymer/paper-menu-button/paper-menu-button.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-button/paper-button.js';
+import '@polymer/paper-spinner/paper-spinner-lite.js';
+//import '@google/model-viewer';
 
 class MyActivity extends PolymerElement {
 	static get template() {
@@ -21,7 +23,7 @@ class MyActivity extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 90vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -43,7 +45,7 @@ class MyActivity extends PolymerElement {
 					:host {
 						--app-grid-columns: 2;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 40vw;
+						--app-grid-item-height: 60vw;
 						--app-grid-expandible-item-columns: 2;
 					}
 					.list {
@@ -57,21 +59,15 @@ class MyActivity extends PolymerElement {
 					:host {
 						--app-grid-columns: 4;
 						--app-grid-gutter: 32px;
-						--app-grid-item-height: 25vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-item-height: 30vw;
+						--app-grid-expandible-item-columns: 4;
 					}
 					.list {
-						width: 60vw;
+						width: 50vw;
 					}
-					.item:nth-child(5n+1) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+2) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(5n+4) {
-						@apply --app-grid-expandible-item;
-					}
+				}
+				paper-icon-button[active] {
+					color: var(--accent-color);
 				}
       </style>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
@@ -101,6 +97,22 @@ class MyActivity extends PolymerElement {
 						{{activity.title}}
 					</div>
 					<div>
+						<paper-icon-button
+								toggles
+								active="{{controls}}"
+								icon="my-icons:pan-tool">
+						</paper-icon-button>
+						<paper-icon-button
+								toggles
+								active="{{autoRotate}}"
+								icon="my-icons:3d-rotation">
+						</paper-icon-button>
+						<paper-icon-button
+								hidden$="{{!wideLayout}}"
+								toggles
+								active="{{UI}}"
+								icon$="my-icons:[[getUIIcon(UI)]]">
+						</paper-icon-button>
 						<paper-menu-button horizontal-align="right">
 							<paper-icon-button icon="my-icons:sort" slot="dropdown-trigger"></paper-icon-button>
 							<paper-listbox slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{sortVal}}">
@@ -108,12 +120,6 @@ class MyActivity extends PolymerElement {
 								<paper-icon-item name="title"><iron-icon icon="my-icons:sort-by-alpha" slot="item-icon"></iron-icon>Alphabet<paper-ripple></paper-ripple></paper-icon-item>
 							</paper-listbox>
 						</paper-menu-button>
-						<paper-icon-button
-								hidden$="{{!wideLayout}}"
-								toggles
-								active="{{UI}}"
-								icon$="my-icons:[[getUIIcon(UI)]]">
-						</paper-icon-button>
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
@@ -127,7 +133,17 @@ class MyActivity extends PolymerElement {
 									<div class="description">{{sub.description}}</div>
 								</div>
 								<div class="flexchild flex-vertical">
-									<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
+									<model-viewer src="{{sub.model}}"
+																class$="[[_computeBgClass(sub.color)]]"
+																alt="{{sub.title}}"
+																controls$="{{controls}}"
+																auto-rotate$="{{autoRotate}}"
+																background-image="{{sub.bg}}"
+																background-color="{{sub.ccode}}"
+																reveal-when-loaded
+																preload
+																poster="{{sub.img}}">
+									</model-viewer>
 								</div>
 								<div class="block bottom">
 									<div class="info">
@@ -160,6 +176,11 @@ class MyActivity extends PolymerElement {
 			sortVal: {
 				type: String,
 				value: "none",
+				reflectToAttribute: true
+			},
+			controls: {
+				type: Boolean,
+				value: true,
 				reflectToAttribute: true
 			}
 		};

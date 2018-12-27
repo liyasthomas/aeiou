@@ -264,7 +264,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				overflow: hidden;
 				text-overflow: ellipsis;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 4;
+				-webkit-line-clamp: 3;
 				font-size: 22px;
 				line-height: 1.2;
 			}
