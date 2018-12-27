@@ -90,26 +90,20 @@ class MyHome extends PolymerElement {
 					</div>
 				</div>
 				<div class$="[[getUIType(UI)]] banner flexchild flex-vertical">
-					<skeleton-carousel dots loop auto>
+					<skeleton-carousel dots loop auto duration="5000">
 						<template is="dom-repeat" items="[[collections.sub]]" as="sub">
 							<div class="item">
-								<div class$="[[_computeBgClass(sub.color)]] container">
-									<div class="block top" style="text-align: center;">
+								<div class$="[[_computeBgClass(sub.color)]] container" style="text-align: center;">
+									<div class="top">
 										<div class="title">{{sub.title}}</div>
-									</div>
-									<div class="block mid">
-										<div class="description">{{sub.description}}</div>
 									</div>
 									<div class="flexchild flex-vertical">
 										<iron-image class="bg" preload fade sizing="contain" src="{{sub.img}}"  alt="{{sub.title}}"></iron-image>
 									</div>
-									<div class="block bottom">
+									<div class="bottom">
 										<div class="info">
 											<div class="flexchild">
 												<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-											</div>
-											<div>
-												<a href="{{sub.link}}"><a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a></a>
 											</div>
 										</div>
 									</div>

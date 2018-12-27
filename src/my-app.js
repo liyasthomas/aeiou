@@ -144,6 +144,8 @@ class MyApp extends PolymerElement {
 					@apply --layout-center;
 					@apply --layout-justified;
 					border-radius: 8px;
+        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
+					font-weight: 600;
 				}
 				.toast-button {
 					margin: 8px;
