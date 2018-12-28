@@ -69,8 +69,18 @@ class MyActivity extends PolymerElement {
 				paper-icon-button[active] {
 					color: var(--accent-color);
 				}
+				paper-toast.delete {
+					--paper-toast-background-color: red;
+					--paper-toast-color: white;
+				}
       </style>
 			<paper-toast id="shareToast" text="URL copied!"></paper-toast>
+			<paper-toast id="deleteToast" class="delete" duration="0" text="Delete scene?">
+				<div>
+					<paper-icon-button icon="my-icons:done" aria-label="Delete" on-click="deleteThis"></paper-icon-button>
+					<paper-icon-button icon="my-icons:close" aria-label="Cancel" on-click="deleteThis"></paper-icon-button>
+				</div>
+			</paper-toast>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/activity_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -158,7 +168,7 @@ class MyActivity extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<paper-icon-button icon="my-icons:delete" aria-label="Delete"></paper-icon-button>
+											<paper-icon-button icon="my-icons:delete" aria-label="Delete" on-click="deleteThis"></paper-icon-button>
 											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
@@ -235,6 +245,10 @@ class MyActivity extends PolymerElement {
 		this.$.shareToast.toggle();
 //		this.$.input.select();
 //		document.execCommand('copy');
+	}
+
+	deleteThis() {
+		this.$.deleteToast.toggle();
 	}
 
 	tryAgain() {

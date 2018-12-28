@@ -212,7 +212,7 @@ class MyNew extends PolymerElement {
 		return {
 			selected: {
 				type: String,
-				value: "markerless",
+				value: "markerbased",
 				reflectToAttribute: true
 			},
 			selectedThis: {
