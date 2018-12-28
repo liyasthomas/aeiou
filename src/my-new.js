@@ -9,6 +9,7 @@ import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-demo-helpers/demo-snippet.js';
 import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
 import '@polymer/iron-collapse/iron-collapse.js';
+//import '@google/model-viewer';
 
 class MyNew extends PolymerElement {
 	static get template() {
@@ -88,6 +89,13 @@ class MyNew extends PolymerElement {
 					--paper-input-container-underline: {
 						display: none;
 					};
+				}
+				model-viewer {
+					border-radius: 8px;
+					border-top: 1px solid var(--light-text-color);
+					border-bottom: 1px solid var(--light-text-color);
+					width: 80vw;
+					height: 60vh;
 				}
       </style>
 			<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -180,7 +188,21 @@ class MyNew extends PolymerElement {
 					</iron-collapse>
 				</div>
 				<div name="markerless">
-					Page Two
+					<div class="grid flex-center-center">
+						<div class="actions">
+							<div class="title">Create new scene</div>
+						</div>
+						<div class="content">
+							<model-viewer src="../gltf/test/scene.gltf"
+														alt="title"
+														controls
+														background-color="#eee"
+														reveal-when-loaded
+														preload
+														poster="../images/assets/app/puff.svg">
+							</model-viewer>
+						</div>
+					</div>
 				</div>
 			</iron-pages>
     `;
@@ -190,7 +212,7 @@ class MyNew extends PolymerElement {
 		return {
 			selected: {
 				type: String,
-				value: "markerbased",
+				value: "markerless",
 				reflectToAttribute: true
 			},
 			selectedThis: {
