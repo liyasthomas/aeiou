@@ -137,6 +137,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			model-viewer {
 				height: 100%;
 				width: 100%;
+				background-color: #eee;
 				cursor: all-scroll;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
@@ -145,11 +146,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				--skeleton-carousel-dot-selected: {
 					color: var(--accent-color);
 				}
-				--skeleton-carousel: {
-					padding: 0 32px;
-				};
 				--skeleton-carousel-item: {
 					border-radius: 8px;
+					cursor: all-scroll;
+					padding: 0 32px;
 				};
 			}
 			iron-collapse {
@@ -236,7 +236,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.bg {
 				@apply --layout-flex;
 				--iron-image-placeholder: {
-					background-color: rgba(0, 0, 0, .1);
+					background-color: #fff;
 				}
 				transition: all .1s ease;
 			}
@@ -271,6 +271,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
 				font-size: 28px;
+				font-weight: 700;
 				line-height: 1.25;
 			}
 			.title span {
@@ -322,11 +323,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				.bottom {
 					padding: 4px 8px 4px 4px;
 				}
-				skeleton-carousel {
-					--skeleton-carousel: {
-						padding: 0 16px;
-					};
-				}
+			skeleton-carousel {
+				--skeleton-carousel-item: {
+					padding: 0 16px;
+				};
+			}
 			}
 			.white-bg {
 				background-color: #fff;

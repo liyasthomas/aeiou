@@ -184,7 +184,8 @@ class MyHome extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<a href="{{sub.link}}"><a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a></a>
+											<paper-icon-button icon="my-icons:share" aria-label="Share"></paper-icon-button>
+											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
 								</div>

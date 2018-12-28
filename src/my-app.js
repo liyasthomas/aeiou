@@ -235,6 +235,13 @@ class MyApp extends PolymerElement {
 								</a>
 								<a href="">
 									<paper-icon-item>
+										<iron-icon icon="my-icons:dashboard" slot="item-icon"></iron-icon>
+										<span>Collections</span>
+										<paper-ripple></paper-ripple>
+									</paper-icon-item>
+								</a>
+								<a href="">
+									<paper-icon-item>
 										<iron-icon icon="my-icons:settings" slot="item-icon"></iron-icon>
 										<span>Settings</span>
 										<paper-ripple></paper-ripple>

@@ -157,6 +157,8 @@ class MyActivity extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
+											<paper-icon-button icon="my-icons:delete" aria-label="Delete"></paper-icon-button>
+											<paper-icon-button icon="my-icons:share" aria-label="Share"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -164,10 +166,12 @@ class MyActivity extends PolymerElement {
 							</div>
 						</div>
 					</template>
-					<template is="dom-if" if="{{!renderedCount}}">
-						Nothing found for '{{filterVal}}'
-					</template>
 				</div>
+				<template is="dom-if" if="{{!renderedCount}}">
+					<div class$="[[getUIType(UI)]] content flex-justified">
+						Nothing found for "{{filterVal}}" - <a class="link" href="">Try harder</a>
+					</div>
+				</template>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{activity.link}}">
 						<paper-button class="primary" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
