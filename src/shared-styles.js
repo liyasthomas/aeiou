@@ -134,6 +134,18 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-menu-button {
 				padding: 0;
 			}
+			paper-toast {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+				@apply --layout-justified;
+				border-radius: 8px;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				font-size: 18px;
+				font-weight: 600;
+			}
+			.toast-button {
+				margin: 8px;
+			}
 			model-viewer {
 				height: 100%;
 				width: 100%;
@@ -323,11 +335,15 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				.bottom {
 					padding: 4px 8px 4px 4px;
 				}
-			skeleton-carousel {
-				--skeleton-carousel-item: {
-					padding: 0 16px;
-				};
-			}
+				skeleton-carousel {
+					--skeleton-carousel-item: {
+						padding: 0 16px;
+					};
+				}
+				paper-toast {
+					max-width: none;
+					width: calc(100% - 24px);
+				}
 			}
 			.white-bg {
 				background-color: #fff;

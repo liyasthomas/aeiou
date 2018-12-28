@@ -139,17 +139,6 @@ class MyApp extends PolymerElement {
 					display: block;
 					width: 100%;
 				}
-				paper-toast {
-					@apply --layout-horizontal;
-					@apply --layout-center;
-					@apply --layout-justified;
-					border-radius: 8px;
-        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
-					font-weight: 600;
-				}
-				.toast-button {
-					margin: 8px;
-				}
 				#fab {
 					@apply --shadow-elevation-4dp;
 					position: fixed;
@@ -163,10 +152,6 @@ class MyApp extends PolymerElement {
 					color: var(--secondary-text-color);
 				}
 				@media (max-width: 640px) {
-					paper-toast {
-						max-width: none;
-						width: calc(100% - 24px);
-					}
 					#sharehome {
 						max-width: none;
 					}
@@ -189,14 +174,14 @@ class MyApp extends PolymerElement {
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
       <iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
-			<paper-toast id="updateToast" duration="3000" text="App cahed. Browse offline!"></paper-toast>
+			<paper-toast id="updateToast" text="App cahed. Browse offline!"></paper-toast>
 			<paper-toast id="sharehome" duration="0">
 				<div class="flex-vertical">
 					<div class="flex-horizontal">
 						<div class="flexchild">Connect via</div>
-						<paper-icon-button icon="my-icons:close" on-tap="openShare" aria-label="Close"></paper-icon-button>
+						<paper-icon-button icon="my-icons:close" on-click="openShare" aria-label="Close"></paper-icon-button>
 					</div>
-					<div on-tap="openShare">
+					<div on-click="openShare">
 						<template is="dom-repeat" items="[[social]]">
 							<a href="{{item.link}}" target="_blank" rel="noopener">
 								<paper-icon-button class="toast-button" src="../images/assets/social/{{item.icon}}.svg" aria-label="Icon"></paper-icon-button>
@@ -248,7 +233,7 @@ class MyApp extends PolymerElement {
 									</paper-icon-item>
 								</a>
 								<a href="#" onclick="return false;">
-									<paper-icon-item on-tap="openShare">
+									<paper-icon-item on-click="openShare">
 										<iron-icon icon="my-icons:share" slot="item-icon"></iron-icon>
 										<span>Share</span>
 										<paper-ripple></paper-ripple>

@@ -23,7 +23,7 @@ class MyActivity extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -34,7 +34,7 @@ class MyActivity extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -57,10 +57,10 @@ class MyActivity extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 4;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
 						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 4;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
 						width: 50vw;
@@ -70,6 +70,7 @@ class MyActivity extends PolymerElement {
 					color: var(--accent-color);
 				}
       </style>
+			<paper-toast id="shareToast" text="URL copied!"></paper-toast>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/activity_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -158,7 +159,7 @@ class MyActivity extends PolymerElement {
 										</div>
 										<div>
 											<paper-icon-button icon="my-icons:delete" aria-label="Delete"></paper-icon-button>
-											<paper-icon-button icon="my-icons:share" aria-label="Share"></paper-icon-button>
+											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -228,6 +229,12 @@ class MyActivity extends PolymerElement {
 
 	clearInput() {
 		this.filterVal = null;
+	}
+
+	shareThis() {
+		this.$.shareToast.toggle();
+//		this.$.input.select();
+//		document.execCommand('copy');
 	}
 
 	tryAgain() {

@@ -24,7 +24,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
+						--app-grid-item-height: 110vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -35,7 +35,7 @@ class MyHome extends PolymerElement {
 					:host {
 						--app-grid-columns: 1;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 80vw;
+						--app-grid-item-height: 100vw;
 						--app-grid-expandible-item-columns: 1;
 					}
 					.list {
@@ -68,6 +68,7 @@ class MyHome extends PolymerElement {
 					color: var(--accent-color);
 				}
       </style>
+			<paper-toast id="shareToast" text="URL copied!"></paper-toast>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/home_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -184,7 +185,7 @@ class MyHome extends PolymerElement {
 											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
 										</div>
 										<div>
-											<paper-icon-button icon="my-icons:share" aria-label="Share"></paper-icon-button>
+											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -236,6 +237,12 @@ class MyHome extends PolymerElement {
 					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
 				};
 		}
+	}
+
+	shareThis() {
+		this.$.shareToast.toggle();
+//		this.$.input.select();
+//		document.execCommand('copy');
 	}
 
 	tryAgain() {
