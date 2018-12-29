@@ -49,7 +49,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-icon-item {
 				white-space: nowrap;
 				font-family: "Prompt", "Roboto", "Noto", sans-serif;
-				font-size: 18px;
+				font-size: 16px;
 				font-weight: 600;
 				cursor: pointer;
 				--paper-item-focused: {

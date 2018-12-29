@@ -82,7 +82,7 @@ class MyDiscover extends PolymerElement {
 			<template is="dom-if" if="{{error0}}">
 				<template is="dom-if" if="{{!loading0}}">
 					<div class$="[[getUIType(UI)]] error">
-						<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
+						<paper-button on-click="tryAgain" aria-label="Try again">Try again</paper-button>
 					</div>
 				</template>
 			</template>
