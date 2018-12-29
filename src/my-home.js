@@ -115,7 +115,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{collections.link}}">
-						<paper-button class="primary" aria-label="View all">View all collections<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="primary" aria-label="View all">View all collections</paper-button>
 					</a>
 				</div>
 			</template>
@@ -186,6 +186,7 @@ class MyHome extends PolymerElement {
 										</div>
 										<div>
 											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
+											<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -196,7 +197,7 @@ class MyHome extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{discover.link}}">
-						<paper-button class="primary" aria-label="View all">Discover more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="primary" aria-label="View all">Discover more</paper-button>
 					</a>
 				</div>
 			</template>

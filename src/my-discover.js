@@ -57,22 +57,13 @@ class MyDiscover extends PolymerElement {
 				}
 				@media all and (min-width: 961px) {
 					:host {
-						--app-grid-columns: 4;
+						--app-grid-columns: 3;
 						--app-grid-gutter: 32px;
 						--app-grid-item-height: 30vw;
-						--app-grid-expandible-item-columns: 2;
+						--app-grid-expandible-item-columns: 3;
 					}
 					.list {
 						width: 50vw;
-					}
-					.item:nth-child(9n+2) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(9n+4) {
-						@apply --app-grid-expandible-item;
-					}
-					.item:nth-child(9n+9) {
-						@apply --app-grid-expandible-item;
 					}
 				}
 				paper-icon-button[active] {
@@ -168,6 +159,7 @@ class MyDiscover extends PolymerElement {
 										</div>
 										<div>
 											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
+											<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -178,12 +170,12 @@ class MyDiscover extends PolymerElement {
 				</div>
 				<template is="dom-if" if="{{!renderedCount}}">
 					<div class$="[[getUIType(UI)]] content flex-justified">
-						Nothing found for "{{filterVal}}" - <a class="link" href="">Try harder</a>
+						Nothing found for "{{filterVal}}" - <a class="link" href="404">Try harder</a>
 					</div>
 				</template>
 				<div class$="[[getUIType(UI)]] actions flex-center-center">
 					<a href="{{discover.link}}">
-						<paper-button class="primary" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="primary" aria-label="View all">Load more</paper-button>
 					</a>
 				</div>
 			</template>

@@ -157,6 +157,7 @@ class MyCollections extends PolymerElement {
 										</div>
 										<div>
 											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
+											<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
 											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
 										</div>
 									</div>
@@ -167,18 +168,18 @@ class MyCollections extends PolymerElement {
 				</div>
 				<template is="dom-if" if="{{!renderedCount}}">
 					<div class$="[[getUIType(UI)]] content flex-justified">
-						Nothing found for "{{filterVal}}" - <a class="link" href="">Try harder</a>
+						Nothing found for "{{filterVal}}" - <a class="link" href="404">Try harder</a>
 					</div>
 				</template>
 				<div class$="[[getUIType(UI)]] content flex-center-center">
 					<a href="{{collections.link}}">
-						<paper-button class="primary" aria-label="View all">Load more<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button class="primary" aria-label="View all">Load more</paper-button>
 					</a>
 				</div>
 				<div class$="[[getUIType(UI)]] content flex-center-center">
 					<p>Don't see what you're looking for?</p>
 					<a href="{{collections.link}}">
-						<paper-button aria-label="View all">Suggest a new collection<iron-icon icon="my-icons:chevron-right"></iron-icon></paper-button>
+						<paper-button aria-label="View all">Suggest a new collection</paper-button>
 					</a>
 				</div>
 			</template>

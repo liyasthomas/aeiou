@@ -85,10 +85,12 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-icon-button {
 				margin: 0 4px;
 			}
-			paper-button[disabled] {
-				pointer-events: none;
+			paper-button.primary[disabled] {
 				color: white;
 				background-color: #b2b2b2;
+			}
+			paper-button[disabled] {
+				color: #b2b2b2;
 			}
 			paper-button iron-icon {
 				margin-left: 8px;

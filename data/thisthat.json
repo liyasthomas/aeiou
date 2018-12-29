@@ -4,6 +4,7 @@
 			"title": "this",
 			"icon": "open-in-new",
 			"link": "this",
+			"pages": 5,
 			"sub": [
 				{
 					"title": "Barcode #1",

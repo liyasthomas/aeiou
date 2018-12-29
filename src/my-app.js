@@ -168,6 +168,9 @@ class MyApp extends PolymerElement {
 						display: block;
 					}
 				}
+				footer {
+					padding: 32px;
+				}
       </style>
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
       </app-location>
@@ -206,26 +209,26 @@ class MyApp extends PolymerElement {
 						<paper-icon-button class="leftItem" hidden$="{{wideLayout}}" icon="my-icons:arrow-back" aria-label="Back" onclick="history.back()"></paper-icon-button>
 						<div condensed-title class="leftItem" hidden$="{{wideLayout}}">{{page}}</div>
 						<div main-title class="rightItem">AEIOU</div>
-						<a href=""><paper-icon-button id="notifications" icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
+						<a href="404"><paper-icon-button id="notifications" icon="my-icons:notifications" aria-label="Create new"></paper-icon-button></a>
 						<paper-tooltip for="notifications" animation-delay="0">Notifications</paper-tooltip>
 						<paper-menu-button id="more" horizontal-align="right">
 							<paper-icon-button icon="my-icons:more-vert" slot="dropdown-trigger" aria-label="More options"></paper-icon-button>
 							<paper-listbox class="listbox" slot="dropdown-content">
-								<a href="">
+								<a href="404">
 									<paper-icon-item>
 										<iron-icon icon="my-icons:face" slot="item-icon"></iron-icon>
 										<span>Profile</span>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<a href="">
+								<a href="404">
 									<paper-icon-item>
 										<iron-icon icon="my-icons:dashboard" slot="item-icon"></iron-icon>
 										<span>Collections</span>
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<a href="">
+								<a href="404">
 									<paper-icon-item>
 										<iron-icon icon="my-icons:settings" slot="item-icon"></iron-icon>
 										<span>Settings</span>
@@ -239,7 +242,7 @@ class MyApp extends PolymerElement {
 										<paper-ripple></paper-ripple>
 									</paper-icon-item>
 								</a>
-								<a href="">
+								<a href="view4">
 									<paper-icon-item>
 										<iron-icon icon="my-icons:help-outline" slot="item-icon"></iron-icon>
 										<span>Help</span>
@@ -291,6 +294,8 @@ class MyApp extends PolymerElement {
 					<my-view4 name="view4"></my-view4>
 					<my-404 name="404"></my-404>
 				</iron-pages>
+				<footer>
+				</footer>
 				<a href="new"><paper-fab id="fab" icon="my-icons:add" aria-label="Scroll top" on-click="scrollTop"></paper-fab></a>
 				<paper-tooltip for="fab" position="top" animation-delay="0">Create new</paper-tooltip>
 			</app-header-layout>
