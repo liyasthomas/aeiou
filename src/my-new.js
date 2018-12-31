@@ -98,14 +98,14 @@ class MyNew extends PolymerElement {
 					height: 60vh;
 				}
       </style>
-			<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
-			</iron-ajax>
 			<paper-tabs selected="{{selected}}" attr-for-selected="name">
 				<paper-tab name="markerbased">Marker based</paper-tab>
 				<paper-tab name="markerless">Marker less</paper-tab>
 			</paper-tabs>
 			<iron-pages selected="{{selected}}" attr-for-selected="name">
 				<div name="markerbased">
+					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+					</iron-ajax>
 					<div class="content flex-center-center">
 						<h1>
 							if
