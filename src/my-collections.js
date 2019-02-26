@@ -8,7 +8,7 @@ import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-image/iron-image.js';
-import '@google/model-viewer';
+//import '@google/model-viewer';
 
 class MyCollections extends PolymerElement {
 	static get template() {

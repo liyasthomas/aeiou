@@ -7,7 +7,7 @@ import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
-import '@google/model-viewer';
+//import '@google/model-viewer';
 
 class MyDiscover extends PolymerElement {
 	static get template() {

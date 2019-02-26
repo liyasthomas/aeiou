@@ -9,7 +9,7 @@ import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-demo-helpers/demo-snippet.js';
 import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
 import '@polymer/iron-collapse/iron-collapse.js';
-import '@google/model-viewer';
+//import '@google/model-viewer';
 
 class MyNew extends PolymerElement {
 	static get template() {
