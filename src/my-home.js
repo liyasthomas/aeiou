@@ -8,7 +8,7 @@ import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-image/iron-image.js';
 import '@fabricelements/skeleton-carousel/skeleton-carousel.js';
-//import '@google/model-viewer';
+import '@google/model-viewer';
 
 class MyHome extends PolymerElement {
 	static get template() {
