@@ -1,6 +1,6 @@
 import {
-	PolymerElement,
-	html
+  PolymerElement,
+  html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
@@ -12,8 +12,8 @@ import '@polymer/iron-collapse/iron-collapse.js';
 //import '@google/model-viewer';
 
 class MyNew extends PolymerElement {
-	static get template() {
-		return html `
+  static get template() {
+    return html `
       <style include="demo-pages-shared-styles"></style>
       <style include="shared-styles">
 				:host {
@@ -166,9 +166,9 @@ class MyNew extends PolymerElement {
 						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create</paper-button></a>
 					</div>
 					<div class="content flex-center-center">
-						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
+						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]" hidden="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
-					<iron-collapse id="collapse" opened="{{opened}}" tabindex="-1">
+					<iron-collapse id="collapse" opened="{{opened}}" hidden="[[isInputEmpty(selectedThis, selectedThat)]]" tabindex="-1">
 						<div class="grid content">
 							<div class="title">Standalone file</div>
 							<demo-snippet>
@@ -206,60 +206,62 @@ class MyNew extends PolymerElement {
 				</div>
 			</iron-pages>
     `;
-	}
+  }
 
-	static get properties() {
-		return {
-			selected: {
-				type: String,
-				value: "markerbased",
-				reflectToAttribute: true
-			},
-			selectedThis: {
-				type: String,
-				value: 0,
-				reflectToAttribute: true
-			},
-			selectedThat: {
-				type: String,
-				value: 0,
-				reflectToAttribute: true
-			},
-			opened: {
-				type: Boolean,
-				reflectToAttribute: true
-			}
-		};
-	}
+  static get properties() {
+    return {
+      selected: {
+        type: String,
+        value: "markerbased",
+        reflectToAttribute: true
+      },
+      selectedThis: {
+        type: String,
+        value: 0,
+        reflectToAttribute: true
+      },
+      selectedThat: {
+        type: String,
+        value: 0,
+        reflectToAttribute: true
+      },
+      opened: {
+        type: Boolean,
+        reflectToAttribute: true
+      }
+    };
+  }
 
-	resetThis() {
-		this.selectedThis = 0;
-	}
+  resetThis() {
+    this.selectedThis = 0;
+  }
 
-	resetThat() {
-		this.selectedThat = 0;
-	}
+  resetThat() {
+    this.selectedThat = 0;
+  }
 
-	isInputEmpty(a, b) {
-		if (a === 0 || b === 0) return true;
-		return false;
-	}
+  isInputEmpty(a, b) {
+    if (this.$.collapse.opened)
+      this.$.collapse.toggle();
+    if (a === 0 || b === 0) return true;
+    return false;
+  }
 
-	tryAgain() {
-		this.$.ajax0.generateRequest();
-	}
+  tryAgain() {
+    this.$.ajax0.generateRequest();
+  }
 
-	_getText(opened) {
-		return opened ? 'Hide' : 'View';
-	}
+  _getText(opened) {
+    return opened ? 'Hide' : 'View';
+  }
 
-	_getIcon(opened) {
-		return opened ? 'expand-less' : 'expand-more';
-	}
+  _getIcon(opened) {
+    return opened ? 'expand-less' : 'expand-more';
+  }
 
-	toggle() {
-		this.$.collapse.toggle();
-	}
+  toggle() {
+    this.$.collapse.toggle();
+  }
 }
 
 window.customElements.define('my-new', MyNew);

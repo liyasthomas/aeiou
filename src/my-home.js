@@ -1,6 +1,6 @@
 import {
-	PolymerElement,
-	html
+  PolymerElement,
+  html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/app-layout/app-grid/app-grid-style.js';
@@ -11,8 +11,8 @@ import '@fabricelements/skeleton-carousel/skeleton-carousel.js';
 //import '@google/model-viewer';
 
 class MyHome extends PolymerElement {
-	static get template() {
-		return html `
+  static get template() {
+    return html `
       <style include="app-grid-style">
       </style>
       <style include="shared-styles">
@@ -202,69 +202,69 @@ class MyHome extends PolymerElement {
 				</div>
 			</template>
     `;
-	}
+  }
 
-	static get properties() {
-		return {
-			sortVal: {
-				type: String,
-				value: "none",
-				reflectToAttribute: true
-			},
-			controls: {
-				type: Boolean,
-				value: true,
-				reflectToAttribute: true
-			}
-		};
-	}
+  static get properties() {
+    return {
+      sortVal: {
+        type: String,
+        value: "none",
+        reflectToAttribute: true
+      },
+      controls: {
+        type: Boolean,
+        value: true,
+        reflectToAttribute: true
+      }
+    };
+  }
 
-	attached() {
-		this._updateGridStyles = this._updateGridStyles || function () {
-			this.updateStyles();
-		}.bind(this);
-		window.addEventListener('resize', this._updateGridStyles);
-	}
+  attached() {
+    this._updateGridStyles = this._updateGridStyles || function () {
+      this.updateStyles();
+    }.bind(this);
+    window.addEventListener('resize', this._updateGridStyles);
+  }
 
-	detached() {
-		window.removeEventListener('resize', this._updateGridStyles);
-	}
+  detached() {
+    window.removeEventListener('resize', this._updateGridStyles);
+  }
 
-	_sort(val) {
-		switch (val) {
-			case 'title':
-				return function (a, b) {
-					if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
-					return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
-				};
-		}
-	}
+  _sort(val) {
+    switch (val) {
+      case 'title':
+        return function (a, b) {
+          if (a.title.toLowerCase() === b.title.toLowerCase()) return 0;
+          return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+        };
+    }
+  }
 
-	shareThis() {
-		this.$.shareToast.toggle();
-//		this.$.input.select();
-//		document.execCommand('copy');
-	}
+  shareThis() {
+    this.$.shareToast.toggle();
+    //		this.$.input.select();
+    //		document.execCommand('copy');
+  }
 
-	tryAgain() {
-		this.$.ajax0.generateRequest();
-	}
+  tryAgain() {
+    this.$.ajax0.generateRequest();
+  }
 
-	getUIType(UI) {
-		return UI ? 'list' : 'grid';
-	}
+  getUIType(UI) {
+    return UI ? 'list' : 'grid';
+  }
 
-	getUIIcon(icon) {
-		return icon ? 'dashboard' : 'view-agenda';
-	}
+  getUIIcon(icon) {
+    return icon ? 'dashboard' : 'view-agenda';
+  }
 
-	_computeBgClass(color) {
-		return color + '-bg';
-	}
+  _computeBgClass(color) {
+    return color + '-bg';
+  }
 
-	_computeFgClass(color) {
-		return color + '-fg';
-	}
+  _computeFgClass(color) {
+    return color + '-fg';
+  }
 }
 
 window.customElements.define('my-home', MyHome);
