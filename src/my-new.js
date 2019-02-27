@@ -1,6 +1,6 @@
 import {
-  PolymerElement,
-  html
+	PolymerElement,
+	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
@@ -12,13 +12,18 @@ import '@polymer/iron-collapse/iron-collapse.js';
 //import '@google/model-viewer';
 
 class MyNew extends PolymerElement {
-  static get template() {
-    return html `
+	static get template() {
+		return html `
       <style include="demo-pages-shared-styles"></style>
       <style include="shared-styles">
 				:host {
 					display: block;
 					--paper-tabs-selection-bar-color: var(--accent-color);
+				}
+				.help {
+					padding: 32px;
+					border-radius: 8px;
+					border: 2px dashed #b2b2b2;
 				}
 				demo-snippet {
 					margin: 16px 0;
@@ -104,6 +109,16 @@ class MyNew extends PolymerElement {
 			</paper-tabs>
 			<iron-pages selected="{{selected}}" attr-for-selected="name">
 				<div name="markerbased">
+					<div class="grid content">
+						<div class="help">
+							<h2>What does "Marker Based" means?</h2>
+							<p>AEIOU uses <a class="link" href="https://github.com/artoolkit">artoolkit</a>, which is a software with years of experience doing augmented reality. <a class="link" href="https://github.com/artoolkit" target="_blank">Read more <iron-icon icon="my-icons:open-in-new"></iron-icon></a></p>
+							<p>We supports a wide range of markers, multiple types of markers, pattern/barcode markers, multiple independent markers at the same time, or multiple markers acting as a single marker up to you to choose.</p>
+							<p>
+							• <a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">Barcode Marker Generator</a> - Generates barcode markers with numerical values.<br>
+							• <a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">Pattern Marker Generator</a> - Generates pattern markers with your own image.</p>
+						</div>
+					</div>
 					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 					</iron-ajax>
 					<div class="content flex-center-center">
@@ -126,6 +141,7 @@ class MyNew extends PolymerElement {
 							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
 								<paper-dropdown-menu label="{{this.title}}" no-label-float>
 									<paper-listbox id="selectedThis" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
+										<paper-icon-item name="pattern"><iron-icon icon="my-icons:filter-vintage" slot="item-icon"></iron-icon>Upload your own pattern<paper-ripple></paper-ripple></paper-icon-item>
 										<template is="dom-repeat" items="[[this.sub]]" as="sub">
 											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 										</template>
@@ -153,6 +169,7 @@ class MyNew extends PolymerElement {
 							<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
 								<paper-dropdown-menu label="{{that.title}}" no-label-float>
 									<paper-listbox id="selectedThat" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
+										<paper-icon-item name="model"><iron-icon icon="my-icons:filter-vintage" slot="item-icon"></iron-icon>Upload your own model<paper-ripple></paper-ripple></paper-icon-item>
 										<template is="dom-repeat" items="[[that.sub]]" as="sub">
 											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
 										</template>
@@ -188,6 +205,12 @@ class MyNew extends PolymerElement {
 					</iron-collapse>
 				</div>
 				<div name="markerless">
+					<div class="grid content">
+						<div class="help">
+							<h2>What does "Marker Less" means?</h2>
+							<p>AEIOU uses <a class="link" href="https://developers.google.com/ar">ARcore</a> which is a Google’s platform for building augmented reality experiences. <a class="link" href="https://developers.google.com/ar" target="_blank">Read more <iron-icon icon="my-icons:open-in-new"></iron-icon></a></p>
+						</div>
+					</div>
 					<div class="grid flex-center-center">
 						<div class="actions">
 							<div class="title">Create new scene</div>
@@ -206,62 +229,62 @@ class MyNew extends PolymerElement {
 				</div>
 			</iron-pages>
     `;
-  }
+	}
 
-  static get properties() {
-    return {
-      selected: {
-        type: String,
-        value: "markerbased",
-        reflectToAttribute: true
-      },
-      selectedThis: {
-        type: String,
-        value: 0,
-        reflectToAttribute: true
-      },
-      selectedThat: {
-        type: String,
-        value: 0,
-        reflectToAttribute: true
-      },
-      opened: {
-        type: Boolean,
-        reflectToAttribute: true
-      }
-    };
-  }
+	static get properties() {
+		return {
+			selected: {
+				type: String,
+				value: "markerbased",
+				reflectToAttribute: true
+			},
+			selectedThis: {
+				type: String,
+				value: 0,
+				reflectToAttribute: true
+			},
+			selectedThat: {
+				type: String,
+				value: 0,
+				reflectToAttribute: true
+			},
+			opened: {
+				type: Boolean,
+				reflectToAttribute: true
+			}
+		};
+	}
 
-  resetThis() {
-    this.selectedThis = 0;
-  }
+	resetThis() {
+		this.selectedThis = 0;
+	}
 
-  resetThat() {
-    this.selectedThat = 0;
-  }
+	resetThat() {
+		this.selectedThat = 0;
+	}
 
-  isInputEmpty(a, b) {
-    if (this.$.collapse.opened)
-      this.$.collapse.toggle();
-    if (a === 0 || b === 0) return true;
-    return false;
-  }
+	isInputEmpty(a, b) {
+		if (this.$.collapse.opened)
+			this.$.collapse.toggle();
+		if (a === 0 || b === 0) return true;
+		return false;
+	}
 
-  tryAgain() {
-    this.$.ajax0.generateRequest();
-  }
+	tryAgain() {
+		this.$.ajax0.generateRequest();
+	}
 
-  _getText(opened) {
-    return opened ? 'Hide' : 'View';
-  }
+	_getText(opened) {
+		return opened ? 'Hide' : 'View';
+	}
 
-  _getIcon(opened) {
-    return opened ? 'expand-less' : 'expand-more';
-  }
+	_getIcon(opened) {
+		return opened ? 'expand-less' : 'expand-more';
+	}
 
-  toggle() {
-    this.$.collapse.toggle();
-  }
+	toggle() {
+		this.$.collapse.toggle();
+	}
 }
 
 window.customElements.define('my-new', MyNew);
