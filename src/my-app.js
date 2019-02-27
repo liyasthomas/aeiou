@@ -1,10 +1,10 @@
 import {
-  PolymerElement,
-  html
+	PolymerElement,
+	html
 } from '@polymer/polymer/polymer-element.js';
 import {
-  setPassiveTouchGestures,
-  setRootPath
+	setPassiveTouchGestures,
+	setRootPath
 } from '@polymer/polymer/lib/utils/settings.js';
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
@@ -37,8 +37,8 @@ setPassiveTouchGestures(true);
 setRootPath(MyAppGlobals.rootPath);
 
 class MyApp extends PolymerElement {
-  static get template() {
-    return html `
+	static get template() {
+		return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -300,173 +300,173 @@ class MyApp extends PolymerElement {
 				<paper-tooltip for="fab" position="top" animation-delay="0">Create new</paper-tooltip>
 			</app-header-layout>
     `;
-  }
+	}
 
-  static get properties() {
-    return {
-      wideLayout: {
-        type: Boolean,
-        value: false
-      },
-      page: {
-        type: String,
-        reflectToAttribute: true,
-        observer: '_pageChanged'
-      },
-      opened: {
-        type: Boolean,
-        reflectToAttribute: true
-      },
-      social: {
-        type: Array,
-        value: function () {
-          return [{
-              link: "https://www.facebook.com/liyasthomas",
-              icon: "facebook"
+	static get properties() {
+		return {
+			wideLayout: {
+				type: Boolean,
+				value: false
+			},
+			page: {
+				type: String,
+				reflectToAttribute: true,
+				observer: '_pageChanged'
+			},
+			opened: {
+				type: Boolean,
+				reflectToAttribute: true
+			},
+			social: {
+				type: Array,
+				value: function () {
+					return [{
+							link: "https://www.facebook.com/liyasthomas",
+							icon: "facebook"
 						},
-            {
-              link: "https://twitter.com/liyasthomas",
-              icon: "twitter"
+						{
+							link: "https://twitter.com/liyasthomas",
+							icon: "twitter"
 						},
-            {
-              link: "https://instagram.com/liyasthomas",
-              icon: "instagram"
+						{
+							link: "https://instagram.com/liyasthomas",
+							icon: "instagram"
 						},
-            {
-              link: "https://plus.google.com/liyasthomas",
-              icon: "google-plus"
+						{
+							link: "https://plus.google.com/liyasthomas",
+							icon: "google-plus"
 						},
-            {
-              link: "https://liyasthomas.tumblr.com",
-              icon: "tumblr"
+						{
+							link: "https://liyasthomas.tumblr.com",
+							icon: "tumblr"
 						},
-            {
-              link: "https://www.linkedin.com/in/liyasthomas",
-              icon: "linkedin"
+						{
+							link: "https://www.linkedin.com/in/liyasthomas",
+							icon: "linkedin"
 						},
-            {
-              link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
-              icon: "whatsapp"
+						{
+							link: "https://api.whatsapp.com/send?phone=919539653962&text=Hi%20Liyas,",
+							icon: "whatsapp"
 						}
 					]
-        }
-      },
-      routeData: Object,
-      subroute: Object
-    };
-  }
+				}
+			},
+			routeData: Object,
+			subroute: Object
+		};
+	}
 
-  show() {
-    this.$.toolbar.animate({
-      transform: ['translateY(-100%)', 'translateY(0)']
-    }, {
-      duration: 600,
-      easing: 'ease-in-out'
-    });
-    this.$.fab.animate({
-      transform: ['scale(0)', 'scale(1)']
-    }, {
-      duration: 1000,
-      easing: 'ease-in-out'
-    });
-  }
+	show() {
+		this.$.toolbar.animate({
+			transform: ['translateY(-100%)', 'translateY(0)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.fab.animate({
+			transform: ['scale(0)', 'scale(1)']
+		}, {
+			duration: 1000,
+			easing: 'ease-in-out'
+		});
+	}
 
-  tryAgain() {
-    this.$.ajax.generateRequest();
-  }
+	tryAgain() {
+		this.$.ajax.generateRequest();
+	}
 
-  update(worker) {
-    this.$.updateToast.show();
-  }
+	update(worker) {
+		this.$.updateToast.show();
+	}
 
-  openShare() {
-    this.$.sharehome.toggle();
-  }
+	openShare() {
+		this.$.sharehome.toggle();
+	}
 
-  _getIcon(opened) {
-    return opened ? 'expand-less' : 'expand-more';
-  }
+	_getIcon(opened) {
+		return opened ? 'expand-less' : 'expand-more';
+	}
 
-  scrollTop() {
-    var scrollDuration = 200;
-    var scrollStep = -window.scrollY / (scrollDuration / 10),
-      scrollInterval = setInterval(function () {
-        if (window.scrollY != 0) {
-          window.scrollBy(0, scrollStep);
-        } else clearInterval(scrollInterval);
-      }, 10);
-  }
+	scrollTop() {
+		var scrollDuration = 200;
+		var scrollStep = -window.scrollY / (scrollDuration / 10),
+			scrollInterval = setInterval(function () {
+				if (window.scrollY != 0) {
+					window.scrollBy(0, scrollStep);
+				} else clearInterval(scrollInterval);
+			}, 10);
+	}
 
-  static get observers() {
-    return [
+	static get observers() {
+		return [
       '_routePageChanged(routeData.page)'
     ];
-  }
+	}
 
-  _routePageChanged(page) {
-    // Reset scroll position
-    this.scrollTop();
+	_routePageChanged(page) {
+		// Reset scroll position
+		this.scrollTop();
 
-    // Show the corresponding page according to the route.
-    //
-    // If no page was found in the route data, page will be an empty string.
-    // Show 'home' in that case. And if the page doesn't exist, show '404'.
-    if (!page) {
-      this.page = 'home';
-    } else if (['home', 'collections', 'discover', 'activity', 'new', 'view4'].indexOf(page) !== -1) {
-      this.page = page;
-    } else {
-      this.page = '404';
-    }
+		// Show the corresponding page according to the route.
+		//
+		// If no page was found in the route data, page will be an empty string.
+		// Show 'home' in that case. And if the page doesn't exist, show '404'.
+		if (!page) {
+			this.page = 'home';
+		} else if (['home', 'collections', 'discover', 'activity', 'new', 'view4'].indexOf(page) !== -1) {
+			this.page = page;
+		} else {
+			this.page = '404';
+		}
 
-    // Change page title
-    document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' - AEIOU';
+		// Change page title
+		document.title = this.page.charAt(0).toUpperCase() + this.page.slice(1) + ' - AEIOU';
 
-    // Animations
-    this.$.pages.animate({
-      opacity: [0, 1],
-      transform: ['translateY(-32px)', 'translateY(0)']
-    }, {
-      duration: 600,
-      easing: 'ease-in-out'
-    });
-    this.$.fab.animate({
-      transform: ['scale(0)', 'scale(1)']
-    }, {
-      duration: 600,
-      easing: 'ease-in-out'
-    });
-  }
+		// Animations
+		this.$.pages.animate({
+			opacity: [0, 1],
+			transform: ['translateY(-32px)', 'translateY(0)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+		this.$.fab.animate({
+			transform: ['scale(0)', 'scale(1)']
+		}, {
+			duration: 600,
+			easing: 'ease-in-out'
+		});
+	}
 
-  _pageChanged(page) {
-    // Import the page component on demand.
-    //
-    // Note: `polymer build` doesn't like string concatenation in the import
-    // statement, so break it up.
-    switch (page) {
-      case 'home':
-        import('./my-home.js');
-        break;
-      case 'collections':
-        import('./my-collections.js');
-        break;
-      case 'discover':
-        import('./my-discover.js');
-        break;
-      case 'activity':
-        import('./my-activity.js');
-        break;
-      case 'new':
-        import('./my-new.js');
-        break;
-      case 'view4':
-        import('./my-view4.js');
-        break;
-      case '404':
-        import('./my-404.js');
-        break;
-    }
-  }
+	_pageChanged(page) {
+		// Import the page component on demand.
+		//
+		// Note: `polymer build` doesn't like string concatenation in the import
+		// statement, so break it up.
+		switch (page) {
+			case 'home':
+				import('./my-home.js');
+				break;
+			case 'collections':
+				import('./my-collections.js');
+				break;
+			case 'discover':
+				import('./my-discover.js');
+				break;
+			case 'activity':
+				import('./my-activity.js');
+				break;
+			case 'new':
+				import('./my-new.js');
+				break;
+			case 'view4':
+				import('./my-view4.js');
+				break;
+			case '404':
+				import('./my-404.js');
+				break;
+		}
+	}
 }
 
 window.customElements.define('my-app', MyApp);
