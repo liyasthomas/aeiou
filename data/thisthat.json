@@ -2,9 +2,8 @@
 	"this": [
 		{
 			"title": "this",
-			"icon": "open-in-new",
+			"icon": "360",
 			"link": "this",
-			"pages": 5,
 			"sub": [
 				{
 					"title": "Barcode #1",
@@ -62,47 +61,47 @@
 	"that": [
 		{
 			"title": "that",
-			"icon": "open-in-new",
+			"icon": "360",
 			"link": "that",
 			"sub": [
 				{
 					"title": "Alphabet A",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "alphabet"
 				},
 				{
 					"title": "Cat",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "cat"
 				},
 				{
 					"title": "Car",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "car"
 				},
 				{
 					"title": "Skeleton",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "skeleton"
 				},
 				{
 					"title": "H2O",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "h2O"
 				},
 				{
 					"title": "Motherboard",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "motherboard"
 				},
 				{
 					"title": "Spiderman",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "spiderman"
 				},
 				{
 					"title": "Earth",
-					"icon": "open-in-new",
+					"icon": "360",
 					"link": "earth"
 				}
 			]
