@@ -80,8 +80,28 @@ class MyNew extends PolymerElement {
 					width: 80vw;
 					height: 60vh;
 				}
+				.model model-viewer {
+					width: 226px;
+					height: 226px;
+				}
+				.marker {
+					border-radius: 8px;
+				}
+				.assets {
+					margin: 16px 0;
+				}
 				code-sample {
-					margin-top: 16px;
+					--code-sample-font-size: 16px;
+					--code-sample-copy-button-bg-color: var(--accent-color);
+					--code-sample-copy-clipboard-button: {
+						padding: 8px;
+						font-family: "Roboto Mono", monospace;
+						font-weight: bold;
+						border-radius: 0 8px 0 8px;
+					}
+					--code-sample-hljs: {
+						border-radius: 8px;
+					}
 				}
       </style>
 			<paper-tabs selected="{{selected}}" attr-for-selected="name">
@@ -96,8 +116,8 @@ class MyNew extends PolymerElement {
 							<p>AEIOU uses <a class="link" href="https://github.com/artoolkit">artoolkit</a>, which is a software with years of experience doing augmented reality.</p>
 							<p>We supports a wide range of markers, multiple types of markers, pattern/barcode markers, multiple independent markers at the same time, or multiple markers acting as a single marker up to you to choose.</p>
 							<p>
-							• <a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">Barcode Marker Generator</a> - Generates barcode markers with numerical values.<br>
-							• <a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">Pattern Marker Generator</a> - Generates pattern markers with your own image.</p>
+							• <a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">Barcode Marker Generator<iron-icon icon="my-icons:open-in-new"></a> Generate barcode markers with numerical values.<br>
+							• <a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">Pattern Marker Generator<iron-icon icon="my-icons:open-in-new"></a> Generate pattern markers with your own image.</p>
 						</div>
 					</div>
 					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -164,16 +184,30 @@ class MyNew extends PolymerElement {
 						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create</paper-button></a>
 					</div>
 					<div class="content flex-center-center">
-						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]" hidden="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] code<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
+						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]" hidden="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] assets<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" hidden="[[isInputEmpty(selectedThis, selectedThat)]]" tabindex="-1">
 						<div class="grid content">
-							<div class="title">Standalone file</div>
-							<code-sample id="sample" type="html" copy-clipboard-button>
-								<template preserve-content>
-									Something went wrong!
-								</template>
-							</code-sample>
+							<div class="flex-horizontal assets">
+								<div class="flexchild">
+									<h3>if marker: {{selectedThis}}</h3>
+									<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
+								</div>
+							</div>
+							<div class="flex-horizontal assets">
+								<div class="flexchild">
+									<h3>then model: {{selectedThat}}</h3>
+									<div id="model" class="model"></div>
+								</div>
+							</div>
+							<div class="assets">
+								<h3>standalone file</h3>
+								<code-sample id="sample" copy-clipboard-button>
+									<template>
+										Something went wrong!
+									</template>
+								</code-sample>
+							</div>
 						</div>
 					</iron-collapse>
 				</div>
@@ -279,6 +313,23 @@ Something went wrong!
 </template>
 			`;
 		this.$.sample.innerHTML = content;
+		let model = (this.$.collapse.opened) ?
+			`
+<model-viewer src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
+							alt="title"
+							controls
+							background-color="#eee"
+							reveal-when-loaded
+							preload
+							poster="../images/assets/app/puff.svg">
+</model-viewer>
+			` :
+			`
+<template>
+Something went wrong!
+</template>
+			`;
+		this.$.model.innerHTML = model;
 	}
 }
 
