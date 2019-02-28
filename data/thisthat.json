@@ -8,52 +8,52 @@
 				{
 					"title": "Barcode #1",
 					"icon": "center-focus-strong",
-					"link": "barcode1"
+					"link": "1"
 				},
 				{
 					"title": "Barcode #2",
 					"icon": "center-focus-strong",
-					"link": "barcode2"
+					"link": "2"
 				},
 				{
 					"title": "Barcode #3",
 					"icon": "center-focus-strong",
-					"link": "barcode3"
+					"link": "3"
 				},
 				{
 					"title": "Barcode #4",
 					"icon": "center-focus-strong",
-					"link": "barcode4"
+					"link": "4"
 				},
 				{
 					"title": "Barcode #5",
 					"icon": "center-focus-strong",
-					"link": "barcode5"
+					"link": "5"
 				},
 				{
 					"title": "Barcode #6",
 					"icon": "center-focus-strong",
-					"link": "barcode6"
+					"link": "6"
 				},
 				{
 					"title": "Barcode #7",
 					"icon": "center-focus-strong",
-					"link": "barcode7"
+					"link": "7"
 				},
 				{
 					"title": "Barcode #8",
 					"icon": "center-focus-strong",
-					"link": "barcode8"
+					"link": "8"
 				},
 				{
 					"title": "Barcode #9",
 					"icon": "center-focus-strong",
-					"link": "barcode9"
+					"link": "9"
 				},
 				{
 					"title": "Barcode #10",
 					"icon": "center-focus-strong",
-					"link": "barcode10"
+					"link": "10"
 				}
 			]
 		}

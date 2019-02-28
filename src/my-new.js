@@ -169,7 +169,7 @@ class MyNew extends PolymerElement {
 					<iron-collapse id="collapse" opened="{{opened}}" hidden="[[isInputEmpty(selectedThis, selectedThat)]]" tabindex="-1">
 						<div class="grid content">
 							<div class="title">Standalone file</div>
-							<code-sample id="sample" type="js" copy-clipboard-button>
+							<code-sample id="sample" type="html" copy-clipboard-button>
 								<template preserve-content>
 									Something went wrong!
 								</template>
@@ -258,13 +258,26 @@ class MyNew extends PolymerElement {
 	toggle() {
 		this.$.collapse.toggle();
 		let content = (this.$.collapse.opened) ?
-			`<template>` +
-			this.selectedThis +
-			this.selectedThat +
-			`</template>` :
-			`<template>
-				Something went wrong!
-			</template>`;
+			`
+<template>
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+<a-scene>
+<a-marker type="barcode" value="` + this.selectedThis + `">
+<a-entity gltf-model="#` + this.selectedThat + `" scale="0.05 0.05 0.05" animation-mixer></a-entity>
+</a-marker>
+<a-entity camera></a-entity>
+</a-scene>
+</html>
+</template>
+			` :
+			`
+<template>
+Something went wrong!
+</template>
+			`;
 		this.$.sample.innerHTML = content;
 	}
 }
