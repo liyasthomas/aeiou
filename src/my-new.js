@@ -119,7 +119,7 @@ class MyNew extends PolymerElement {
 					.model model-viewer {
 						@apply --layout-flex;
 						width: 100%;
-						min-height: 160px;
+						height: calc(50vw - 48px);
 					}
 				}
       </style>
@@ -135,8 +135,15 @@ class MyNew extends PolymerElement {
 							<p>AEIOU uses <a class="link" href="https://github.com/artoolkit">artoolkit</a>, which is a software with years of experience doing augmented reality.</p>
 							<p>We supports a wide range of markers, multiple types of markers, pattern/barcode markers, multiple independent markers at the same time, or multiple markers acting as a single marker up to you to choose.</p>
 							<p>
-							• <a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">Barcode Marker Generator<iron-icon icon="my-icons:open-in-new"></a> Generate barcode markers with numerical values.<br>
-							• <a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">Pattern Marker Generator<iron-icon icon="my-icons:open-in-new"></a> Generate pattern markers with your own image.</p>
+								<a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">
+										<paper-button class="primary" aria-label="Barcode Generator">Barcode Generator<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button>
+									</a> Generate barcode markers with numerical values.
+							</p>
+							<p>
+								<a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">
+									<paper-button class="primary" aria-label="Custom Generator">Custom Generator<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button>
+								</a> Generate pattern markers with your own image.
+							</p>
 						</div>
 					</div>
 					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
