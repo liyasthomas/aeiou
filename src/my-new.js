@@ -88,7 +88,7 @@ class MyNew extends PolymerElement {
 					border-radius: 8px;
 				}
 				.assets {
-					margin: 16px 0;
+					margin-right: 16px;
 				}
 				code-sample {
 					--code-sample-font-size: 16px;
@@ -101,6 +101,25 @@ class MyNew extends PolymerElement {
 					}
 					--code-sample-hljs: {
 						border-radius: 8px;
+					}
+					margin-top: 16px;
+				}
+				@media (max-width: 640px) {
+					.help {
+						padding: 16px;
+					}
+					.assets {
+						@apply --layout-flex;
+						width: 50%;
+					}
+					.marker {
+						@apply --layout-flex;
+						width: 100%;
+					}
+					.model model-viewer {
+						@apply --layout-flex;
+						width: 100%;
+						min-height: 160px;
 					}
 				}
       </style>
@@ -188,20 +207,17 @@ class MyNew extends PolymerElement {
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" hidden="[[isInputEmpty(selectedThis, selectedThat)]]" tabindex="-1">
 						<div class="grid content">
-							<div class="flex-horizontal assets">
-								<div class="flexchild">
-									<h3>if marker: {{selectedThis}}</h3>
+							<div class="help flex-horizontal">
+								<div class="assets">
+									<div>if marker: {{selectedThis}}</div>
 									<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
 								</div>
-							</div>
-							<div class="flex-horizontal assets">
 								<div class="flexchild">
-									<h3>then model: {{selectedThat}}</h3>
+									<div>then model: {{selectedThat}}</div>
 									<div id="model" class="model"></div>
 								</div>
 							</div>
-							<div class="assets">
-								<h3>standalone file</h3>
+							<div>
 								<code-sample id="sample" copy-clipboard-button>
 									<template>
 										Something went wrong!
