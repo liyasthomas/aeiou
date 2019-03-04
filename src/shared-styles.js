@@ -103,7 +103,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				background-color: var(--paper-grey-100);
 				border-radius: 32px;
 				--paper-input-container: {
-					padding: 4px 8px;
+					padding: 4px;
 				};
 				--paper-input-container-underline: {
 					display: none;

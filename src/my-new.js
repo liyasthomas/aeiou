@@ -3,7 +3,8 @@ import {
 	html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
-import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
+import '@polymer/app-layout/app-grid/app-grid-style.js';
+import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-collapse/iron-collapse.js';
@@ -13,10 +14,45 @@ import '@kuscamara/code-sample/code-sample.js';
 class MyNew extends PolymerElement {
 	static get template() {
 		return html `
+      <style include="app-grid-style">
+      </style>
       <style include="shared-styles">
 				:host {
 					display: block;
 					--paper-tabs-selection-bar-color: var(--accent-color);
+          --app-grid-item-height: 100%;
+				}
+				@media all and (min-width: 0) and (max-width: 360px) {
+					:host {
+						--app-grid-columns: 1;
+						--app-grid-gutter: 16px;
+						--app-grid-item-height: 110vw;
+						--app-grid-expandible-item-columns: 1;
+					}
+				}
+				@media all and (min-width: 361px) and (max-width: 640px) {
+					:host {
+						--app-grid-columns: 1;
+						--app-grid-gutter: 16px;
+						--app-grid-item-height: 100vw;
+						--app-grid-expandible-item-columns: 1;
+					}
+				}
+				@media all and (min-width: 641px) and (max-width: 960px) {
+					:host {
+						--app-grid-columns: 2;
+						--app-grid-gutter: 32px;
+						--app-grid-item-height: 40vw;
+						--app-grid-expandible-item-columns: 2;
+					}
+				}
+				@media all and (min-width: 961px) {
+					:host {
+						--app-grid-columns: 4;
+						--app-grid-gutter: 32px;
+						--app-grid-item-height: 20vw;
+						--app-grid-expandible-item-columns: 4;
+					}
 				}
 				.help {
 					padding: 32px;
@@ -47,33 +83,14 @@ class MyNew extends PolymerElement {
 				paper-tab.iron-selected {
 					color: var(--accent-color);
 				}
-				h1 {
-					font-size: 48px;
-					text-align: center;
+				.item.iron-selected {
+					box-shadow: 0 0 0 8px var(--accent-color);
 				}
-				paper-dropdown-menu {
-					--paper-input-container-label: {
-						font-family: "Prompt", "Roboto", "Noto", sans-serif;
-						color: var(--accent-color);
-						text-align: center;
-						font-weight: 700;
-						font-size: 48px;
-						height: 100%;
-						@apply --layout-vertical;
-						@apply --layout-center-center;
-					};
-					--paper-input-container-input: {
-						font-family: "Prompt", "Roboto", "Noto", sans-serif;
-						color: var(--accent-color);
-						text-align: center;
-						font-weight: 700;
-						font-size: 48px;
-					};
-					--paper-input-container-underline: {
-						display: none;
-					};
+				model-viewer.mb {
+					border-top: 1px solid var(--light-text-color);
+					border-radius: 8px 8px 0 0;
 				}
-				model-viewer {
+				model-viewer.ml {
 					border-radius: 8px;
 					border-top: 1px solid var(--light-text-color);
 					border-bottom: 1px solid var(--light-text-color);
@@ -81,6 +98,9 @@ class MyNew extends PolymerElement {
 					height: 60vh;
 				}
 				.model model-viewer {
+					border-radius: 8px;
+					border-top: 1px solid var(--light-text-color);
+					border-bottom: 1px solid var(--light-text-color);
 					width: 226px;
 					height: 226px;
 				}
@@ -146,66 +166,85 @@ class MyNew extends PolymerElement {
 							</p>
 						</div>
 					</div>
-					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
-					</iron-ajax>
-					<div class="content flex-center-center">
-						<h1>
+					<div class="grid actions flex-justified">
+						<div class="title">
 							if
-						</h1>
-						<div>
-							<template is="dom-if" if="{{loading0}}">
-								<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
-									<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
-								</div>
-							</template>
-							<template is="dom-if" if="{{error0}}">
-								<template is="dom-if" if="{{!loading0}}">
-									<div class="grid error">
-										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
-									</div>
-								</template>
-							</template>
-							<template is="dom-repeat" items="[[ajaxResponse0.this]]" as="this">
-								<paper-dropdown-menu label="{{this.title}}" no-label-float>
-									<paper-listbox id="selectedThis" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThis}}">
-										<paper-icon-item name="pattern"><iron-icon icon="my-icons:filter-vintage" slot="item-icon"></iron-icon>Upload your own pattern<paper-ripple></paper-ripple></paper-icon-item>
-										<template is="dom-repeat" items="[[this.sub]]" as="sub">
-											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
-										</template>
-									</paper-listbox>
-								</paper-dropdown-menu>
-								<paper-icon-button on-click="resetThis" icon="my-icons:refresh" aria-label="Reset" hidden$="{{!selectedThis}}"></paper-icon-button>
-							</template>
-						</div>
-						<h1>
-							then
-						</h1>
-						<div>
-							<template is="dom-if" if="{{loading0}}">
-								<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
-									<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
-								</div>
-							</template>
-							<template is="dom-if" if="{{error0}}">
-								<template is="dom-if" if="{{!loading0}}">
-									<div class="grid error">
-										<paper-button on-click="tryAgain" aria-label="Try again">Try again<iron-icon icon="my-icons:refresh"></iron-icon></paper-button>
-									</div>
-								</template>
-							</template>
-							<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
-								<paper-dropdown-menu label="{{that.title}}" no-label-float>
-									<paper-listbox id="selectedThat" slot="dropdown-content" class="listbox" attr-for-selected="name" selected="{{selectedThat}}">
-										<paper-icon-item name="model"><iron-icon icon="my-icons:filter-vintage" slot="item-icon"></iron-icon>Upload your own model<paper-ripple></paper-ripple></paper-icon-item>
-										<template is="dom-repeat" items="[[that.sub]]" as="sub">
-											<paper-icon-item name="{{sub.link}}"><iron-icon icon="my-icons:{{sub.icon}}" slot="item-icon"></iron-icon>{{sub.title}}<paper-ripple></paper-ripple></paper-icon-item>
-										</template>
-									</paper-listbox>
-								</paper-dropdown-menu>
-								<paper-icon-button on-click="resetThat" icon="my-icons:refresh" aria-label="Reset" hidden$="{{!selectedThat}}"></paper-icon-button>
-							</template>
 						</div>
 					</div>
+					<div class="grid content">
+						<paper-input class="searchInput" value="{{selectedThis}}" placeholder="Enter a barcode value between 0-63" no-label-float maxlength="2" required auto-validate allowed-pattern="[0-9]">
+							<paper-icon-button icon="my-icons:center-focus-strong" slot="prefix"></paper-icon-button>
+							<paper-icon-button slot="suffix" on-click="clearInput" icon="my-icons:close" alt="clear" title="clear" hidden$="{{!selectedThis}}"></paper-icon-button>
+						</paper-input>
+					</div>
+					<iron-ajax auto url="../data/thisthat.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
+					</iron-ajax>
+					<template is="dom-if" if="{{loading0}}">
+						<div class="grid actions flex-center-center" hidden$="[[!loading0]]">
+							<paper-spinner-lite active$="[[loading0]]"></paper-spinner-lite>
+						</div>
+					</template>
+					<template is="dom-if" if="{{error0}}">
+						<template is="dom-if" if="{{!loading0}}">
+							<div class="grid error">
+								<paper-button on-click="tryAgain" aria-label="Try again">Try again</paper-button>
+							</div>
+						</template>
+					</template>
+					<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
+						<div class="grid actions flex-justified">
+							<div class="title">
+								then
+							</div>
+						</div>
+						<div class="grid app-grid" has-aspect-ratio>
+							<template is="dom-repeat" items="[[that.sub]]" as="sub">
+								<iron-selector attr-for-selected="name" selected="{{selectedThat}}">
+									<div class="item" name="{{sub.link}}">
+										<div class="container">
+											<div class="flexchild flex-vertical">
+												<model-viewer class="mb"
+																			src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{sub.link}}/scene.gltf"
+																			alt="{{sub.title}}"
+																			controls
+																			background-color="#eee"
+																			reveal-when-loaded
+																			preload
+																			poster="../images/assets/app/puff.svg">
+												</model-viewer>
+											</div>
+											<div class="block bottom">
+												<div class="info">
+													<div class="flexchild">
+														<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.title}}</paper-button></a>
+													</div>
+													<div>
+														<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</iron-selector>
+							</template>
+							<iron-selector attr-for-selected="name" selected="{{selectedThat}}">
+								<div class="item" name="upload">
+									<div class="container help">
+										<div class="flexchild flex-vertical flex-center-center">
+											<h1>Drop 3D model here!</h1>
+										</div>
+										<div class="block">
+											<div class="info">
+												<div class="flexchild">
+													<a href="new"><paper-button aria-label="Info">Upload</paper-button></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</iron-selector>
+						</div>
+					</template>
 					<div class="content flex-center-center">
 						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create</paper-button></a>
 					</div>
@@ -246,7 +285,8 @@ class MyNew extends PolymerElement {
 							<div class="title">Create new scene</div>
 						</div>
 						<div class="content">
-							<model-viewer src="../gltf/test/scene.gltf"
+							<model-viewer class="ml"
+														src="../gltf/test/scene.gltf"
 														alt="title"
 														controls
 														background-color="#eee"
@@ -285,18 +325,26 @@ class MyNew extends PolymerElement {
 		};
 	}
 
-	resetThis() {
-		this.selectedThis = 0;
+	attached() {
+		this._updateGridStyles = this._updateGridStyles || function () {
+			this.updateStyles();
+		}.bind(this);
+		window.addEventListener('resize', this._updateGridStyles);
 	}
 
-	resetThat() {
-		this.selectedThat = 0;
+	detached() {
+		window.removeEventListener('resize', this._updateGridStyles);
+	}
+
+	clearInput() {
+		this.selectedThis = '0';
 	}
 
 	isInputEmpty(a, b) {
 		if (this.$.collapse.opened)
 			this.$.collapse.toggle();
-		if (a === 0 || b === 0) return true;
+		if (a === '' || a === 0 || b === 0)
+			return true;
 		return false;
 	}
 
