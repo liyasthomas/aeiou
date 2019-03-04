@@ -32,10 +32,10 @@ class MyNew extends PolymerElement {
 				}
 				@media all and (min-width: 361px) and (max-width: 640px) {
 					:host {
-						--app-grid-columns: 1;
+						--app-grid-columns: 2;
 						--app-grid-gutter: 16px;
-						--app-grid-item-height: 100vw;
-						--app-grid-expandible-item-columns: 1;
+						--app-grid-item-height: 60vw;
+						--app-grid-expandible-item-columns: 2;
 					}
 				}
 				@media all and (min-width: 641px) and (max-width: 960px) {
@@ -82,6 +82,9 @@ class MyNew extends PolymerElement {
 				}
 				paper-tab.iron-selected {
 					color: var(--accent-color);
+				}
+				.item {
+					cursor: pointer;
 				}
 				.item.iron-selected {
 					box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--accent-color);
@@ -234,7 +237,7 @@ class MyNew extends PolymerElement {
 								<div class="item" name="upload">
 									<div class="container help">
 										<div class="flexchild flex-vertical flex-center-center">
-											<h1>Drop 3D model here!</h1>
+											<div class="title">Drop 3D model here!</div>
 										</div>
 										<div class="block">
 											<div class="info">
@@ -258,11 +261,11 @@ class MyNew extends PolymerElement {
 						<div class="grid content">
 							<div class="help flex-horizontal">
 								<div class="assets">
-									<div>if marker: {{selectedThis}}</div>
+									<div>if: marker {{selectedThis}}</div>
 									<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
 								</div>
 								<div class="flexchild">
-									<div>then model: {{selectedThat}}</div>
+									<div>then: model {{selectedThat}}</div>
 									<div id="model" class="model"></div>
 								</div>
 							</div>
