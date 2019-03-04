@@ -1,113 +1,44 @@
 {
-	"this": [
-		{
-			"title": "this",
-			"icon": "360",
-			"link": "this",
-			"sub": [
-				{
-					"title": "Barcode #1",
-					"icon": "center-focus-strong",
-					"link": "1"
-				},
-				{
-					"title": "Barcode #2",
-					"icon": "center-focus-strong",
-					"link": "2"
-				},
-				{
-					"title": "Barcode #3",
-					"icon": "center-focus-strong",
-					"link": "3"
-				},
-				{
-					"title": "Barcode #4",
-					"icon": "center-focus-strong",
-					"link": "4"
-				},
-				{
-					"title": "Barcode #5",
-					"icon": "center-focus-strong",
-					"link": "5"
-				},
-				{
-					"title": "Barcode #6",
-					"icon": "center-focus-strong",
-					"link": "6"
-				},
-				{
-					"title": "Barcode #7",
-					"icon": "center-focus-strong",
-					"link": "7"
-				},
-				{
-					"title": "Barcode #8",
-					"icon": "center-focus-strong",
-					"link": "8"
-				},
-				{
-					"title": "Barcode #9",
-					"icon": "center-focus-strong",
-					"link": "9"
-				},
-				{
-					"title": "Barcode #10",
-					"icon": "center-focus-strong",
-					"link": "10"
-				}
-			]
-		}
-	],
 	"that": [
 		{
 			"title": "that",
-			"icon": "360",
+			"icon": "open-in-new",
 			"link": "that",
 			"sub": [
 				{
-					"title": "apple",
-					"icon": "360",
+					"title": "Apple",
+					"icon": "open-in-new",
 					"link": "apple"
 				},
 				{
-					"title": "pyrrole",
-					"icon": "360",
+					"title": "Pyrole",
+					"icon": "open-in-new",
 					"link": "pyrrole"
 				},
 				{
-					"title": "catt",
-					"icon": "360",
+					"title": "Cat",
+					"icon": "open-in-new",
 					"link": "catt"
 				},
 				{
-					"title": "couchh",
-					"icon": "360",
+					"title": "Couch",
+					"icon": "open-in-new",
 					"link": "couchh"
 				},
 				{
-					"title": "orange",
-					"icon": "360",
+					"title": "Orange",
+					"icon": "open-in-new",
 					"link": "orange"
 				},
 				{
-					"title": "dog",
-					"icon": "360",
+					"title": "Dog",
+					"icon": "open-in-new",
 					"link": "dog"
 				},
 				{
-					"title": "ethane",
-					"icon": "360",
-					"link": "ethane"
-				},
-				{
-					"title": "ironman",
-					"icon": "360",
+					"title": "Ironman",
+					"icon": "open-in-new",
 					"link": "ironman"
-				},
-				{
-					"title": "umbrella",
-					"icon": "360",
-					"link": "umbrella"
 				}
 			]
 		}
