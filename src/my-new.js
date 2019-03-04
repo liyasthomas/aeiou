@@ -14,13 +14,13 @@ import '@kuscamara/code-sample/code-sample.js';
 class MyNew extends PolymerElement {
 	static get template() {
 		return html `
-      <style include="app-grid-style">
-      </style>
-      <style include="shared-styles">
+			<style include="app-grid-style">
+			</style>
+			<style include="shared-styles">
 				:host {
 					display: block;
 					--paper-tabs-selection-bar-color: var(--accent-color);
-          --app-grid-item-height: 100%;
+					--app-grid-item-height: 100%;
 				}
 				@media all and (min-width: 0) and (max-width: 360px) {
 					:host {
@@ -69,7 +69,7 @@ class MyNew extends PolymerElement {
 					}
 				}
 				paper-tab {
-        	font-family: "Prompt", "Roboto", "Noto", sans-serif;
+					font-family: "Prompt", "Roboto", "Noto", sans-serif;
 					text-transform: capitalize;
 					padding: 0;
 					font-size: 18px;
@@ -84,7 +84,7 @@ class MyNew extends PolymerElement {
 					color: var(--accent-color);
 				}
 				.item.iron-selected {
-					box-shadow: 0 0 0 8px var(--accent-color);
+					box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--accent-color);
 				}
 				model-viewer.mb {
 					border-top: 1px solid var(--light-text-color);
@@ -124,6 +124,9 @@ class MyNew extends PolymerElement {
 					}
 					margin-top: 16px;
 				}
+				.bottom {
+					padding: 8px 8px 8px 16px;
+				}
 				@media (max-width: 640px) {
 					.help {
 						padding: 16px;
@@ -142,7 +145,7 @@ class MyNew extends PolymerElement {
 						height: calc(50vw - 48px);
 					}
 				}
-      </style>
+			</style>
 			<paper-tabs selected="{{selected}}" attr-for-selected="name">
 				<paper-tab name="markerbased">Marker based</paper-tab>
 				<paper-tab name="markerless">Marker less</paper-tab>
@@ -216,7 +219,7 @@ class MyNew extends PolymerElement {
 											<div class="block bottom">
 												<div class="info">
 													<div class="flexchild">
-														<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.title}}</paper-button></a>
+														{{sub.title}}
 													</div>
 													<div>
 														<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
@@ -298,7 +301,7 @@ class MyNew extends PolymerElement {
 					</div>
 				</div>
 			</iron-pages>
-    `;
+		`;
 	}
 
 	static get properties() {

@@ -273,10 +273,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.bottom {
 				padding: 8px 16px 8px 8px;
 				border-radius: 0 0 8px 8px;
-				border-top: 1px solid var(--light-text-color);
-				border-left: 1px solid var(--light-text-color);
-				border-right: 1px solid var(--light-text-color);
-				border-bottom: 1px solid var(--light-text-color);
+				border: 1px solid var(--light-text-color);
 			}
 			.title {
 				display: -webkit-box;
