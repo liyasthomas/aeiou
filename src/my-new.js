@@ -8,6 +8,8 @@ import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-collapse/iron-collapse.js';
+import '@polymer/paper-dialog/paper-dialog.js';
+import '@polymer/paper-dialog-scrollable/paper-dialog-scrollable.js';
 import '@kuscamara/code-sample/code-sample.js';
 
 class MyNew extends PolymerElement {
@@ -99,6 +101,14 @@ class MyNew extends PolymerElement {
 					width: 80vw;
 					height: 60vh;
 				}
+				model-viewer.mo {
+					@apply --layout-flex;
+					width: 60vw;
+					height: calc(70vh - 128px);
+					border-radius: 8px;
+					border-top: 1px solid var(--light-text-color);
+					border-bottom: 1px solid var(--light-text-color);
+				}
 				.model model-viewer {
 					border-radius: 8px;
 					border-top: 1px solid var(--light-text-color);
@@ -148,6 +158,18 @@ class MyNew extends PolymerElement {
 					}
 				}
 			</style>
+			<paper-dialog id="scrolling">
+				<div class="flex-horizontal flex-justified">
+					<div class="title">
+						{{selectedThat}}
+					</div>
+					<div>
+						<paper-icon-button icon="my-icons:close" dialog-dismiss></paper-icon-button>
+					</div>
+				</div>
+				<paper-dialog-scrollable id="modal">
+				</paper-dialog-scrollable>
+			</paper-dialog>
 			<paper-tabs selected="{{selected}}" attr-for-selected="name">
 				<paper-tab name="markerbased">Marker based</paper-tab>
 				<paper-tab name="markerless">Marker less</paper-tab>
@@ -161,7 +183,7 @@ class MyNew extends PolymerElement {
 							<p>We supports a wide range of markers, multiple types of markers, pattern/barcode markers, multiple independent markers at the same time, or multiple markers acting as a single marker up to you to choose.</p>
 							<p>
 								<a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">
-										<paper-button class="primary" aria-label="Barcode Generator">Barcode Generator<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button>
+									<paper-button class="primary" aria-label="Barcode Generator">Barcode Generator<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button>
 									</a> Generate barcode markers with numerical values.
 							</p>
 							<p>
@@ -224,7 +246,7 @@ class MyNew extends PolymerElement {
 														{{sub.title}}
 													</div>
 													<div>
-														<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+														<paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon" on-click="openModal"></paper-icon-button>
 													</div>
 												</div>
 											</div>
@@ -367,6 +389,29 @@ class MyNew extends PolymerElement {
 
 	_getIcon(opened) {
 		return opened ? 'expand-less' : 'expand-more';
+	}
+
+	openModal() {
+		this.$.scrolling.open();
+		let modal = (this.$.scrolling.opened) ?
+			`
+<model-viewer class="mo"
+							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
+							alt="title"
+							controls
+							auto-rotate
+							background-color="#eee"
+							reveal-when-loaded
+							preload
+							poster="../images/assets/app/puff.svg">
+</model-viewer>
+			` :
+			`
+<template>
+Something went wrong!
+</template>
+			`;
+		this.$.modal.innerHTML = modal;
 	}
 
 	toggle() {

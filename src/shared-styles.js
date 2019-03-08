@@ -136,6 +136,16 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			paper-menu-button {
 				padding: 0;
 			}
+			paper-dialog {
+				top: 128px;
+				border-radius: 8px;
+				font-family: "Prompt", "Roboto", "Noto", sans-serif;
+				line-height: 1.25;
+			}
+			paper-dialog h2 {
+				padding: 24px 24px 0;
+				font-weight: 700;
+			}
 			paper-toast {
 				@apply --layout-horizontal;
 				@apply --layout-center;
@@ -282,6 +292,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				display: -webkit-box;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				text-transform: capitalize;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
 				font-size: 28px;

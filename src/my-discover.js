@@ -7,6 +7,8 @@ import '@polymer/app-layout/app-grid/app-grid-style.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
+import '@polymer/paper-dialog/paper-dialog.js';
+import '@polymer/paper-dialog-scrollable/paper-dialog-scrollable.js';
 
 class MyDiscover extends PolymerElement {
 	static get template() {
@@ -69,6 +71,18 @@ class MyDiscover extends PolymerElement {
 					color: var(--accent-color);
 				}
       </style>
+			<paper-dialog id="scrolling">
+				<div class="flex-horizontal flex-justified">
+					<div class="title">
+						{{selectedThat}}
+					</div>
+					<div>
+						<paper-icon-button icon="my-icons:close" dialog-dismiss></paper-icon-button>
+					</div>
+				</div>
+				<paper-dialog-scrollable id="modal">
+				</paper-dialog-scrollable>
+			</paper-dialog>
 			<paper-toast id="shareToast" text="URL copied!"></paper-toast>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/discover_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
@@ -152,7 +166,7 @@ class MyDiscover extends PolymerElement {
 										<div>
 											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
 											<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
-											<a href="{{sub.link}}"><paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon"></paper-icon-button></a>
+											<paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon" on-click="openModal"></paper-icon-button>
 										</div>
 									</div>
 								</div>
@@ -239,12 +253,27 @@ class MyDiscover extends PolymerElement {
 		return icon ? 'dashboard' : 'view-agenda';
 	}
 
-	_computeBgClass(color) {
-		return color + '-bg';
-	}
-
-	_computeFgClass(color) {
-		return color + '-fg';
+	openModal() {
+		this.$.scrolling.open();
+		let modal = (this.$.scrolling.opened) ?
+			`
+<model-viewer class="mo"
+							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
+							alt="title"
+							controls
+							auto-rotate
+							background-color="#eee"
+							reveal-when-loaded
+							preload
+							poster="../images/assets/app/puff.svg">
+</model-viewer>
+			` :
+			`
+<template>
+Something went wrong!
+</template>
+			`;
+		this.$.modal.innerHTML = modal;
 	}
 }
 
