@@ -9,7 +9,6 @@ import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-spinner/paper-spinner-lite.js';
 import '@polymer/iron-collapse/iron-collapse.js';
 import '@kuscamara/code-sample/code-sample.js';
-//import '@google/model-viewer';
 
 class MyNew extends PolymerElement {
 	static get template() {
@@ -262,11 +261,15 @@ class MyNew extends PolymerElement {
 							<div class="help flex-horizontal">
 								<div class="assets">
 									<div>if: marker {{selectedThis}}</div>
-									<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
+									<a href="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3" target="_blank" rel="noopener">
+										<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
+									</a>
 								</div>
 								<div class="flexchild">
 									<div>then: model {{selectedThat}}</div>
-									<div id="model" class="model"></div>
+									<a href="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{selectedThat}}/scene.gltf" target="_blank" rel="noopener">
+										<div id="model" class="model"></div>
+									</a>
 								</div>
 							</div>
 							<div>

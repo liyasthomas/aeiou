@@ -9,7 +9,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			*::before,
 			*::after {
 				box-sizing: border-box;
-				outline: 0;
+				outline: none;
 			}
 			[hidden] {
 				display: none;
@@ -155,6 +155,9 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				cursor: all-scroll;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
+			}
+			model-viewer:focus {
+				outline: none;
 			}
 			skeleton-carousel {
 				--skeleton-carousel-dot-selected: {
