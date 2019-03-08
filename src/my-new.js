@@ -115,12 +115,13 @@ class MyNew extends PolymerElement {
 					border-bottom: 1px solid var(--light-text-color);
 					width: 226px;
 					height: 226px;
+					margin-bottom: 8px;
 				}
 				.marker {
 					border-radius: 8px;
 				}
-				.assets {
-					margin-right: 16px;
+				.assets:nth-child(2) {
+					margin-left: 16px;
 				}
 				code-sample {
 					--code-sample-font-size: 16px;
@@ -145,7 +146,6 @@ class MyNew extends PolymerElement {
 					}
 					.assets {
 						@apply --layout-flex;
-						width: 50%;
 					}
 					.marker {
 						@apply --layout-flex;
@@ -154,7 +154,7 @@ class MyNew extends PolymerElement {
 					.model model-viewer {
 						@apply --layout-flex;
 						width: 100%;
-						height: calc(50vw - 48px);
+						height: calc(50vw - 50px);
 					}
 				}
 			</style>
@@ -282,16 +282,28 @@ class MyNew extends PolymerElement {
 						<div class="grid content">
 							<div class="help flex-horizontal">
 								<div class="assets">
-									<div>if: marker {{selectedThis}}</div>
-									<a href="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3" target="_blank" rel="noopener">
+									<div>
 										<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
-									</a>
+									</div>
+									<div class="flexchild flex-horizontal flex-justified">
+										<div>{{selectedThis}}</div>
+										<div>
+											<a href="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3" target="_blank" rel="noopener">
+												<paper-icon-button icon="my-icons:get-app" aria-label="Icon"></paper-icon-button>
+											</a>
+										</div>
+									</div>
 								</div>
-								<div class="flexchild">
-									<div>then: model {{selectedThat}}</div>
-									<a href="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{selectedThat}}/scene.gltf" target="_blank" rel="noopener">
-										<div id="model" class="model"></div>
-									</a>
+								<div class="assets">
+									<div id="model" class="model"></div>
+									<div class="flexchild flex-horizontal flex-justified">
+										<div>{{selectedThat}}</div>
+										<div>
+											<a href="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{selectedThat}}/scene.gltf" target="_blank" rel="noopener">
+												<paper-icon-button icon="my-icons:get-app" aria-label="Icon"></paper-icon-button>
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div>
