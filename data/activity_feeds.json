@@ -2,7 +2,7 @@
 	"activity": [
 		{
 			"title": "Activity",
-			"icon": "open-in-new",
+			"icon": "visibility",
 			"color": "light-blue",
 			"link": "activity",
 			"sub": [
@@ -15,7 +15,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/apple/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
@@ -27,7 +27,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/pyrrole/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
 				{
@@ -39,7 +39,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/catt/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
 				{
@@ -51,7 +51,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/couchh/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
 				{
@@ -63,7 +63,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/orange/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
 				{
@@ -75,7 +75,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/dog/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -87,7 +87,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ethane/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -99,7 +99,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ironman/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				}
 			]
@@ -108,7 +108,7 @@
 	"others": [
 		{
 			"title": "Others",
-			"icon": "open-in-new",
+			"icon": "visibility",
 			"color": "indigo",
 			"link": "discover",
 			"sub": [
@@ -127,7 +127,7 @@
 					"description": "Developers community",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "fuseorg"
 				}
 			]

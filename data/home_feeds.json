@@ -12,7 +12,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/marketing.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
 				{
@@ -21,7 +21,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/diamond.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/animals.html"
 				},
 				{
@@ -30,7 +30,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/gear.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
 				{
@@ -39,7 +39,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/ui.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -48,7 +48,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/share.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/chemistry.html"
 				},
 				{
@@ -57,7 +57,7 @@
 					"description": "Description",
 					"info": "Remix",
 					"img": "../images/assets/collections/spark.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/.html"
 				}
 			]
@@ -79,7 +79,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/apple/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
 				{
@@ -91,7 +91,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/pyrrole/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
 				{
@@ -103,7 +103,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/catt/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
 				{
@@ -115,7 +115,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/couchh/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
 				{
@@ -127,7 +127,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/orange/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
 				{
@@ -139,7 +139,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/dog/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -151,7 +151,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ethane/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -163,7 +163,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ironman/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
 				{
@@ -175,7 +175,7 @@
 					"img": "../images/assets/collections/puff.svg",
 					"bg": "",
 					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/umbrella/scene.gltf",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				}
 			]
@@ -194,7 +194,7 @@
 					"description": "Intranet for NCERC",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "konnect"
 				},
 				{
@@ -203,7 +203,7 @@
 					"description": "Faculty feedback system",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "feedie"
 				},
 				{
@@ -212,7 +212,7 @@
 					"description": "Virtual and Augmented Reality for everyone!",
 					"info": "Remix",
 					"img": "../images/assets/collections/puff.svg",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "lvr"
 				}
 			]

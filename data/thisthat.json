@@ -2,42 +2,42 @@
 	"that": [
 		{
 			"title": "that",
-			"icon": "open-in-new",
+			"icon": "visibility",
 			"link": "that",
 			"sub": [
 				{
 					"title": "Apple",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "apple"
 				},
 				{
 					"title": "Pyrole",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "pyrrole"
 				},
 				{
 					"title": "Cat",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "catt"
 				},
 				{
 					"title": "Couch",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "couchh"
 				},
 				{
 					"title": "Orange",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "orange"
 				},
 				{
 					"title": "Dog",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "dog"
 				},
 				{
 					"title": "Ironman",
-					"icon": "open-in-new",
+					"icon": "visibility",
 					"link": "ironman"
 				}
 			]
