@@ -63,7 +63,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-family: "Prompt", "Roboto", "Noto", sans-serif;
 				margin: 4px;
 				padding: .6em 1.2em;
-				font-size: 22px;
+				font-size: 20px;
 				color: var(--accent-color);
 				text-transform: none;
 				transition: all .1s ease;
@@ -137,6 +137,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				padding: 0;
 			}
 			paper-dialog {
+				@apply --shadow-elevation-8dp;
 				top: 128px;
 				border-radius: 8px;
 				font-family: "Prompt", "Roboto", "Noto", sans-serif;
@@ -161,10 +162,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			model-viewer {
 				height: 100%;
 				width: 100%;
-				background-color: #eee;
 				cursor: all-scroll;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
+				background-color: #eee;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
 			}
 			model-viewer:focus {
 				outline: none;

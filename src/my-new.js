@@ -55,6 +55,9 @@ class MyNew extends PolymerElement {
 						--app-grid-expandible-item-columns: 4;
 					}
 				}
+				paper-icon-button[active] {
+					color: var(--accent-color);
+				}
 				.help {
 					padding: 32px;
 					border-radius: 8px;
@@ -154,7 +157,7 @@ class MyNew extends PolymerElement {
 					.model model-viewer {
 						@apply --layout-flex;
 						width: 100%;
-						height: calc(50vw - 50px);
+						height: calc(50vw - 42px);
 					}
 				}
 			</style>
@@ -223,6 +226,18 @@ class MyNew extends PolymerElement {
 							<div class="title">
 								then
 							</div>
+							<div>
+								<paper-icon-button
+										toggles
+										active="{{controls}}"
+										icon="my-icons:pan-tool">
+								</paper-icon-button>
+								<paper-icon-button
+										toggles
+										active="{{rotate}}"
+										icon="my-icons:360">
+								</paper-icon-button>
+							</div>
 						</div>
 						<div class="grid app-grid" has-aspect-ratio>
 							<template is="dom-repeat" items="[[that.sub]]" as="sub">
@@ -233,7 +248,8 @@ class MyNew extends PolymerElement {
 												<model-viewer class="mb"
 																			src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{sub.link}}/scene.gltf"
 																			alt="{{sub.title}}"
-																			controls
+																			controls$="{{controls}}"
+																			auto-rotate$="{{rotate}}"
 																			background-color="#eee"
 																			reveal-when-loaded
 																			preload

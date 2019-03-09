@@ -194,11 +194,6 @@ class MyDiscover extends PolymerElement {
 				type: String,
 				value: "none",
 				reflectToAttribute: true
-			},
-			controls: {
-				type: Boolean,
-				value: true,
-				reflectToAttribute: true
 			}
 		};
 	}
