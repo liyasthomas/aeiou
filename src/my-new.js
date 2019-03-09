@@ -285,7 +285,7 @@ class MyNew extends PolymerElement {
 									<div>
 										<img class="marker" src="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3">
 									</div>
-									<div class="flexchild flex-horizontal flex-justified">
+									<div class="flexchild flex-horizontal flex-justified flex-center">
 										<div>{{selectedThis}}</div>
 										<div>
 											<a href="http://au.gmented.com/app/marker/marker.php?genImage&marker_type=matrix&gen_single_number={{selectedThis}}&marker_size=80&marker_image_resolution=72&ecc_type=none&border_size=0.25&border_is_white=false&border_quiet_zone=false&barcode_dimensions=3" target="_blank" rel="noopener">
@@ -296,7 +296,7 @@ class MyNew extends PolymerElement {
 								</div>
 								<div class="assets">
 									<div id="model" class="model"></div>
-									<div class="flexchild flex-horizontal flex-justified">
+									<div class="flexchild flex-horizontal flex-justified flex-center">
 										<div>{{selectedThat}}</div>
 										<div>
 											<a href="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{selectedThat}}/scene.gltf" target="_blank" rel="noopener">

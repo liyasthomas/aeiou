@@ -191,6 +191,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			.flex-horizontal {
 				@apply --layout-horizontal;
 			}
+			.flex-center {
+				@apply --layout-horizontal;
+				@apply --layout-center;
+			}
 			.flex-center-center {
 				@apply --layout-vertical;
 				@apply --layout-center-center;
