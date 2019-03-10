@@ -162,7 +162,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			model-viewer {
 				height: 100%;
 				width: 100%;
-				cursor: all-scroll;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
 				background-color: #eee;
@@ -172,6 +171,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 			}
 			model-viewer:focus {
 				outline: none;
+			}
+			model-viewer.mo {
+				@apply --layout-flex;
+				width: 60vw;
+				height: calc(70vh - 128px);
+				border-radius: 8px;
+				border-top: 1px solid var(--light-text-color);
+				border-bottom: 1px solid var(--light-text-color);
 			}
 			skeleton-carousel {
 				--skeleton-carousel-dot-selected: {
@@ -223,7 +230,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				font-size: 32px;
 				font-weight: 700;
 				color: var(--primary-text-color);
-				font-family: "Prompt", "Roboto", "Noto", sans-serif;
 			}
 			.actions paper-icon-button {
 				color: var(--secondary-text-color);
@@ -279,20 +285,20 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				@apply --layout-horizontal;
 			}
 			.top {
-				padding: 32px 32px 4px 32px;
+				padding: 24px 24px 4px 24px;
 				border-radius: 8px 8px 0 0;
 				border-top: 1px solid var(--light-text-color);
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
 			}
 			.mid {
-				padding: 4px 32px 16px 32px;
+				padding: 4px 24px 16px 24px;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
 				border-bottom: 1px solid var(--light-text-color);
 			}
 			.bottom {
-				padding: 8px 16px 8px 8px;
+				padding: 8px;
 				border-radius: 0 0 8px 8px;
 				border: 1px solid var(--light-text-color);
 			}

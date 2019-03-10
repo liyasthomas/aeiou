@@ -101,16 +101,8 @@ class MyNew extends PolymerElement {
 					border-radius: 8px;
 					border-top: 1px solid var(--light-text-color);
 					border-bottom: 1px solid var(--light-text-color);
-					width: 80vw;
+					width: 100%;
 					height: 60vh;
-				}
-				model-viewer.mo {
-					@apply --layout-flex;
-					width: 60vw;
-					height: calc(70vh - 128px);
-					border-radius: 8px;
-					border-top: 1px solid var(--light-text-color);
-					border-bottom: 1px solid var(--light-text-color);
 				}
 				.model model-viewer {
 					border-radius: 8px;
@@ -163,9 +155,7 @@ class MyNew extends PolymerElement {
 			</style>
 			<paper-dialog id="scrolling">
 				<div class="flex-horizontal flex-justified">
-					<div class="title">
-						{{selectedThat}}
-					</div>
+					<div class="title">{{selectedThat}}</div>
 					<div>
 						<paper-icon-button icon="my-icons:close" dialog-dismiss></paper-icon-button>
 					</div>
@@ -187,7 +177,7 @@ class MyNew extends PolymerElement {
 							<p>
 								<a class="link" href="http://au.gmented.com/app/marker/marker.php" target="_blank">
 									<paper-button class="primary" aria-label="Barcode Generator">Barcode Generator<iron-icon icon="my-icons:open-in-new"></iron-icon></paper-button>
-									</a> Generate barcode markers with numerical values.
+								</a> Generate barcode markers with numerical values.
 							</p>
 							<p>
 								<a class="link" href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">
@@ -197,9 +187,7 @@ class MyNew extends PolymerElement {
 						</div>
 					</div>
 					<div class="grid actions flex-justified">
-						<div class="title">
-							if
-						</div>
+						<div class="title">if</div>
 					</div>
 					<div class="grid content">
 						<paper-input class="searchInput" value="{{selectedThis}}" placeholder="Enter a barcode value between 0-63" no-label-float maxlength="2" required auto-validate allowed-pattern="[0-9]">
@@ -223,9 +211,7 @@ class MyNew extends PolymerElement {
 					</template>
 					<template is="dom-repeat" items="[[ajaxResponse0.that]]" as="that">
 						<div class="grid actions flex-justified">
-							<div class="title">
-								then
-							</div>
+							<div class="title">then</div>
 							<div>
 								<paper-icon-button
 										toggles
@@ -337,23 +323,22 @@ class MyNew extends PolymerElement {
 						<div class="help">
 							<h2>What does "Marker Less" means?</h2>
 							<p>AEIOU uses <a class="link" href="https://developers.google.com/ar">ARcore</a> which is a Google’s platform for building augmented reality experiences.</p>
+							<p>Requires <a class="link" href="https://immersive-web.github.io/webxr">WebXR Device API</a> support</p>
 						</div>
 					</div>
-					<div class="grid flex-center-center">
-						<div class="actions">
-							<div class="title">Create new scene</div>
-						</div>
-						<div class="content">
-							<model-viewer class="ml"
-														src="../gltf/test/scene.gltf"
-														alt="title"
-														controls
-														background-color="#eee"
-														reveal-when-loaded
-														preload
-														poster="../images/assets/app/puff.svg">
-							</model-viewer>
-						</div>
+					<div class="grid actions flex-justified">
+						<div class="title">Create new scene</div>
+					</div>
+					<div class="grid content">
+						<model-viewer class="ml"
+													src="../gltf/test/scene.gltf"
+													alt="title"
+													controls
+													background-color="#eee"
+													reveal-when-loaded
+													preload
+													poster="../images/assets/app/puff.svg">
+						</model-viewer>
 					</div>
 				</div>
 			</iron-pages>
@@ -425,7 +410,7 @@ class MyNew extends PolymerElement {
 			`
 <model-viewer class="mo"
 							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
-							alt="title"
+							alt="` + this.selectedThat + `"
 							controls
 							auto-rotate
 							background-color="#eee"

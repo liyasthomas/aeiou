@@ -73,9 +73,7 @@ class MyDiscover extends PolymerElement {
       </style>
 			<paper-dialog id="scrolling">
 				<div class="flex-horizontal flex-justified">
-					<div class="title">
-						{{selectedThat}}
-					</div>
+					<div class="title">{{selectedThat}}</div>
 					<div>
 						<paper-icon-button icon="my-icons:close" dialog-dismiss></paper-icon-button>
 					</div>
@@ -83,7 +81,7 @@ class MyDiscover extends PolymerElement {
 				<paper-dialog-scrollable id="modal">
 				</paper-dialog-scrollable>
 			</paper-dialog>
-			<paper-toast id="shareToast" text="URL copied!"></paper-toast>
+			<paper-toast id="shareToast" text="URL copied! ({{selectedThat}})"></paper-toast>
 			<iron-media-query query="min-width: 641px" query-matches="{{wideLayout}}"></iron-media-query>
 			<iron-ajax auto url="../data/discover_feeds.json" id="ajax0" loading="{{loading0}}" handle-as="json" last-error="{{error0}}" last-response="{{ajaxResponse0}}">
 			</iron-ajax>
@@ -138,40 +136,42 @@ class MyDiscover extends PolymerElement {
 				</div>
 				<div class$="[[getUIType(UI)]] app-grid" has-aspect-ratio>
 					<template is="dom-repeat" items="[[discover.sub]]" as="sub" filter="{{_filter(filterVal)}}" sort="{{_sort(sortVal)}}" rendered-item-count="{{renderedCount}}">
-						<div class="item">
-							<div class="container">
-								<div class="block top">
-									<div class="title">{{sub.title}}</div>
-								</div>
-								<div class="block mid">
-									<div class="description">{{sub.description}}</div>
-								</div>
-								<div class="flexchild flex-vertical">
-									<model-viewer src="{{sub.model}}"
-																alt="{{sub.title}}"
-																controls$="{{controls}}"
-																auto-rotate$="{{rotate}}"
-																background-image="{{sub.bg}}"
-																background-color="#eee"
-																reveal-when-loaded
-																preload
-																poster="{{sub.img}}">
-									</model-viewer>
-								</div>
-								<div class="block bottom">
-									<div class="info">
-										<div class="flexchild">
-											<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
-										</div>
-										<div>
-											<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
-											<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
-											<paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon" on-click="openModal"></paper-icon-button>
+						<iron-selector attr-for-selected="name" selected="{{selectedThat}}">
+							<div class="item" name="{{sub.model}}">
+								<div class="container">
+									<div class="block top">
+										<div class="title">{{sub.title}}</div>
+									</div>
+									<div class="block mid">
+										<div class="description">{{sub.description}}</div>
+									</div>
+									<div class="flexchild flex-vertical">
+										<model-viewer src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{sub.model}}/scene.gltf"
+																	alt="{{sub.title}}"
+																	controls$="{{controls}}"
+																	auto-rotate$="{{rotate}}"
+																	background-image="{{sub.bg}}"
+																	background-color="#eee"
+																	reveal-when-loaded
+																	preload
+																	poster="{{sub.img}}">
+										</model-viewer>
+									</div>
+									<div class="block bottom">
+										<div class="info">
+											<div class="flexchild">
+												<a href="{{sub.link}}"><paper-button aria-label="Info">{{sub.info}}</paper-button></a>
+											</div>
+											<div>
+												<paper-icon-button icon="my-icons:share" aria-label="Share" on-click="shareThis"></paper-icon-button>
+												<paper-icon-button icon="my-icons:favorite" aria-label="Like"></paper-icon-button>
+												<paper-icon-button icon="my-icons:{{sub.icon}}" aria-label="Icon" on-click="openModal"></paper-icon-button>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</iron-selector>
 					</template>
 				</div>
 				<template is="dom-if" if="{{!renderedCount}}">
@@ -193,6 +193,11 @@ class MyDiscover extends PolymerElement {
 			sortVal: {
 				type: String,
 				value: "none",
+				reflectToAttribute: true
+			},
+			selectedThat: {
+				type: String,
+				value: 0,
 				reflectToAttribute: true
 			}
 		};
@@ -233,7 +238,7 @@ class MyDiscover extends PolymerElement {
 	}
 
 	shareThis() {
-		this.$.shareToast.toggle();
+		this.$.shareToast.show();
 	}
 
 	tryAgain() {
@@ -254,7 +259,7 @@ class MyDiscover extends PolymerElement {
 			`
 <model-viewer class="mo"
 							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
-							alt="title"
+							alt="` + this.selectedThat + `"
 							controls
 							auto-rotate
 							background-color="#eee"
