@@ -14,7 +14,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/apple/scene.gltf",
+					"model": "apple",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/movie.html"
 				},
@@ -26,7 +26,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/pyrrole/scene.gltf",
+					"model": "pyrrole",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/geography.html"
 				},
@@ -38,7 +38,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/catt/scene.gltf",
+					"model": "catt",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/alphabets.html"
 				},
@@ -50,7 +50,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/couchh/scene.gltf",
+					"model": "couchh",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/electronics.html"
 				},
@@ -62,7 +62,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/orange/scene.gltf",
+					"model": "orange",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/automobile.html"
 				},
@@ -74,7 +74,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/dog/scene.gltf",
+					"model": "dog",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
@@ -86,7 +86,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ethane/scene.gltf",
+					"model": "ethane",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
@@ -98,7 +98,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/ironman/scene.gltf",
+					"model": "ironman",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				},
@@ -110,7 +110,7 @@
 					"info": "Remix",
 					"img": "../images/assets/app/puff.svg",
 					"bg": "",
-					"model": "https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/umbrella/scene.gltf",
+					"model": "umbrella",
 					"icon": "visibility",
 					"link": "https://liyasthomas.github.io/lvr/src/biology.html"
 				}
