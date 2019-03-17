@@ -27,15 +27,15 @@ When I wrote this, only God and I understood what I was doing. Now, only God kno
 
 ### Features :sparkles:
 
-:eyeglasses: **Virtual Reality made simple**: Description 1
+:eyeglasses: **Virtual Reality made simple**
 
-:heart: **Declarative HTML**: Description 2
+:heart: **Declarative HTML**
 
-:electric_plug: **Entity-Component Architecture**: Description 3
+:electric_plug: **Entity-Component Architecture**
 
-:zap: **Performance**: Description 4
+:zap: **Performance**
 
-:globe_with_meridians: **Cross-Platform**: Description 5
+:globe_with_meridians: **Cross-Platform**
 
 ---
 
@@ -64,8 +64,9 @@ It works on all platforms. Android, iOS and Windows phone. It runs on **any brow
 
 Try on your phone in only two easy steps, check it out!
 
-1. Step 1
-2. Step 2
+* Step 1: Open this [marker image](https://github.com/liyasthomas/lvr/tree/master/assets/patterns).
+* Step 2: Visit this [web page](https://liyasthomas.github.io/lvr)
+* Step 3: Scan the marker to experience AR!
 
 You're done!
 
@@ -119,8 +120,11 @@ Will be explained later
 
 ## Built with
 
-* **[Sample](https://www.google.com)** - Sample
-	* [Sample](https://www.google.com) - Sample
+* [AR.js](https://github.com/jeromeetienne/AR.js)
+* [three.js](https://github.com/mrdoob/three.js)
+* [A-Frame](https://github.com/aframevr/aframe)
+* **[Polymer](https://polymer-project.org)**
+* **[Web Components](https://webcomponents.org)**
 * **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
 * HTML - For the web framework
 * CSS - For styling components
@@ -179,4 +183,10 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 * Hat tip to anyone who's code was used
 * Inspirations:
-	* [Sample](https://www.google.com)
+	* [A-Frame](https://aframe.io)
+	* [Google VR](https://vr.google.com)
+	* [Google ARCore](https://developers.google.com/ar)
+	* [Google WebVR Experiments](https://experiments.withgoogle.com/webvr)
+	* [Google AR Experiments](https://experiments.withgoogle.com/ar)
+	* [Apple ARKit](https://developer.apple.com/arkit)
+	* [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)
