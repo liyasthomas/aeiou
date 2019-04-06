@@ -215,7 +215,7 @@ class MyNew extends PolymerElement {
 							<div>
 								<paper-icon-button
 										toggles
-										active="{{controls}}"
+										active="{{camera-controls}}"
 										icon="my-icons:pan-tool">
 								</paper-icon-button>
 								<paper-icon-button
@@ -234,7 +234,7 @@ class MyNew extends PolymerElement {
 												<model-viewer class="mb"
 																			src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{sub.link}}/scene.gltf"
 																			alt="{{sub.title}}"
-																			controls$="{{controls}}"
+																			camera-controls$="{{camera-controls}}"
 																			auto-rotate$="{{rotate}}"
 																			background-color="#eee"
 																			reveal-when-loaded
@@ -278,7 +278,7 @@ class MyNew extends PolymerElement {
 						<a href="{{selectedThis}}/{{selectedThat}}" disabled$="[[isInputEmpty(selectedThis, selectedThat)]]"><paper-button class="primary" aria-label="Next" disabled="[[isInputEmpty(selectedThis, selectedThat)]]">Create</paper-button></a>
 					</div>
 					<div class="content flex-center-center">
-						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]" hidden="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] assets<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
+						<paper-button on-click="toggle" aria-expanded$="[[opened]]" aria-camera-controls="collapse" disabled="[[isInputEmpty(selectedThis, selectedThat)]]" hidden="[[isInputEmpty(selectedThis, selectedThat)]]">[[_getText(opened)]] assets<iron-icon icon="my-icons:[[_getIcon(opened)]]"></iron-icon></paper-button>
 					</div>
 					<iron-collapse id="collapse" opened="{{opened}}" hidden="[[isInputEmpty(selectedThis, selectedThat)]]" tabindex="-1">
 						<div class="grid content">
@@ -333,7 +333,7 @@ class MyNew extends PolymerElement {
 						<model-viewer class="ml"
 													src="../gltf/test/scene.gltf"
 													alt="title"
-													controls
+													camera-controls
 													background-color="#eee"
 													reveal-when-loaded
 													preload
@@ -411,7 +411,7 @@ class MyNew extends PolymerElement {
 <model-viewer class="mo"
 							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
 							alt="` + this.selectedThat + `"
-							controls
+							camera-controls
 							auto-rotate
 							background-color="#eee"
 							reveal-when-loaded
@@ -455,7 +455,7 @@ Something went wrong!
 			`
 <model-viewer src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
 							alt="title"
-							controls
+							camera-controls
 							background-color="#eee"
 							reveal-when-loaded
 							preload

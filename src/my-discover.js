@@ -111,7 +111,7 @@ class MyDiscover extends PolymerElement {
 					<div>
 						<paper-icon-button
 								toggles
-								active="{{controls}}"
+								active="{{camera-controls}}"
 								icon="my-icons:pan-tool">
 						</paper-icon-button>
 						<paper-icon-button
@@ -148,7 +148,7 @@ class MyDiscover extends PolymerElement {
 									<div class="flexchild flex-vertical">
 										<model-viewer src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/{{sub.model}}/scene.gltf"
 																	alt="{{sub.title}}"
-																	controls$="{{controls}}"
+																	camera-controls$="{{camera-controls}}"
 																	auto-rotate$="{{rotate}}"
 																	background-image="{{sub.bg}}"
 																	background-color="#eee"
@@ -260,7 +260,7 @@ class MyDiscover extends PolymerElement {
 <model-viewer class="mo"
 							src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/gltf/` + this.selectedThat + `/scene.gltf"
 							alt="` + this.selectedThat + `"
-							controls
+							camera-controls
 							auto-rotate
 							background-color="#eee"
 							reveal-when-loaded
