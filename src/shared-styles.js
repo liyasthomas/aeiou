@@ -164,7 +164,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 				width: 100%;
 				border-left: 1px solid var(--light-text-color);
 				border-right: 1px solid var(--light-text-color);
-				background-color: #eee;
+				--poster-color: #eee;
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;

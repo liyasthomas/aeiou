@@ -237,7 +237,7 @@ class MyNew extends PolymerElement {
 																			camera-controls$="{{camera-controls}}"
 																			auto-rotate$="{{rotate}}"
 																			background-color="#eee"
-																			reveal-when-loaded
+																			reveal
 																			preload
 																			poster="../images/assets/app/puff.svg">
 												</model-viewer>
@@ -335,7 +335,7 @@ class MyNew extends PolymerElement {
 													alt="title"
 													camera-controls
 													background-color="#eee"
-													reveal-when-loaded
+													reveal
 													preload
 													poster="../images/assets/app/puff.svg">
 						</model-viewer>
@@ -414,7 +414,7 @@ class MyNew extends PolymerElement {
 							camera-controls
 							auto-rotate
 							background-color="#eee"
-							reveal-when-loaded
+							reveal
 							preload
 							poster="../images/assets/app/puff.svg">
 </model-viewer>
@@ -457,7 +457,7 @@ Something went wrong!
 							alt="title"
 							camera-controls
 							background-color="#eee"
-							reveal-when-loaded
+							reveal
 							preload
 							poster="../images/assets/app/puff.svg">
 </model-viewer>

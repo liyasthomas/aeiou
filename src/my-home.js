@@ -179,7 +179,7 @@ class MyHome extends PolymerElement {
 																	auto-rotate$="{{rotate}}"
 																	background-image="{{sub.bg}}"
 																	background-color="#eee"
-																	reveal-when-loaded
+																	reveal
 																	preload
 																	poster="{{sub.img}}">
 										</model-viewer>
@@ -272,7 +272,7 @@ class MyHome extends PolymerElement {
 							camera-controls
 							auto-rotate
 							background-color="#eee"
-							reveal-when-loaded
+							reveal
 							preload
 							poster="../images/assets/app/puff.svg">
 </model-viewer>
