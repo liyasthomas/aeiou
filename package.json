@@ -14,7 +14,7 @@
 	},
 	"dependencies": {
 		"@fabricelements/skeleton-carousel": "^3.0.2",
-		"@google/model-viewer": "0.3.1",
+		"@google/model-viewer": "0.4.0",
 		"@kuscamara/code-sample": "^3.0.2",
 		"@polymer/app-layout": "^3.0.2",
 		"@polymer/app-route": "^3.0.2",
@@ -56,7 +56,7 @@
 	"devDependencies": {
 		"growl": "^1.10.5",
 		"lodash": "^4.17.11",
-		"polymer-cli": "^1.9.9",
+		"polymer-cli": "^1.9.10",
 		"wct-browser-legacy": "^1.0.2"
 	},
 	"engines": {
