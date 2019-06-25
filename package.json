@@ -51,7 +51,7 @@
 		"@polymer/paper-tooltip": "^3.0.1",
 		"@polymer/polymer": "^3.3.0",
 		"@webcomponents/webcomponentsjs": "^2.2.10",
-		"web-animations-js": "^2.3.1"
+		"web-animations-js": "^2.3.2"
 	},
 	"devDependencies": {
 		"growl": "^1.10.5",
