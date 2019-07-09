@@ -54,7 +54,7 @@
     "@polymer/polymer": "^3.3.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "web-animations-js": "^2.3.2",
-    "snyk": "^1.192.3"
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "growl": "^1.10.5",
