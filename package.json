@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fabricelements/skeleton-carousel": "^3.0.2",
-    "@google/model-viewer": "0.5.1",
+    "@google/model-viewer": "0.6.0",
     "@kuscamara/code-sample": "^3.0.2",
     "@polymer/app-layout": "^3.1.0",
     "@polymer/app-route": "^3.0.2",
