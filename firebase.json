@@ -3,13 +3,8 @@
     "public": "build/es6-bundled",
     "ignore": [
       "firebase.json",
-      "**/.*"
-    ],
-	"rewrites": [
-		{
-			"source": "**",
-			"destination": "/index.html"
-		}
-	]
+      "**/.*",
+      "**/node_modules/**"
+    ]
   }
 }
