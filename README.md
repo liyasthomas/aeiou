@@ -1,19 +1,4 @@
-```
-When I wrote this, only God and I understood what I was doing. Now, only God knows.
-```
-<div align="center">
-  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
-  <br>
-  <h1>Liyas Thomas</h1>
-  <sub>Built with ❤︎ by
-  <a href="https://github.com/liyasthomas">liyasthomas</a> and
-  <a href="https://github.com/liyasthomas/aeiou/graphs/contributors">contributors</a>
-	</sub>
-</div>
-
----
-
-[![Build Status](https://travis-ci.org/liyasthomas/aeiou.svg?branch=master)](https://travis-ci.org/liyasthomas/aeiou) [![GitHub release](https://img.shields.io/github/release/liyasthomas/aeiou/all.svg)](https://github.com/liyasthomas/aeiou/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/aeiou/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+[![Build Status](https://travis-ci.com/liyasthomas/aeiou.svg?branch=master)](https://travis-ci.com/liyasthomas/aeiou) [![GitHub release](https://img.shields.io/github/release/liyasthomas/aeiou/all.svg)](https://github.com/liyasthomas/aeiou/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/aeiou.svg)](https://github.com/liyasthomas/aeiou/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/aeiou/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
 # <img src="https://raw.githubusercontent.com/liyasthomas/aeiou/master/images/manifest/icon-48x48.png" alt="AEIOU" width="32"> AEIOU
 
@@ -139,7 +124,7 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our [CODE OF CONDUCT]
 
 ## Continuous Integration
 
-We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/aeiou).
+We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.com/liyasthomas/aeiou).
 
 ---
 
@@ -159,12 +144,6 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 
 ### Lead Developers
 * [**Liyas Thomas**](https://github.com/liyasthomas) - *Author*
-
-### Testing and Debugging
-* [Liyas Thomas](https://github.com/liyasthomas)
-
-### Contributors
-* [Liyas Thomas](https://github.com/liyasthomas)
 
 ### Thanks
 * [Sample](https://www.google.com) - For [Sample](https://www.google.com)
